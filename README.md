@@ -7,117 +7,198 @@ Grunt を使うとWordPressテーマを開発する上で必要な様々なプ�
 [underscores]: https://github.com/automattic/_s
 [grunt-init]: http://gruntjs.com/project-scaffolding
 
-## Installation
-もし、[grunt-init][] をインストールしてなければ先にインストールしてください。
+## インストール
+
+### grunt-init をインストール
+
+まずはじめに `grunt-init` をインストールしてください。
 
 ```
 sudo npm install -g grunt-init
 ```
 
-[grunt-init][] のインストールが完了したら、`~/.grunt-init/` ディレクトリを作成してください。
+次に、`~/.grunt-init` ディレクトリを作成してください。
 
 ```
 mkdir ~/.grunt-init
 ```
 
-次は、以下のコマンドを実行して、このテンプレートをインストールしてください。
+ここまでの作業は、他の `grunt-init` テンプレートを使ったことがあれば不要です。
+
+### Iemoto をインストール
+
+次にこのテンプレートを git から取得して下さい。
 
 ```
-git clone git@github.com:megumiteam/iemoto.git
+git clone git@github.com:megumiteam/iemoto.git ~/.grunt-init/iemoto
 ```
 
-httpsを使うなら以下のような感じで。
+https を使う場合は以下のとおり。
 
 ```
-git clone https://github.com/megumiteam/iemoto.git
-```
-
-インストールは以上で完了です。
-
-テンプレートを最新版に更新するには以下のコマンドを実行しましょう。
-
-```
-cd ~/.grunt-init/iemoto
-git pull
+git clone https://github.com/megumiteam/iemoto.git ~/.grunt-init/iemoto
 ```
 
 ## 使い方
 
-`wp-content/themes` ディレクトリに移動して任意のディレクトリを作成し、以下のコマンドを実行してください。
+`wp-content/themes` ディレクトリ以下に、任意の名前のテーマ用ディレクトリを作成してください。
+
+```
+mkdir wp-content/themes/my-plugin
+```
+
+次に以下のコマンドを実行して、テーマのベースとなる各種のファイルを作ります。
 
 ```
 grunt-init iemoto
 ```
 
-以上を実行すると、テーマ名などの入力を求められた後、テーマファイルが作成されます。
+このコマンドを実行すると、テーマ名やDescription、ライセンスなど、いくつかの情報の入力を求められます。
 
-テーマファイルの作成が完了したら、以下のコマンドを実行してください。これによりCompassなどのツールのセットアップが完了します。
+```
+[miyauchi@localhost iemoto]$ grunt-init iemoto
+Running "init:iemoto" (init) task
+This task will create one or more files in the current directory, based on the
+environment and the answers to a few questions. Note that answering "?" to any
+question will show question-specific help and answering "none" to most questions
+will leave its value blank.
+
+Please answer the following:
+[?] Project title (Iemoto) 
+[?] PHP function prefix (alpha and underscore characters only) (iemoto) 
+[?] Description (This is a awesome cool plugin.) 
+[?] Project homepage (https://digitalcube.jp/) 
+[?] Author name (Digitalcube Co,.Ltd) 
+[?] Author url (https://digitalcube.jp/) 
+[?] Do you need to make any changes to the above before continuing? (y/N)
+```
+
+最後に、変更はありませんか？と尋ねられるので、`n` と入力するか、そのままエンターキーを押すとテーマのテンプレートが作成されます。
+
+次に以下のコマンドを実行して `grunt` の実行に必要な Grunt プラグインをダウンロードしてください。
 
 ```
 npm install
 ```
 
-あとは、`sass/your-theme-name.scss` や `js/your-theme-name.js` などを編集して、必要に応じて以下のコマンドを実行して、.scss などのコンパイルを実行してください。
+ここで、インストールされる Grunt プラグインは `package.json` 内で定義されています。
+
+以上が完了すると、ディレクトリ内に以下のようにプラグイン用のファイルが生成されていることを確認できると思います。
+
+```
+[miyauchi@localhost iemoto]$ tree
+.
+├── 404.php
+├── Gruntfile.js
+├── README.md
+├── archive.php
+├── comments.php
+├── content-none.php
+├── content-page.php
+├── content-single.php
+├── content.php
+├── footer.php
+├── functions.php
+├── header.php
+├── inc
+│   ├── custom-header.php
+│   ├── customizer.php
+│   ├── extras.php
+│   ├── jetpack.php
+│   └── template-tags.php
+├── index.php
+├── js
+│   ├── customizer.js
+│   ├── hatamoto.js
+│   ├── navigation.js
+│   └── skip-link-focus-fix.js
+├── languages
+│   ├── _s.pot
+│   ├── ja.mo
+│   ├── ja.po
+│   └── readme.txt
+├── layouts
+│   ├── content-sidebar.css
+│   └── sidebar-content.css
+├── node_modules
+├── package.json
+├── page.php
+├── rtl.css
+├── sass
+│   ├── _wordpress.scss
+│   └── hatamoto.scss
+├── screenshot.png
+├── search.php
+├── searchform.php
+├── sidebar.php
+├── single.php
+└── style.css
+```
+
+以上でテーマの開発に必要な環境が整いました。
+
+## デフォルト値について
+
+`grunt-init` 実行時に表示される各種プロンプトにはデフォルト値を設定することができます。
+
+名前やURL等は、あらかじめデフォルト値を設定してくとさらに便利になります。
+
+デフォルト値を設定するには以下のように、`defaults.json` を設置し、そのファイルを編集してください。
+
+```
+cp ~/.grunt-init/iemoto/defaults.json.sample ~/.grunt-init/defaults.json
+```
+
+## CSS や JavaScript ファイルの minify について
+
+`.js` や `.css` などのファイルを修正したら、以下のコマンドを実行して下さい。
+
+たったこれだけで、minifyが自動的に行われます。
 
 ```
 grunt
 ```
 
-以降は、`grunt` と実行するだけで、.scss のコンパイルや、JavaScriptのminifyを行います。
+## watch について
 
-また、これらのファイルは、WordPressによってあらかじめロードされています。
-
-## Compassをさらに使いこなす！
-
-### Foundationを使う
-
-[Foundation](http://foundation.zurb.com/)をインストール
+grunt watch を使えば、ファイルの更新を grunt が監視し、自動的に minify 等の作業を行います。
 
 ```
-sudo gem install zurb-foundation
+grunt watch
 ```
 
-テーマディレクトリ内のGruntfile.jsの69行目に以下のように記述
+watch を終了するには、キーボードで `[control]+[c]` を押して下さい。
+
+## composer について
+
+このテンプレートは、[composer](http://getcomposer.org/) にも対応しています。
+
+`composer` を使用するには、`grunt-init` 実行時に表示されるプロンプトで、`y` と答えて下さい。
+
+その後、以下のコマンドを実行しましょう。
 
 ```
-        compass: {
-            dist: {
-                options: {
-                    require: 'zurb-foundation', // この行を追加
-                    sassDir: 'sass',
-                    cssDir: 'css',
+composer install
 ```
 
-あとは .scss を編集して `grunt` コマンドを実行！
+以上で、composer.json に記述された各種のライブラリが自動的にダウンロードされ、テーマによって `require()` されます。
 
-### Susyを使う
+## 公式ディレクトリ等へ登録する際の注意
 
-[Susy](http://susy.oddbird.net/)をインストール
+* `composer` の動作環境は php5.3+ である一方で、WordPressの動作環境は php5.2+ です。`composer` を使用する際には、readme.txt に php5.3+ が動作条件である旨を書くようにしましょう。
+* 以下のファイルは公式ディレクトリに登録する際には、svn:ignore しておきましょう。
+ * node_modules
+ * composer.phar
 
-```
-sudo gem install susy
-```
+## フィードバック
 
-テーマディレクトリ内のGruntfile.jsの69行目に以下のように記述
+皆様からのフィードバックをお待ちしています。
 
-```
-        compass: {
-            dist: {
-                options: {
-                    require: 'susy', // この行を追加
-                    sassDir: 'sass',
-                    cssDir: 'css',
-```
-
-あとは .scss を編集して `grunt` コマンドを実行！
-
-## Notes
-
- * Compassの設定ファイル config.rb は不要です。
- * Underscoresに対して、フックの追加、CSSの削除等の修正を加えてあります。
+* https://github.com/megumiteam/iemoto/issues
 
 ## Contributors
 
 * [miya0001](https://github.com/miya0001)
 * [gatespace](https://github.com/gatespace)
-* [megumiteam](https://github.com/megumiteam)
+* [Digitalcube Co.,Ltd](https://digitalcube.jp/)
+
