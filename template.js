@@ -1,22 +1,16 @@
 /**
- * grunt-wp-underscores
- * https://github.com/ericmann/grunt-wp-underscores
+ * iemoto
+ * https://github.com/megumiteam/iemoto/blob/master/template.js
  *
- * Copyright (c) 2013 Eric Mann, 10up
- * Licensed under the MIT License
+ * Licensed under the GPLv2
  */
 
 'use strict';
 
 exports.description = 'Create a WordPress theme based on Automattic\'s _s starter theme.';
 
-// Template-specific notes to be displayed before question prompts.
 exports.notes = '';
-
-// Template-specific notes to be displayed after the question prompts.
 exports.after = '';
-
-// Any existing file or directory matching this wildcard will cause a warning.
 exports.warnOn = '*';
 
 // The actual init template
