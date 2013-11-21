@@ -86,8 +86,6 @@ npm install
 以上が完了すると、ディレクトリ内に以下のようにプラグイン用のファイルが生成されていることを確認できると思います。
 
 ```
-[miyauchi@localhost iemoto]$ tree
-.
 ├── 404.php
 ├── Gruntfile.js
 ├── README.md
@@ -109,7 +107,7 @@ npm install
 ├── index.php
 ├── js
 │   ├── customizer.js
-│   ├── hatamoto.js
+│   ├── iemoto.js
 │   ├── navigation.js
 │   └── skip-link-focus-fix.js
 ├── languages
@@ -126,7 +124,7 @@ npm install
 ├── rtl.css
 ├── sass
 │   ├── _wordpress.scss
-│   └── hatamoto.scss
+│   └── iemoto.scss
 ├── screenshot.png
 ├── search.php
 ├── searchform.php
