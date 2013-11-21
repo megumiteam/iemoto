@@ -1,6 +1,8 @@
 # Iemoto
 
-> Create a WordPress theme based on [Underscores][] with [grunt-init][].
+これは、WordPressテーマ用の [grunt-init](http://gruntjs.com/project-scaffolding) テンプレートです。
+
+Grunt を使うとWordPressテーマを開発する上で必要な様々なプロセスを自動化することができます。
 
 [underscores]: https://github.com/automattic/_s
 [grunt-init]: http://gruntjs.com/project-scaffolding
