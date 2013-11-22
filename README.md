@@ -44,7 +44,7 @@ git clone https://github.com/megumiteam/iemoto.git ~/.grunt-init/iemoto
 `wp-content/themes` ディレクトリ以下に、任意の名前のテーマ用ディレクトリを作成してください。
 
 ```
-mkdir wp-content/themes/my-plugin
+mkdir wp-content/themes/my-theme
 ```
 
 次に以下のコマンドを実行して、テーマのベースとなる各種のファイルを作ります。
