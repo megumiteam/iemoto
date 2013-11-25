@@ -8,8 +8,9 @@
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
-if ( ! isset( $content_width ) )
+if ( ! isset( $content_width ) ) {
 	$content_width = 640; /* pixels */
+}
 
 if ( ! function_exists( '{%= prefix %}_setup' ) ) :
 /**
@@ -35,7 +36,7 @@ function {%= prefix %}_setup() {
 	add_theme_support( 'automatic-feed-links' );
 
 	/**
-	 * Enable support for Post Thumbnails on posts and pages
+	 * Enable support for Post Thumbnails on posts and pages.
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
@@ -84,39 +85,39 @@ add_action( 'widgets_init', '{%= prefix %}_widgets_init' );
  */
 function {%= prefix %}_scripts() {
 	wp_enqueue_style(
-        '{%= prefix %}-style',
-        get_stylesheet_directory_uri() . '/style.css',
-        array(),
-        '{%= grunt.template.today("yyyymmdd") %}'
-    );
+		'{%= prefix %}-style',
+		get_stylesheet_directory_uri() . '/style.css',
+		array(),
+		'{%= grunt.template.today("yyyymmdd") %}'
+	);
 
 	wp_enqueue_script(
-        '{%= prefix %}-navigation',
-        get_template_directory_uri() . '/js/navigation.js',
-        array(),
-        '{%= grunt.template.today("yyyymmdd") %}',
-        true
-    );
+		'{%= prefix %}-navigation',
+		get_template_directory_uri() . '/js/navigation.js',
+		array(),
+		'{%= grunt.template.today("yyyymmdd") %}',
+		true
+	);
 
 	wp_enqueue_script(
-        '{%= prefix %}-skip-link-focus-fix',
-        get_template_directory_uri() . '/js/skip-link-focus-fix.js',
-        array(),
-        '{%= grunt.template.today("yyyymmdd") %}',
-        true
-    );
+		'{%= prefix %}-skip-link-focus-fix',
+		get_template_directory_uri() . '/js/skip-link-focus-fix.js',
+		array(),
+		'{%= grunt.template.today("yyyymmdd") %}',
+		true
+	);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
 	wp_enqueue_script(
-        '{%= prefix %}-script',
-        get_stylesheet_directory_uri() . '/js/{%= file_name %}.min.js',
-        array('jquery'),
-        '{%= grunt.template.today("yyyymmdd") %}',
-        true
-    );
+		'{%= prefix %}-script',
+		get_stylesheet_directory_uri() . '/js/{%= file_name %}.min.js',
+		array('jquery'),
+		'{%= grunt.template.today("yyyymmdd") %}',
+		true
+	);
 }
 add_action( 'wp_enqueue_scripts', '{%= prefix %}_scripts' );
 

@@ -87,7 +87,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php {%= prefix %}_content_nav( 'nav-below' ); ?>
+			<?php {%= prefix %}_paging_nav(); ?>
 
 		<?php else : ?>
 
