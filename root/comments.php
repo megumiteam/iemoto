@@ -15,12 +15,13 @@
  * the visitor has not yet entered the password we will
  * return early without loading the comments.
  */
-if ( post_password_required() )
+if ( post_password_required() ) {
 	return;
+}
 ?>
 
-	<div id="comments" class="comments-area">
-		<?php do_action( '{%= prefix %}_before_comments' ); ?>
+<div id="comments" class="comments-area">
+	<?php do_action( '{%= prefix %}_before_comments' ); ?>
 
 	<?php // You can start editing here -- including this comment! ?>
 
@@ -71,5 +72,5 @@ if ( post_password_required() )
 
 	<?php comment_form(); ?>
 
-		<?php do_action( '{%= prefix %}_after_comments' ); ?>
+	<?php do_action( '{%= prefix %}_after_comments' ); ?>
 </div><!-- #comments -->
