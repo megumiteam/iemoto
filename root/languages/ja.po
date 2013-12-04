@@ -4,14 +4,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0-wpcom\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2013-11-25 08:10:22+00:00\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2013-12-04 02:25:46+00:00\n"
 "PO-Revision-Date: 2013-04-08 16:45+0900\n"
 "Last-Translator: Kazue Igarashi <gatesapce.k@gmail.com>\n"
 "Language-Team: \n"
 "Language: JAPANESE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n == 1 ? 0 : 1;\n"
 
 #: 404.php:15
@@ -46,9 +46,19 @@ msgstr "%sのアーカイブ"
 msgid "Month: %s"
 msgstr "%sのアーカイブ"
 
+#: archive.php:42
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "Y年F"
+
 #: archive.php:45
 msgid "Year: %s"
 msgstr "%s年のアーカイブ"
+
+#: archive.php:45
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
 
 #: archive.php:48
 msgid "Asides"
@@ -313,4 +323,3 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid "http://automattic.com/"
 msgstr ""
-
