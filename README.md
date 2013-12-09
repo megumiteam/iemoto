@@ -198,5 +198,5 @@ composer install
 
 * [miya0001](https://github.com/miya0001)
 * [gatespace](https://github.com/gatespace)
-* [Digitalcube Co.,Ltd](https://digitalcube.jp/)
+* [8bitodyssey](https://github.com/8bitodyssey)
 
