@@ -23,7 +23,7 @@ exports.template = function( grunt, init, done ) {
             message: 'PHP function prefix (alpha and underscore characters only)',
             default: 'iemoto'
         },
-        init.prompt( 'description', 'Underscores based Megumi theme' ),
+        init.prompt( 'description', 'Megumi theme based on Underscores' ),
         init.prompt( 'homepage', 'https://www.digitalcube.jp/' ),
         init.prompt( 'author_name', 'DigitalCube Co.,Ltd' ),
         init.prompt( 'author_url', 'https://www.digitalcube.jp/' ),
