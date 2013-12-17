@@ -47,6 +47,9 @@ get_header(); ?>
 						elseif ( is_tax( 'post_format', 'post-format-aside' ) ) :
 							_e( 'Asides', '{%= prefix %}' );
 
+						elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) :
+							_e( 'Galleries', '{%= prefix %}');
+
 						elseif ( is_tax( 'post_format', 'post-format-image' ) ) :
 							_e( 'Images', '{%= prefix %}');
 
@@ -58,6 +61,15 @@ get_header(); ?>
 
 						elseif ( is_tax( 'post_format', 'post-format-link' ) ) :
 							_e( 'Links', '{%= prefix %}' );
+
+						elseif ( is_tax( 'post_format', 'post-format-status' ) ) :
+							_e( 'Statuses', '{%= prefix %}' );
+
+						elseif ( is_tax( 'post_format', 'post-format-audio' ) ) :
+							_e( 'Audios', '{%= prefix %}' );
+
+						elseif ( is_tax( 'post_format', 'post-format-chat' ) ) :
+							_e( 'Chats', '{%= prefix %}' );
 
 						else :
 							_e( 'Archives', '{%= prefix %}' );

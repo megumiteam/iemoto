@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0-wpcom\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2013-12-04 02:25:46+00:00\n"
+"POT-Creation-Date: 2013-12-17 02:35:33+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -62,22 +62,38 @@ msgid "Asides"
 msgstr ""
 
 #: archive.php:51
-msgid "Images"
+msgid "Galleries"
 msgstr ""
 
 #: archive.php:54
-msgid "Videos"
+msgid "Images"
 msgstr ""
 
 #: archive.php:57
-msgid "Quotes"
+msgid "Videos"
 msgstr ""
 
 #: archive.php:60
+msgid "Quotes"
+msgstr ""
+
+#: archive.php:63
 msgid "Links"
 msgstr ""
 
-#: archive.php:63 sidebar.php:17
+#: archive.php:66
+msgid "Statuses"
+msgstr ""
+
+#: archive.php:69
+msgid "Audios"
+msgstr ""
+
+#: archive.php:72
+msgid "Chats"
+msgstr ""
+
+#: archive.php:75 sidebar.php:17
 msgid "Archives"
 msgstr ""
 
