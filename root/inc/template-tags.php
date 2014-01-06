@@ -55,10 +55,10 @@ function {%= prefix %}_post_nav() {
 	<nav class="navigation post-navigation" role="navigation">
 		<h1 class="screen-reader-text"><?php _e( 'Post navigation', '{%= prefix %}' ); ?></h1>
 		<div class="nav-links">
-
-			<?php previous_post_link( '%link', _x( '<span class="meta-nav">&larr;</span> %title', 'Previous post link', '{%= prefix %}' ) ); ?>
-			<?php next_post_link(     '%link', _x( '%title <span class="meta-nav">&rarr;</span>', 'Next post link',     '{%= prefix %}' ) ); ?>
-
+			<?php
+				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span> %title', 'Previous post link', '{%= prefix %}' ) );
+				next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title <span class="meta-nav">&rarr;</span>', 'Next post link',     '{%= prefix %}' ) );
+			?>
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
 	<?php
