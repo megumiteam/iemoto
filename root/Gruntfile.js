@@ -57,8 +57,8 @@ module.exports = function( grunt ) {
         options: {
           sassDir: 'sass',
           cssDir: 'css',
-          outputStyle: 'nested',
-          imagesDir: 'img',
+          outputStyle: 'expanded',
+          imagesDir: 'images',
           javascriptsDir: 'js'
         }
       }
@@ -86,6 +86,16 @@ module.exports = function( grunt ) {
           ]
         }
       }
+    },
+    watch: {
+      scripts: {
+        files: [
+          'sass/*.scss',
+          'sass/*/*.scss',
+          'js/{%= file_name %}.js'
+        ],
+        tasks: ['jshint', 'uglify', 'compass', 'cssmin']
+      }
     }
   } );
   //
@@ -94,6 +104,7 @@ module.exports = function( grunt ) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default task.
   grunt.registerTask(
