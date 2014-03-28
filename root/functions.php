@@ -30,37 +30,37 @@ function {%= prefix %}_setup() {
 	 */
 	load_theme_textdomain( '{%= prefix %}', get_template_directory() . '/languages' );
 
-	/**
-	 * Add default posts and comments RSS feed links to head
-	 */
+	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
 
-	/**
+	/*
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
 	//add_theme_support( 'post-thumbnails' );
 
-	/**
-	 * This theme uses wp_nav_menu() in one location.
-	 */
+	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', '{%= prefix %}' ),
 	) );
 
-	/**
-	 * Enable support for Post Formats
-	 */
+	// Enable support for Post Formats.
 	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
 
-	/**
-	 * Setup the WordPress core custom background feature.
-	 */
+	// Setup the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( '{%= prefix %}_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+
+	// Enable support for HTML5 markup.
+	add_theme_support( 'html5', array(
+		'comment-list',
+		'search-form',
+		'comment-form',
+		'gallery',
+	) );
 }
 endif; // {%= prefix %}_setup
 add_action( 'after_setup_theme', '{%= prefix %}_setup' );

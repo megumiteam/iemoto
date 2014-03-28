@@ -27,7 +27,7 @@
 		<?php do_action( '{%= prefix %}_after_entry_content' ); ?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-meta">
+	<footer class="entry-footer">
 		<?php
 			/* translators: used between list items, there is a space after the comma */
 			$category_list = get_the_category_list( __( ', ', '{%= prefix %}' ) );
@@ -62,5 +62,5 @@
 		?>
 
 		<?php edit_post_link( __( 'Edit', '{%= prefix %}' ), '<span class="edit-link">', '</span>' ); ?>
-	</footer><!-- .entry-meta -->
+	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
