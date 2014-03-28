@@ -37,6 +37,7 @@ exports.template = function( grunt, init, done ) {
             'grunt-contrib-nodeunit': '~0.1.2',
             'grunt-contrib-compass': '*',
             'grunt-contrib-cssmin': '*',
+            "grunt-contrib-watch": "*"
         };
         // Sanitize names where we need to for PHP/JS
         props.name = props.title.replace( /\s+/g, '-' ).toLowerCase();
