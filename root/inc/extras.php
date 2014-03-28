@@ -43,14 +43,14 @@ add_filter( 'body_class', '{%= prefix %}_body_classes' );
  * @return string The filtered title.
  */
 function {%= prefix %}_wp_title( $title, $sep ) {
-	global $page, $paged;
-
 	if ( is_feed() ) {
 		return $title;
 	}
+	
+	global $page, $paged;
 
 	// Add the blog name
-	$title .= get_bloginfo( 'name' );
+	$title .= get_bloginfo( 'name', 'display' );
 
 	// Add the blog description for the home/front page.
 	$site_description = get_bloginfo( 'description', 'display' );
