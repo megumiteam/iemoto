@@ -69,9 +69,9 @@ exports.template = function( grunt, init, done ) {
             }
         });
 
-        fs.stat(path.resolve('img'), function(err, stats){
+        fs.stat(path.resolve('images'), function(err, stats){
             if (err) {
-                fs.mkdir(path.resolve('img'));
+                fs.mkdir(path.resolve('images'));
             }
         });
 
