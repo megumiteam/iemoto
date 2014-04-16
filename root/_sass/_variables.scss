@@ -1,0 +1,221 @@
+@charset "UTF-8";
+//
+// Theme Variables
+//
+
+//$base-font-size: 16px;
+//$body-line-height: 1.5;
+
+@function nounit($value) {
+	@if (type-of($value) == number) {
+		$_divisor: ($value * 0) + 1;
+		@return $value / $_divisor;
+	} @else {
+		@warn "#{$value} is not a number.";
+		@return $value;
+	}
+}
+
+@function emCalc($px, $base: $base-font-size) {
+    @return ( nounit($px) / nounit($base)) * 1em;
+}
+
+@mixin fontsize($size: $base-font-size) {
+  font-size: nounit($size) + px;
+  font-size: ( nounit($size) / 10) + rem;
+}
+
+
+// 
+// Various global styles
+// 
+
+// $body-background: #ffffff;
+// $body-font-color: #404040;
+// $body-font-family: sans-serif;
+
+
+// Layout
+// $site-max-width: 1000px;
+// $sidebar-width: 25%;
+// $brake-point: 600px;
+
+//
+// Typography Variables
+//
+
+// Headings
+
+// $header-margin-bottom: 1.5em;
+// $header-font-weight: bold;
+// $h1-font-size: emCalc(28);
+// $h2-font-size: emCalc(26);
+// $h3-font-size: emCalc(22);
+// $h4-font-size: emCalc(20);
+// $h5-font-size: emCalc(18);
+// $h6-font-size: 1em;
+
+
+// Style the <hr> element
+
+// $hr-border-width: 1px;
+// $hr-border-style: solid;
+// $hr-border-color: #ccc;
+// $hr-margin: 1.5em;
+
+
+// Style paragraphs
+
+// $paragraph-margin-bottom: 1.5em;
+
+
+// Style lists
+
+// $list-side-margin: 3em;
+// $list-nested-margin: 1.5em;
+// $definition-list-header-weight: bold;
+// $definition-list-header-margin-bottom: .3em;
+// $definition-list-margin-bottom: 1.5em;
+// $definition-list-margin-left: 3em;
+
+
+// Style blockquotes
+
+// $blockquote-margin: 1.5em;
+// $blockquote-font-color: lighten($body-font-color, 30%);
+// $blockquote-background: #eee;
+// $blockquote-border: 1px solid #ddd;
+// $blockquote-padding: 1em;
+// $blockquote-cite-font-size: emCalc(13);
+// $blockquote-cite-font-color: lighten($header-font-color, 20%);
+// $blockquote-cite-link-color: $blockquote-cite-font-color;
+
+
+// Style <code> <pre> tags
+
+// $pre-background-color: #eee;
+// $pre-font-family: "Courier 10 Pitch", Courier, monospace;
+// $pre-font-size: 15px;
+// $pre-line-height: 1.6;
+// $pre-margin-bottom: 1.6em;
+// $pre-padding:  1.6em;
+
+// $code-font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+
+
+// Acronym styles
+
+// $acronym-underline: 1px dotted #666;
+
+
+// Mark styles
+// $mark-background-color: #fff9c0;
+
+
+// A general <small> styling
+
+// $small-font-size: 75%;
+
+
+// A general <big> styling
+
+// $big-font-size: 125%;
+
+
+
+// Table Variables
+
+// $table-margin-bottom: 1.5em;
+// $table-bg: #fff;
+// $table-row-padding: 0.5em;
+
+// $table-border: solid 1px #ccc;
+
+// $table-head-bg: #eee;
+// $table-head-font-color: #222;
+// $table-head-font-weight: bold;
+
+
+// Form Variables
+
+// $input-font-size: 100%;
+
+// $button-font-size: 12px;
+// $button-font-color: rgba(0, 0, 0, .8);
+// $button-text-shadow-hoff: false;
+// $button-text-shadow-voff: 1px;
+// $button-text-shadow-blur: false;
+// $button-text-shadow-spread: false;
+// $button-text-shadow-color: rgba(255, 255, 255, 0.8);
+// $button-padding: 0.6em 1em 0.4em;
+// $button-bg-color: #e6e6e6;
+// $button-border-color: #ccc;
+// $button-border-style: solid;
+// $button-border-width: 1px;
+// $button-border-radius: 3px;
+$button-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+$button-box-hover-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
+$button-box-focus-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+
+// $input-font-color: #666;
+// $input-focus-font-color: #111;
+// $input-bg-color: #fff;
+// $input-focus-bg-color: darken(#fff, 2%);
+// $input-border-color: #ccc;
+// $input-border-style: solid;
+// $input-border-width: 1px;
+// $input-border-radius: 3px;
+// $input-box-padding: 3px;
+
+// Style anchors
+
+// $anchor-font-color: royalblue;
+// $anchor-font-color-visited: purple;
+// $anchor-font-color-hover: midnightblue;
+// $anchor-text-decoration: none;
+// $anchor-text-hover-decoration: underline;
+
+
+// Alignment
+
+// $alignment-margin: 1.5em;
+
+
+// main-navigation
+// $main-navigation-a-padding: 0;
+// $main-navigation-a-background: transparent;
+// $main-navigation-a-color: $anchor-font-color;
+// $main-navigation-a-hover-link: false;
+
+// secondary
+// $main-navigation-secondary-top: 1.5em;
+// $main-navigation-secondary-width: 200px;
+// $main-navigation-secondary-background: transparent;
+// $main-navigation-secondary-shadow-color: rgba(0, 0, 0, 0.2);
+// $main-navigation-secondary-shadow-hoff: 0px;
+// $main-navigation-secondary-shadow-voff: 3px;
+// $main-navigation-secondary-shadow-blur: 3px;
+// $main-navigation-secondary-shadow-spread: false;
+// $main-navigation-secondary-shadow-inset: false;
+// $main-navigation-secondary-a-color: $anchor-font-color;
+// $main-navigation-secondary-a-background: transparent;
+
+// hover
+// $main-navigation-hover-a-color: $anchor-font-color;
+// $main-navigation-hover-a-background: transparent;
+// $main-navigation-secondary-hover-a-color: $anchor-font-color;
+// $main-navigation-secondary-hover-a-background: transparent;
+
+// current item
+// $main-navigation-current-a-color: $anchor-font-color;
+// $main-navigation-current-a-background: transparent;
+
+
+// wp-caption
+// $wp-caption-border-style: solid;
+// $wp-caption-border-color: #ccc;
+// $wp-caption-border-width: 1px;
+
+// $wp-caption-text-size: 1em;
+// $wp-caption-text-align: center;
+// $wp-caption-text-margin: 0.8075em;

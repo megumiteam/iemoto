@@ -1,0 +1,172 @@
+@charset "UTF-8";
+/*--------------------------------------------------------------
+5.0 Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+5.1 Links
+--------------------------------------------------------------*/
+$anchor-text-decoration: false !default;
+$anchor-font-color: royalblue !default;
+$anchor-font-color-visited: purple !default;
+$anchor-font-color-hover: midnightblue !default;
+$anchor-text-hover-decoration: false !default;
+a {
+	@include link-colors( $anchor-font-color, $anchor-font-color-hover, $anchor-font-color-hover, $anchor-font-color-visited, $anchor-font-color-hover);
+	@if $anchor-text-decoration {
+		text-decoration: $anchor-text-decoration;
+	}
+	@if $anchor-text-hover-decoration {
+		&:hover, &:focus, &:active {
+			text-decoration: $anchor-text-hover-decoration;
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+5.2 Menus
+--------------------------------------------------------------*/
+$main-navigation-a-padding: 0 !default;
+$main-navigation-a-background: transparent !default;
+$main-navigation-a-color: $anchor-font-color !default;
+$main-navigation-a-hover-link: false !default;
+
+$main-navigation-secondary-top: 1.5em !default;
+$main-navigation-secondary-width: 200px !default;
+$main-navigation-secondary-background: transparent !default;
+$main-navigation-secondary-shadow-color: rgba(0, 0, 0, 0.2) !default;
+$main-navigation-secondary-shadow-hoff: 0px !default;
+$main-navigation-secondary-shadow-voff: 3px !default;
+$main-navigation-secondary-shadow-blur: 3px !default;
+$main-navigation-secondary-shadow-spread: false !default;
+$main-navigation-secondary-shadow-inset: false !default;
+$main-navigation-secondary-a-color: $anchor-font-color !default;
+$main-navigation-secondary-a-background: transparent !default;
+
+$main-navigation-hover-a-color: $anchor-font-color !default;
+$main-navigation-hover-a-background: transparent !default;
+$main-navigation-secondary-hover-a-color: $anchor-font-color !default;
+$main-navigation-secondary-hover-a-background: transparent !default;
+
+$main-navigation-current-a-color: $anchor-font-color !default;
+$main-navigation-current-a-background: transparent !default;
+
+.main-navigation {
+	clear: both;
+	display: block;
+	float: left;
+	width: 100%;
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+	}
+
+	li {
+		float: left;
+		position: relative;
+	}
+
+	a {
+		display: block;
+		color: $main-navigation-a-color;
+		text-decoration: none;
+		padding: $main-navigation-a-padding;
+		background: $main-navigation-a-background;
+		@if $main-navigation-a-hover-link {
+			@include hover-link;
+		}
+	}
+
+	// secondary
+	ul ul {
+		background: $main-navigation-secondary-background;
+		@include single-box-shadow( $main-navigation-secondary-shadow-color, $main-navigation-secondary-shadow-hoff, $main-navigation-secondary-shadow-voff, $main-navigation-secondary-shadow-blur, $main-navigation-secondary-shadow-spread, $main-navigation-secondary-shadow-inset );
+		display: none;
+		float: left;
+		position: absolute;
+		top: $main-navigation-secondary-top;
+		left: 0;
+		z-index: 99999;
+
+		ul {
+			left: 100%;
+			top: 0;
+		}
+
+		a {
+			width: $main-navigation-secondary-width;
+			color: $main-navigation-secondary-a-color;
+			background: $main-navigation-secondary-a-background;
+		}
+
+		li {
+		}
+
+	}
+
+	// hover
+	li:hover > a {
+		color: $main-navigation-hover-a-color;
+		background: $main-navigation-hover-a-background;
+	}
+
+	ul ul :hover > a {
+		color: $main-navigation-secondary-hover-a-color;
+		background: $main-navigation-secondary-hover-a-background;
+	}
+
+	ul ul a:hover {
+	}
+
+	ul li:hover > ul {
+		display: block;
+	}
+
+	// current item
+	.current_page_item a,
+	.current-menu-item a {
+		color: $main-navigation-current-a-color;
+		background: $main-navigation-current-a-background;
+	}
+
+}
+
+/* Small menu */
+.menu-toggle {
+	cursor: pointer;
+	display: none;
+}
+
+$brake-point: 600px !default;
+@media screen and (max-width: $brake-point) {
+
+	.menu-toggle,
+	.main-navigation.toggled .nav-menu {
+		display: block;
+	}
+
+	.main-navigation ul {
+		display: none;
+	}
+
+}
+.site-main .comment-navigation,
+.site-main .paging-navigation,
+.site-main .post-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+.comment-navigation .nav-previous,
+.paging-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: left;
+	width: 50%;
+}
+.comment-navigation .nav-next,
+.paging-navigation .nav-next,
+.post-navigation .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}

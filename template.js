@@ -76,11 +76,6 @@ exports.template = function( grunt, init, done ) {
         });
 
         fs.writeFileSync(
-            path.resolve('sass')+'/'+props.file_name+'.scss',
-            '@import "compass";\n@import "compass/reset";\n@import "_wordpress.scss";'
-        );
-
-        fs.writeFileSync(
             path.resolve('js')+'/'+props.file_name+'.js',
             '(function($){})(jQuery);'
         );

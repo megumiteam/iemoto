@@ -1,0 +1,349 @@
+@charset "UTF-8";
+/*--------------------------------------------------------------
+2.0 Typography
+--------------------------------------------------------------*/
+$body-font-color: #404040 !default;
+$body-font-family: sans-serif !default;
+$body-line-height: 1.5 !default;
+body,
+button,
+input,
+select,
+textarea {
+	color: $body-font-color;
+	font-family: $body-font-family;
+	@include fontsize;
+	line-height: $body-line-height;
+}
+$header-font-weight: inherit !default;
+$h1-font-size: inherit !default;
+$h2-font-size: inherit !default;
+$h3-font-size: inherit !default;
+$h4-font-size: inherit !default;
+$h5-font-size: inherit !default;
+$h6-font-size: inherit !default;
+$header-margin-bottom: 0 !default;
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	font-weight: $header-font-weight;
+	margin-bottom: $header-margin-bottom;
+}
+h1 {
+	font-size: $h1-font-size;
+}
+h2 {
+	font-size: $h2-font-size;
+}
+h3 {
+	font-size: $h3-font-size;
+}
+h4 {
+	font-size: $h4-font-size;
+}
+h5 {
+	font-size: $h5-font-size;
+}
+h6 {
+	font-size: $h6-font-size;
+}
+$paragraph-margin-bottom: 1.5em !default;
+p {
+	margin-bottom: $paragraph-margin-bottom;
+}
+b, strong {
+	font-weight: bold;
+}
+dfn, cite, em, i {
+	font-style: italic;
+}
+$blockquote-margin: 1.5em !default;
+$blockquote-font-color: false !default;
+$blockquote-background: false !default;
+$blockquote-border: false !default;
+$blockquote-padding: false !default;
+blockquote {
+	margin: 0 $blockquote-margin;
+	@if $blockquote-font-color {
+		color: $blockquote-font-color;
+	}
+	@if $blockquote-background {
+		background: $blockquote-background;
+	}
+	@if $blockquote-border {
+		border: $blockquote-border;
+	}
+	@if $blockquote-padding {
+		padding: $blockquote-padding;
+	}
+}
+address {
+	margin: 0 0 $paragraph-margin-bottom;
+}
+$pre-background-color: #eee !default;
+$pre-font-family: "Courier 10 Pitch", Courier, monospace !default;
+$pre-font-size: 15px !default;
+$pre-line-height: 1.6 !default;
+$pre-margin-bottom: 1.6em !default;
+$pre-padding: 1.6em !default;
+$code-font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace !default;
+pre {
+	background: $pre-background-color;
+	font-family: $pre-font-family;
+	@include fontsize($pre-font-size);
+	line-height: $pre-line-height;
+	margin-bottom: $pre-margin-bottom;
+	max-width: 100%;
+	overflow: auto;
+	padding: $pre-padding;
+}
+code, kbd, tt, var {
+	@include fontsize($pre-font-size);
+	font-family: $code-font-family;
+}
+$acronym-underline: 1px dotted #666 !default;
+abbr, acronym {
+	border-bottom: $acronym-underline;
+	cursor: help;
+}
+$mark-background-color: #fff9c0 !default;
+mark, ins {
+	background: $mark-background-color;
+	text-decoration: none;
+}
+sup,
+sub {
+	font-size: 75%;
+	height: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	bottom: 1ex;
+}
+sub {
+	top: .5ex;
+}
+$small-font-size: 75% !default;
+small {
+	font-size: $small-font-size;
+}
+$big-font-size: 125% !default;
+big {
+	font-size: $big-font-size;
+}
+
+/*--------------------------------------------------------------
+3.0 Elements
+--------------------------------------------------------------*/
+$hr-border-width: 1px !default;
+$hr-border-style: solid !default;
+$hr-border-color: #ccc !default;
+$hr-margin: 1.5em !default;
+hr {
+	border-top-style: $hr-border-style;
+	border-top-color: $hr-border-color;
+	border-top-width: $hr-border-width;
+	height: 0;
+	margin-top: $hr-margin;
+	margin-bottom: $hr-margin;
+}
+$list-side-margin: 3em !default;
+$list-nested-margin: 1.5em !default;
+ul, ol {
+	margin: 0 0 $paragraph-margin-bottom $list-side-margin;
+}
+ul {
+	list-style: disc;
+}
+ol {
+	list-style: decimal;
+}
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: $list-nested-margin;
+}
+$definition-list-header-weight: inherit !default;
+$definition-list-header-margin-bottom: 0 !default;
+$definition-list-margin-bottom: 1.5em !default;
+$definition-list-margin-left: 3em !default;
+dt {
+	font-weight: $definition-list-header-weight;
+	margin-bottom: $definition-list-header-margin-bottom;
+}
+dd {
+	margin: 0 $definition-list-margin-bottom $definition-list-margin-left;
+}
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+figure {
+	margin: 0;
+}
+$table-margin-bottom: 1.5em !default;
+$table-bg: false !default;
+$table-row-padding: false !default;
+$table-border: false !default;
+$table-head-bg: false !default;
+$table-head-font-color: false !default;
+$table-head-font-weight: bold !default;
+table {
+	margin: 0 0 $table-margin-bottom;
+	width: 100%;
+	@if $table-bg {
+		background-color: $table-bg;
+	}
+}
+@if $table-row-padding {
+td, th {
+	padding: $table-row-padding;
+}
+}
+@if $table-border {
+td, th {
+	border: $table-border;
+}
+}
+th {
+	font-weight: $table-head-font-weight;
+	@if $table-head-font-color {
+		color: $table-head-font-color;
+	}
+	@if $table-head-bg {
+		background-color: $table-head-bg;
+	}
+}
+
+/*--------------------------------------------------------------
+4.0 Forms
+--------------------------------------------------------------*/
+$input-font-size: 100% !default;
+$button-font-size: 12px !default;
+$button-font-color: rgba(0, 0, 0, .8) !default;
+$button-text-shadow-hoff: false !default;
+$button-text-shadow-voff: 1px !default;
+$button-text-shadow-blur: false !default;
+$button-text-shadow-spread: false !default;
+$button-text-shadow-color: rgba(255, 255, 255, 0.8) !default;
+$button-padding: 0.6em 1em 0.4em !default;
+$button-bg-color: #e6e6e6 !default;
+$button-border-color: #ccc !default;
+$button-border-style: solid !default;
+$button-border-width: 1px !default;
+$button-border-radius: 3px !default;
+$button-box-shadow: false !default;
+$button-box-hover-shadow: false !default;
+$button-box-focus-shadow: false !default;
+$input-font-color: #666 !default;
+$input-focus-font-color: #111 !default;
+$input-bg-color: false !default;
+$input-focus-bg-color: false !default;
+$input-border-color: #ccc !default;
+$input-border-style: solid !default;
+$input-border-width: 1px !default;
+$input-border-radius: 3px !default;
+$input-box-padding: 3px !default;
+button,
+input,
+select,
+textarea {
+	font-size: $input-font-size; /* Corrects font size not being inherited in all browsers */
+	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
+	*vertical-align: middle; /* Improves appearance and consistency in all browsers */
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	@include fontsize($button-font-size);
+	color: $button-font-color;
+//	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+	@include single-text-shadow($button-text-shadow-hoff, $button-text-shadow-voff, $button-text-shadow-blur, $button-text-shadow-spread, $button-text-shadow-color);
+	line-height: 1;
+	padding: $button-padding;
+	background: $button-bg-color;
+	border: {
+		color: $button-border-color;
+		style: $button-border-style;
+		width: $button-border-width;
+	}
+	border-color: $button-border-color $button-border-color darken($button-border-color, 5%) $button-border-color;
+	@include border-radius($button-border-radius);
+	@if $button-box-shadow {
+		box-shadow: $button-box-shadow;
+	}
+	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
+	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
+
+	&:hover {
+		border-color: $button-border-color darken($button-border-color, 5%) darken($button-border-color, 12%) darken($button-border-color, 5%);
+		@if $button-box-hover-shadow {
+			box-shadow: $button-box-hover-shadow;
+		}
+	}
+
+	&:focus, &:active {
+		border-color: darken($button-border-color, 12%) darken($button-border-color, 5%) darken($button-border-color, 5%) darken($button-border-color, 5%);
+		@if $button-box-focus-shadow {
+			box-shadow: $button-box-focus-shadow;
+		}
+	}
+}
+input[type="checkbox"],
+input[type="radio"] {
+	padding: 0; /* Addresses excess padding in IE8/9 */
+}
+input[type="search"] {
+	-webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */
+	-webkit-box-sizing: content-box; /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
+	-moz-box-sizing:    content-box;
+	box-sizing:         content-box;
+}
+input[type="search"]::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+	-webkit-appearance: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner { /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+	border: 0;
+	padding: 0;
+}
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+	color: $input-font-color;
+	border: {
+		color: $input-border-color;
+		style: $input-border-style;
+		width: $input-border-width;
+	}
+	@include border-radius($input-border-radius);
+	@if $input-bg-color {
+		background-color: $input-bg-color;
+	}
+	
+	&:focus {
+		color: $input-focus-font-color;
+		@if $input-focus-bg-color {
+			background-color: $input-focus-bg-color;
+		}
+	}
+}
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"] {
+	padding: $input-box-padding;
+}
+textarea {
+	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
+	padding-left: $input-box-padding;
+	vertical-align: top; /* Improves readability and alignment in all browsers */
+	width: 98%;
+}
