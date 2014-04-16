@@ -43,7 +43,7 @@ module.exports = function( grunt ) {
             ' * <%= pkg.homepage %>\n' +
             ' *\n' +
             ' * Copyright <%= grunt.template.today("yyyy") %>, <%= pkg.author.name %> (<%= pkg.author.url %>)\n' +
-            ' * Released under the <%= pkg.license %>\n' +
+            ' * Released under the GNU General Public License v2 or later\n' +
             ' */\n',
           mangle: {
             except: ['jQuery']
@@ -66,16 +66,16 @@ module.exports = function( grunt ) {
     cssmin: {
       options: {
       banner: '/*\n' +
-        'Theme Name: {%= title %}\n' +
-        'Theme URI: {%= homepage %}\n' +
-        'Author: {%= author_name %}\n' +
-        'Author URI: {%= author_url %}\n' +
-        'Description: {%= description %}\n' +
-        'Version: 1.0\n' +
+        'Theme Name: <%= pkg.title %>\n' +
+        'Theme URI: <%= pkg.homepage %>\n' +
+        'Author: <%= pkg.author.name %>\n' +
+        'Author URI: <%= pkg.author.url %>\n' +
+        'Description: <%= pkg.description %>\n' +
+        'Version: <%= pkg.version %>\n' +
         'License: GNU General Public License v2 or later\n' +
         'License URI: http://www.gnu.org/licenses/gpl-2.0.html\n' +
         'Text Domain: {%= prefix %}\n' +
-        'Domain Path: /languages\n' +
+        'Domain Path: /languages/\n' +
         'Tags:\n' +
         '*/\n'
       },
