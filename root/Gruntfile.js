@@ -55,7 +55,7 @@ module.exports = function( grunt ) {
     compass: {
       dist: {
         options: {
-          sassDir: 'sass',
+          sassDir: '_sass',
           cssDir: 'css',
           outputStyle: 'expanded',
           imagesDir: 'images',
@@ -82,7 +82,7 @@ module.exports = function( grunt ) {
       combine: {
         files: {
           'style.css': [
-            'css/{%= file_name %}.css'
+            'css/style.css'
           ]
         }
       }
@@ -90,8 +90,8 @@ module.exports = function( grunt ) {
     watch: {
       scripts: {
         files: [
-          'sass/*.scss',
-          'sass/*/*.scss',
+          '_sass/*.scss',
+          '_sass/*/*.scss',
           'js/{%= file_name %}.js'
         ],
         tasks: ['jshint', 'uglify', 'compass', 'cssmin']

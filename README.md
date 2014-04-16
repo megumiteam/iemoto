@@ -86,9 +86,22 @@ npm install
 以上が完了すると、ディレクトリ内に以下のようにテーマ用のファイルが生成されていることを確認できると思います。
 
 ```
+├── _sass
+│   ├── _content.scss
+│   ├── _layout.scss
+│   ├── _media.scss
+│   ├── _navigation.scss
+│   ├── _variables.scss
+│   ├── _widgets.scss
+│   ├── common
+│   │   ├── _accessibility.scss
+│   │   ├── _alignments.scss
+│   │   ├── _clearings.scss
+│   │   ├── _infinitescroll.scss
+│   │   ├── _reset.scss
+│   │   └── _typography.scss
+│   └── style.scss
 ├── 404.php
-├── Gruntfile.js
-├── README.md
 ├── archive.php
 ├── comments.php
 ├── content-none.php
@@ -97,6 +110,7 @@ npm install
 ├── content.php
 ├── footer.php
 ├── functions.php
+├── Gruntfile.js
 ├── header.php
 ├── inc
 │   ├── custom-header.php
@@ -115,19 +129,13 @@ npm install
 │   ├── ja.mo
 │   ├── ja.po
 │   └── readme.txt
-├── layouts
-│   ├── content-sidebar.css
-│   └── sidebar-content.css
 ├── node_modules
 ├── package.json
 ├── page.php
+├── README.md
 ├── rtl.css
-├── sass
-│   ├── _wordpress.scss
-│   └── iemoto.scss
 ├── screenshot.png
 ├── search.php
-├── searchform.php
 ├── sidebar.php
 ├── single.php
 └── style.css
