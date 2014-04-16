@@ -10,8 +10,6 @@
 if ( ! function_exists( '{%= prefix %}_paging_nav' ) ) :
 /**
  * Display navigation to next/previous set of posts when applicable.
- *
- * @return void
  */
 function {%= prefix %}_paging_nav() {
 	// Don't print empty markup if there's only one page.
@@ -40,8 +38,6 @@ endif;
 if ( ! function_exists( '{%= prefix %}_post_nav' ) ) :
 /**
  * Display navigation to next/previous post when applicable.
- *
- * @return void
  */
 function {%= prefix %}_post_nav() {
 	// Don't print empty markup if there's nowhere to navigate.
@@ -97,14 +93,16 @@ endif;
 
 /**
  * Returns true if a blog has more than 1 category.
+ *
+ * @return bool
  */
 function {%= prefix %}_categorized_blog() {
-	if ( false === ( $all_the_cool_cats = get_transient( 'all_the_cool_cats' ) ) ) {
+	if ( false === ( $all_the_cool_cats = get_transient( '{%= prefix %}_categories' ) ) ) {
 		// Create an array of all the categories that are attached to posts.
 		$all_the_cool_cats = get_categories( array(
 			'fields'     => 'ids',
 			'hide_empty' => 1,
-			
+
 			// We only need to know if there is more than one category.
 			'number'     => 2,
 		) );
@@ -112,7 +110,7 @@ function {%= prefix %}_categorized_blog() {
 		// Count the number of categories that are attached to the posts.
 		$all_the_cool_cats = count( $all_the_cool_cats );
 
-		set_transient( 'all_the_cool_cats', $all_the_cool_cats );
+		set_transient( '{%= prefix %}_categories', $all_the_cool_cats );
 	}
 
 	if ( $all_the_cool_cats > 1 ) {
@@ -129,7 +127,7 @@ function {%= prefix %}_categorized_blog() {
  */
 function {%= prefix %}_category_transient_flusher() {
 	// Like, beat it. Dig?
-	delete_transient( 'all_the_cool_cats' );
+	delete_transient( '{%= prefix %}_categories' );
 }
 add_action( 'edit_category', '{%= prefix %}_category_transient_flusher' );
 add_action( 'save_post',     '{%= prefix %}_category_transient_flusher' );
