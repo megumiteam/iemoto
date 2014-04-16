@@ -1,9 +1,9 @@
-# Copyright (C) 2014 Automattic
+# Copyright (C) 2014 {%= author_name %}
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: _s 1.0-wpcom\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
+"Project-Id-Version: {%= title %} {%= version %}\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tags/{%= prefix %}\n"
 "POT-Creation-Date: 2014-02-26 01:30:23+00:00\n"
 "PO-Revision-Date: 2013-04-08 16:45+0900\n"
 "Last-Translator: Kazue Igarashi <gatesapce.k@gmail.com>\n"
@@ -284,29 +284,21 @@ msgid "Meta"
 msgstr "メタ"
 
 #. Theme Name of the plugin/theme
-msgid "_s"
+msgid "{%= title %}"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "http://underscores.me/"
+msgid "{%= homepage %}"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid ""
-"Hi. I'm a starter theme called <code>_s</code>, or <em>underscores</em>, if "
-"you like. I'm a theme meant for hacking so don't use me as a <em>Parent "
-"Theme</em>. Instead try turning me into the next, most awesome, WordPress "
-"theme out there. That's what I'm here for."
+msgid "{%= description %}"
 msgstr ""
-"<code>_s</code>（アンダースコアーズ）というスターター・テーマです。親テーマ用"
-"ではなく、改変のベースとなるテーマとして作られています。これをもとに変更を加"
-"えて、次世代のすばらしい WordPress テーマを作るためのコードの参考にしてくださ"
-"い。"
 
 #. Author of the plugin/theme
-msgid "Automattic"
+msgid "{%= author_name %}"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "http://automattic.com/"
+msgid "{%= author_url %}"
 msgstr ""

@@ -85,6 +85,11 @@ exports.template = function( grunt, init, done ) {
             '(function($){})(jQuery);'
         );
 
+        fs.renameSync(
+            path.resolve('languages')+'/_s.pot',
+            path.resolve('languages')+'/'+props.file_name+'.pot'
+        );
+
         // Done!
         done();
     });
