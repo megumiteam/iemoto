@@ -60,6 +60,7 @@ function {%= prefix %}_setup() {
 		'search-form',
 		'comment-form',
 		'gallery',
+		'caption',
 	) );
 }
 endif; // {%= prefix %}_setup
