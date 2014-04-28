@@ -1,7 +1,4 @@
 @charset "UTF-8";
-$wp-caption-border-style: solid !default;
-$wp-caption-border-color: #ccc !default;
-$wp-caption-border-width: 1px !default;
 $wp-caption-text-size: false !default;
 $wp-caption-text-align: center !default;
 $wp-caption-text-margin: 0.8075em !default;
@@ -27,18 +24,12 @@ object {
 12.1 Captions
 --------------------------------------------------------------*/
 .wp-caption {
-	border: {
-		style: $wp-caption-border-style;
-		color: $wp-caption-border-color;
-		width: $wp-caption-border-width;
-	}
 	margin-bottom: $alignment-margin;
 	max-width: 100%;
 }
 .wp-caption img[class*="wp-image-"] {
 	display: block;
 	margin: 1.2% auto 0;
-	max-width: 98%;
 }
 .wp-caption-text {
 	@if $wp-caption-text-size {

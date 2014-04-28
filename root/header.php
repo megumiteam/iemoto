@@ -32,7 +32,7 @@
 		</div>
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<h1 class="menu-toggle"><?php _e( 'Menu', '{%= prefix %}' ); ?></h1>
+			<button class="menu-toggle"><?php _e( 'Primary Menu', '{%= prefix %}' ); ?></button>
 			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', '{%= prefix %}' ); ?></a>
 
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
