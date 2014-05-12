@@ -9,7 +9,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php do_action( '{%= prefix %}_before_entry_header' ); ?>
-		<h1 class="entry-title"><?php the_title(); ?></h1>
+		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		<?php do_action( '{%= prefix %}_after_entry_header' ); ?>
 	</header><!-- .entry-header -->
 
@@ -24,5 +24,7 @@
 		?>
 		<?php do_action( '{%= prefix %}_after_entry_content' ); ?>
 	</div><!-- .entry-content -->
-	<?php edit_post_link( __( 'Edit', '{%= prefix %}' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
+	<footer class="entry-footer">
+		<?php edit_post_link( __( 'Edit', '_s' ), '<span class="edit-link">', '</span>' ); ?>
+	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
