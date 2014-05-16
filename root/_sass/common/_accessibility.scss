@@ -6,7 +6,9 @@
 .screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
 	position: absolute !important;
-	display: none;
+	height: 1px;
+	width: 1px; 
+	overflow: hidden;
 
 	&:hover, &:active, &:focus {
 		background-color: #f1f1f1;
