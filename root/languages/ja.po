@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0-wpcom\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2014-04-28 01:32:28+00:00\n"
+"POT-Creation-Date: 2014-05-19 03:32:59+00:00\n"
 "Last-Translator: Kazue Igarashi <gatesapce.k@gmail.com>\n"
 "Language-Team: \n"
 "Language: JAPANESE\n"
@@ -151,7 +151,7 @@ msgstr "お探しのコンテンツが見つかりません。検索をお試し
 msgid "Pages:"
 msgstr "ページ:"
 
-#: content-page.php:23 content-single.php:60 content.php:61
+#: content-page.php:24 content-single.php:60 content.php:61
 msgid "Edit"
 msgstr "編集"
 
@@ -220,7 +220,7 @@ msgstr "Proudly powered by %s"
 msgid "Theme: %1$s by %2$s."
 msgstr "テーマ: %1$s by %2$s."
 
-#: functions.php:45 header.php:31
+#: functions.php:45 header.php:32
 msgid "Primary Menu"
 msgstr "メインメニュー"
 
@@ -228,7 +228,7 @@ msgstr "メインメニュー"
 msgid "Sidebar"
 msgstr "サイドバー"
 
-#: header.php:32
+#: header.php:23
 msgid "Skip to content"
 msgstr "コンテンツへスキップ"
 
