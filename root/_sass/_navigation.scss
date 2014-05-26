@@ -82,15 +82,14 @@ $main-navigation-current-a-background: transparent !default;
 	ul ul {
 		background: $main-navigation-secondary-background;
 		@include single-box-shadow( $main-navigation-secondary-shadow-color, $main-navigation-secondary-shadow-hoff, $main-navigation-secondary-shadow-voff, $main-navigation-secondary-shadow-blur, $main-navigation-secondary-shadow-spread, $main-navigation-secondary-shadow-inset );
-		display: none;
 		float: left;
 		position: absolute;
 		top: $main-navigation-secondary-top;
-		left: 0;
+		left: -999em;
 		z-index: 99999;
 
 		ul {
-			left: 100%;
+			left: -999em;
 			top: 0;
 		}
 
@@ -120,7 +119,10 @@ $main-navigation-current-a-background: transparent !default;
 	}
 
 	ul li:hover > ul {
-		display: block;
+		left: auto;
+	}
+	ul ul li:hover > ul {
+		left: 100%;
 	}
 
 	// current item
