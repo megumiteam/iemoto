@@ -77,6 +77,14 @@ module.exports = function( grunt ) {
         'Text Domain: {%= prefix %}\n' +
         'Domain Path: /languages/\n' +
         'Tags:\n' +
+        '\n' +
+        'This theme, like WordPress, is licensed under the GPL.\n' +
+        'Use it to make something cool, have fun, and share what you\'ve learned with others.\n' +
+        '\n' +
+        'Resetting and rebuilding styles have been helped along thanks to the fine work of\n' +
+        'Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html\n' +
+        'along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/\n' +
+        'and Blueprint http://www.blueprintcss.org/\n' +
         '*/\n'
       },
       combine: {
