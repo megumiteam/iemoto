@@ -259,17 +259,15 @@ input[type="reset"],
 input[type="submit"] {
 	@include fontsize($button-font-size);
 	color: $button-font-color;
-//	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
-	@include single-text-shadow($button-text-shadow-hoff, $button-text-shadow-voff, $button-text-shadow-blur, $button-text-shadow-spread, $button-text-shadow-color);
 	line-height: 1;
 	padding: $button-padding;
+	@include single-text-shadow($button-text-shadow-hoff, $button-text-shadow-voff, $button-text-shadow-blur, $button-text-shadow-spread, $button-text-shadow-color);
 	background: $button-bg-color;
 	border: {
-		color: $button-border-color;
 		style: $button-border-style;
 		width: $button-border-width;
 	}
-	border-color: $button-border-color $button-border-color darken($button-border-color, 5%) $button-border-color;
+	border-color: $button-border-color $button-border-color darken($button-border-color, 5%);
 	@include border-radius($button-border-radius);
 	@if $button-box-shadow {
 		box-shadow: $button-box-shadow;
@@ -278,14 +276,14 @@ input[type="submit"] {
 	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
 
 	&:hover {
-		border-color: $button-border-color darken($button-border-color, 5%) darken($button-border-color, 12%) darken($button-border-color, 5%);
+		border-color: $button-border-color darken($button-border-color, 5%) darken($button-border-color, 12%);
 		@if $button-box-hover-shadow {
 			box-shadow: $button-box-hover-shadow;
 		}
 	}
 
 	&:focus, &:active {
-		border-color: darken($button-border-color, 12%) darken($button-border-color, 5%) darken($button-border-color, 5%) darken($button-border-color, 5%);
+		border-color: darken($button-border-color, 12%) darken($button-border-color, 5%) darken($button-border-color, 5%);
 		@if $button-box-focus-shadow {
 			box-shadow: $button-box-focus-shadow;
 		}
@@ -344,5 +342,5 @@ textarea {
 	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
 	padding-left: $input-box-padding;
 	vertical-align: top; /* Improves readability and alignment in all browsers */
-	width: 98%;
+	width: 100%;
 }
