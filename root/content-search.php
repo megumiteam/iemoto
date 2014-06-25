@@ -1,5 +1,9 @@
 <?php
 /**
+ * The template part for displaying results in search pages.
+ *
+ * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ *
  * @package {%= title %}
  */
 ?>
@@ -17,17 +21,9 @@
 		<?php do_action( '{%= prefix %}_after_entry_header' ); ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
-		<?php do_action( '{%= prefix %}_before_entry_content' ); ?>
-		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', '{%= prefix %}' ) ); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', '{%= prefix %}' ),
-				'after'  => '</div>',
-			) );
-		?>
-		<?php do_action( '{%= prefix %}_after_entry_content' ); ?>
-	</div><!-- .entry-content -->
+	<div class="entry-summary">
+		<?php the_excerpt(); ?>
+	</div><!-- .entry-summary -->
 
 	<footer class="entry-footer">
 		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>

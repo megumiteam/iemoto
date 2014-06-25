@@ -141,17 +141,39 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: content-page.php:18 content-single.php:20 content.php:27
+#: content-page.php:18 content-single.php:20 content.php:22
 msgid "Pages:"
 msgstr ""
 
-#: content-page.php:24 content-single.php:60 content.php:61
+#: content-page.php:24 content-search.php:53 content-single.php:60
+#: content.php:55
 msgid "Edit"
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: content-single.php:29 content-single.php:32 content.php:38 content.php:48
+#: content-search.php:30 content-search.php:40 content-single.php:29
+#: content-single.php:32 content.php:32 content.php:42
 msgid ", "
+msgstr ""
+
+#: content-search.php:34 content.php:36
+msgid "Posted in %1$s"
+msgstr ""
+
+#: content-search.php:44 content.php:46
+msgid "Tagged %1$s"
+msgstr ""
+
+#: content-search.php:50 content.php:52
+msgid "Leave a comment"
+msgstr ""
+
+#: content-search.php:50 content.php:52
+msgid "1 Comment"
+msgstr ""
+
+#: content-search.php:50 content.php:52
+msgid "% Comments"
 msgstr ""
 
 #: content-single.php:37
@@ -176,28 +198,8 @@ msgid ""
 "\">permalink</a>."
 msgstr ""
 
-#: content.php:24
+#: content.php:19
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
-
-#: content.php:42
-msgid "Posted in %1$s"
-msgstr ""
-
-#: content.php:52
-msgid "Tagged %1$s"
-msgstr ""
-
-#: content.php:58
-msgid "Leave a comment"
-msgstr ""
-
-#: content.php:58
-msgid "1 Comment"
-msgstr ""
-
-#: content.php:58
-msgid "% Comments"
 msgstr ""
 
 #: footer.php:15
@@ -216,7 +218,7 @@ msgstr ""
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:76
+#: functions.php:80
 msgid "Sidebar"
 msgstr ""
 
@@ -254,10 +256,14 @@ msgctxt "Next post link"
 msgid "%title <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: inc/template-tags.php:81
-msgid ""
-"<span class=\"posted-on\">Posted on %1$s</span><span class=\"byline\"> by "
-"%2$s</span>"
+#: inc/template-tags.php:82
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr ""
+
+#: inc/template-tags.php:87
+msgctxt "post author"
+msgid "by %s"
 msgstr ""
 
 #: search.php:16
