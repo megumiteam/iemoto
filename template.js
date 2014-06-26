@@ -56,7 +56,7 @@ exports.template = function( grunt, init, done ) {
         var files = init.filesToCopy( props );
         console.log( files );
         // Actually copy and process files
-        init.copyAndProcess( files, props, {noProcess: 'screenshot.png'} );
+        init.copyAndProcess( files, props, {noProcess: ['screenshot.png', 'languages/*.mo']} );
         // Generate package.json file
         init.writePackageJSON( 'package.json', props );
 
