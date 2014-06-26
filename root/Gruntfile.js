@@ -21,7 +21,9 @@ module.exports = function( grunt ) {
         undef:   true,
         boss:  true,
         eqnull:  true,
+        devel:true,
         globals: {
+          window:true,
           exports: true,
           module:  false,
           jQuery: false,
