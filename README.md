@@ -39,6 +39,13 @@ https を使う場合は以下のとおり。
 git clone https://github.com/megumiteam/iemoto.git ~/.grunt-init/iemoto
 ```
 
+### sass (compass) について
+
+style.css の作成に Sass および Compass を利用していますので、事前にインストールしておいてください。
+
+* Sass: http://sass-lang.com/
+* Compass: http://compass-style.org/
+
 ## 使い方
 
 `wp-content/themes` ディレクトリ以下に、任意の名前のテーマ用ディレクトリを作成してください。
@@ -73,7 +80,7 @@ Please answer the following:
 [?] Do you need to make any changes to the above before continuing? (y/N)
 ```
 
-最後に、変更はありませんか？と尋ねられるので、`n` と入力するか、そのままエンターキーを押すとテーマのテンプレートが作成されます。
+最後に、変更はありませんか？と尋ねられるので、`N` と入力するか、そのままエンターキーを押すとテーマのテンプレートが作成されます。
 
 次に以下のコマンドを実行して `grunt` の実行に必要な Grunt プラグインをダウンロードしてください。
 
@@ -157,9 +164,9 @@ cp ~/.grunt-init/iemoto/defaults.json.sample ~/.grunt-init/defaults.json
 
 ## CSS や JavaScript ファイルの minify について
 
-`.js` や `.css` などのファイルを修正したら、以下のコマンドを実行して下さい。
+`.js` や `.scss` などのファイルを修正したら、以下のコマンドを実行して下さい。
 
-たったこれだけで、minifyが自動的に行われます。
+たったこれだけで、Sass(Compass) のコンパイルとminifyが自動的に行われます。
 
 ```
 grunt
@@ -167,13 +174,28 @@ grunt
 
 ## watch について
 
-grunt watch を使えば、ファイルの更新を grunt が監視し、自動的に minify 等の作業を行います。
+`grunt watch` を使えば、ファイルの更新を grunt が監視し、自動的に Sass(Compass) のコンパイル、minify の作業を行います。
 
 ```
 grunt watch
 ```
 
 watch を終了するには、キーボードで `[control]+[c]` を押して下さい。
+
+## バージョン番号について
+
+grunt (watch) 実行時に `.js`、`style.css` に自動でバージョン番号を付与します。
+
+バージョン番号を変更する場合は `package.json` ファイルの
+
+```
+"version": "0.1.0",
+```
+
+を変更してください。
+
+`functions.php` の `wp_enqueue_style()` や `wp_enqueue_script()` ではバージョン引数に `style.css` に記載されてるバージョン番号を利用します。
+
 
 ## 公式ディレクトリ等へ登録する際の注意
 
