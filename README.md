@@ -80,7 +80,7 @@ Please answer the following:
 [?] Do you need to make any changes to the above before continuing? (y/N)
 ```
 
-最後に、変更はありませんか？と尋ねられるので、`n` と入力するか、そのままエンターキーを押すとテーマのテンプレートが作成されます。
+最後に、変更はありませんか？と尋ねられるので、`N` と入力するか、そのままエンターキーを押すとテーマのテンプレートが作成されます。
 
 次に以下のコマンドを実行して `grunt` の実行に必要な Grunt プラグインをダウンロードしてください。
 
