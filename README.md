@@ -39,7 +39,7 @@ https を使う場合は以下のとおり。
 git clone https://github.com/megumiteam/iemoto.git ~/.grunt-init/iemoto
 ```
 
-### sass (compass) のについて
+### sass (compass) について
 
 style.css の作成に Sass および Compass を利用していますので、事前にインストールしておいてください。
 
