@@ -17,16 +17,16 @@ module.exports = function( grunt ) {
         latedef: true,
         newcap:  true,
         noarg:   true,
-        sub:   true,
+        sub:     true,
         undef:   true,
-        boss:  true,
+        boss:    true,
         eqnull:  true,
-        devel:true,
+        devel:   true,
         globals: {
-          window:true,
+          window:  true,
           exports: true,
           module:  false,
-          jQuery: false,
+          jQuery:  false,
           Console: false
         }
       }

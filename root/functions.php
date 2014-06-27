@@ -92,18 +92,22 @@ add_action( 'widgets_init', '{%= prefix %}_widgets_init' );
  * Enqueue scripts and styles.
  */
 function {%= prefix %}_scripts() {
+
+	${%= prefix %}_theme_data = wp_get_theme();
+	${%= prefix %}_theme_ver  = ${%= prefix %}_theme_data->get( 'Version' );
+
 	wp_enqueue_style(
 		'{%= prefix %}-style',
-		get_stylesheet_directory_uri() . '/style.css',
+		get_stylesheet_uri(),
 		array(),
-		'{%= grunt.template.today("yyyymmdd") %}'
+		${%= prefix %}_theme_ver
 	);
 
 	wp_enqueue_script(
 		'{%= prefix %}-navigation',
 		get_template_directory_uri() . '/js/navigation.js',
 		array(),
-		'{%= grunt.template.today("yyyymmdd") %}',
+		'20120206',
 		true
 	);
 
@@ -111,7 +115,7 @@ function {%= prefix %}_scripts() {
 		'{%= prefix %}-skip-link-focus-fix',
 		get_template_directory_uri() . '/js/skip-link-focus-fix.js',
 		array(),
-		'{%= grunt.template.today("yyyymmdd") %}',
+		'20130115',
 		true
 	);
 
@@ -123,7 +127,7 @@ function {%= prefix %}_scripts() {
 		'{%= prefix %}-script',
 		get_stylesheet_directory_uri() . '/js/{%= file_name %}.min.js',
 		array('jquery'),
-		'{%= grunt.template.today("yyyymmdd") %}',
+		${%= prefix %}_theme_ver,
 		true
 	);
 }
