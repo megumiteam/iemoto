@@ -184,7 +184,7 @@ watch を終了するには、キーボードで `[control]+[c]` を押して下
 
 ## バージョン番号について
 
-grunt (watch) 実行時に .`js`、`style.css` に自動でバージョン番号を付与します。
+grunt (watch) 実行時に `.js`、`style.css` に自動でバージョン番号を付与します。
 
 バージョン番号を変更する場合は `package.json` ファイルの
 
