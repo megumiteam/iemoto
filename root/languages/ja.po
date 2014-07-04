@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: {%= title %} 1.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/{%= prefix %}\n"
-"POT-Creation-Date: 2014-06-16 10:44:40+00:00\n"
+"POT-Creation-Date: 2014-07-02 03:17:03+00:00\n"
 "Last-Translator: Kazue Igarashi <gatesapce.k@gmail.com>\n"
 "Language-Team: \n"
 "Language: JAPANESE\n"
@@ -95,7 +95,7 @@ msgstr "オーディオ"
 msgid "Chats"
 msgstr "チャット"
 
-#: archive.php:66 sidebar.php:16
+#: archive.php:66
 msgid "Archives"
 msgstr "アーカイブ"
 
@@ -256,13 +256,13 @@ msgstr "投稿ナビゲーション"
 
 #: inc/template-tags.php:55
 msgctxt "Previous post link"
-msgid "<span class=\"meta-nav\">&larr;</span> %title"
-msgstr "<span class=\"meta-nav\">&larr;</span> %title"
+msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
+msgstr "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
 
 #: inc/template-tags.php:56
 msgctxt "Next post link"
-msgid "%title <span class=\"meta-nav\">&rarr;</span>"
-msgstr "%title <span class=\"meta-nav\">&rarr;</span>"
+msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
+msgstr "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
 
 #: inc/template-tags.php:82
 msgctxt "post date"
@@ -277,10 +277,6 @@ msgstr "投稿者: %s"
 #: search.php:16
 msgid "Search Results for: %s"
 msgstr "検索結果: %s"
-
-#: sidebar.php:23
-msgid "Meta"
-msgstr "メタ"
 
 #. Theme Name of the plugin/theme
 msgid "_s"
