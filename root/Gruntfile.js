@@ -13,21 +13,19 @@ module.exports = function( grunt ) {
       options: {
         curly:   true,
         eqeqeq:  true,
+        eqnull:  true,
+        undef:   true,
         immed:   true,
         latedef: true,
         newcap:  true,
         noarg:   true,
         sub:     true,
-        undef:   true,
         boss:    true,
-        eqnull:  true,
+        browser: true,
         devel:   true,
         globals: {
-          window:  true,
-          exports: true,
           module:  false,
-          jQuery:  false,
-          Console: false
+          jQuery:  true
         }
       }
     },
