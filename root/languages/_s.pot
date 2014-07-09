@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: {%= title %} 1.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/{%= prefix %}\n"
-"POT-Creation-Date: 2014-05-19 03:32:59+00:00\n"
+"POT-Creation-Date: 2014-07-02 03:17:03+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -93,7 +93,7 @@ msgstr ""
 msgid "Chats"
 msgstr ""
 
-#: archive.php:66 sidebar.php:16
+#: archive.php:66
 msgid "Archives"
 msgstr ""
 
@@ -248,12 +248,12 @@ msgstr ""
 
 #: inc/template-tags.php:55
 msgctxt "Previous post link"
-msgid "<span class=\"meta-nav\">&larr;</span> %title"
+msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
 msgstr ""
 
 #: inc/template-tags.php:56
 msgctxt "Next post link"
-msgid "%title <span class=\"meta-nav\">&rarr;</span>"
+msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
 #: inc/template-tags.php:82
@@ -268,10 +268,6 @@ msgstr ""
 
 #: search.php:16
 msgid "Search Results for: %s"
-msgstr ""
-
-#: sidebar.php:23
-msgid "Meta"
 msgstr ""
 
 #. Theme Name of the plugin/theme
