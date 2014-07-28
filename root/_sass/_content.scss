@@ -1,5 +1,4 @@
 @charset "UTF-8";
-$alignment-margin: 1.5em !default;
 /*--------------------------------------------------------------
 10.0 Content
 --------------------------------------------------------------*/
@@ -9,7 +8,7 @@ $alignment-margin: 1.5em !default;
 .sticky {
 }
 .hentry {
-	margin: 0 0 $alignment-margin;
+	margin: $hentry-margin;
 }
 .byline,
 .updated {
@@ -22,11 +21,15 @@ $alignment-margin: 1.5em !default;
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: $alignment-margin 0 0;
+	margin: $entry-content-margin;
 }
 .page-links {
 	clear: both;
-	margin: 0 0 $alignment-margin;
+	margin: $page-links-margin;
+}
+.entry-footer {
+	clear: both;
+	margin: $entry-footer-margin;
 }
 
 /*--------------------------------------------------------------
@@ -40,6 +43,15 @@ $alignment-margin: 1.5em !default;
 /*--------------------------------------------------------------
 10.3 Comments
 --------------------------------------------------------------*/
+.comments-area,
+.comment-respond {
+	margin: $comments-area-margin;
+}
+.comments-title,
+.comment-reply-title {
+	margin: $comments-title-margin;
+}
+
 .comment-content a {
 	word-wrap: break-word;
 }

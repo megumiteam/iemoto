@@ -2,16 +2,17 @@
 /*--------------------------------------------------------------
 7.0 Alignments
 --------------------------------------------------------------*/
-$alignment-margin: 1.5em !default;
 .alignleft {
 	display: inline;
 	float: left;
 	margin-right: $alignment-margin;
+	margin-bottom: $alignment-margin;
 }
 .alignright {
 	display: inline;
 	float: right;
 	margin-left: $alignment-margin;
+	margin-bottom: $alignment-margin;
 }
 .aligncenter {
 	clear: both;

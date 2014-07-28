@@ -3,7 +3,7 @@
 9.0 Widgets
 --------------------------------------------------------------*/
 .widget {
-	margin: 0 0 1.5em;
+	margin: $widget-margin;
 }
 
 /* Make sure select elements fit in widgets */
@@ -14,4 +14,9 @@
 /* Search widget */
 .widget_search .search-submit {
 	display: none;
+}
+
+.widget-title,
+.widgettitle {
+	margin: $widget-title-margin;
 }
