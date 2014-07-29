@@ -34,7 +34,6 @@ html {
 	box-sizing:         border-box;
 }
 /* Fallback for when there is no custom background color defined. */
-$body-background: #fff !default;
 body {
 	background: $body-background;
 }

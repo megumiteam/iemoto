@@ -5,11 +5,6 @@
 /*--------------------------------------------------------------
 5.1 Links
 --------------------------------------------------------------*/
-$anchor-text-decoration: false !default;
-$anchor-font-color: royalblue !default;
-$anchor-font-color-visited: purple !default;
-$anchor-font-color-hover: midnightblue !default;
-$anchor-text-hover-decoration: false !default;
 a {
 	@include link-colors( $anchor-font-color, $anchor-font-color-hover, $anchor-font-color-hover, $anchor-font-color-visited, $anchor-font-color-hover);
 	@if $anchor-text-decoration {
@@ -23,33 +18,8 @@ a {
 }
 
 /*--------------------------------------------------------------
-5.2 Menus
+5.2 Main Navigation
 --------------------------------------------------------------*/
-$main-navigation-a-padding: 0 !default;
-$main-navigation-a-background: transparent !default;
-$main-navigation-a-color: $anchor-font-color !default;
-$main-navigation-a-hover-link: false !default;
-
-$main-navigation-secondary-top: 1.5em !default;
-$main-navigation-secondary-width: 200px !default;
-$main-navigation-secondary-background: transparent !default;
-$main-navigation-secondary-shadow-color: rgba(0, 0, 0, 0.2) !default;
-$main-navigation-secondary-shadow-hoff: 0px !default;
-$main-navigation-secondary-shadow-voff: 3px !default;
-$main-navigation-secondary-shadow-blur: 3px !default;
-$main-navigation-secondary-shadow-spread: false !default;
-$main-navigation-secondary-shadow-inset: false !default;
-$main-navigation-secondary-a-color: $anchor-font-color !default;
-$main-navigation-secondary-a-background: transparent !default;
-
-$main-navigation-hover-a-color: $anchor-font-color !default;
-$main-navigation-hover-a-background: transparent !default;
-$main-navigation-secondary-hover-a-color: $anchor-font-color !default;
-$main-navigation-secondary-hover-a-background: transparent !default;
-
-$main-navigation-current-a-color: $anchor-font-color !default;
-$main-navigation-current-a-background: transparent !default;
-
 .main-navigation {
 	clear: both;
 	display: block;
@@ -73,15 +43,14 @@ $main-navigation-current-a-background: transparent !default;
 		text-decoration: none;
 		padding: $main-navigation-a-padding;
 		background: $main-navigation-a-background;
-		@if $main-navigation-a-hover-link {
-			@include hover-link;
-		}
 	}
 
 	// secondary
 	ul ul {
 		background: $main-navigation-secondary-background;
-		@include single-box-shadow( $main-navigation-secondary-shadow-color, $main-navigation-secondary-shadow-hoff, $main-navigation-secondary-shadow-voff, $main-navigation-secondary-shadow-blur, $main-navigation-secondary-shadow-spread, $main-navigation-secondary-shadow-inset );
+		@if $main-navigation-secondary-shadow {
+			@include single-box-shadow( $main-navigation-secondary-shadow-color, $main-navigation-secondary-shadow-hoff, $main-navigation-secondary-shadow-voff, $main-navigation-secondary-shadow-blur, $main-navigation-secondary-shadow-spread, $main-navigation-secondary-shadow-inset );
+		}
 		float: left;
 		position: absolute;
 		top: $main-navigation-secondary-top;
@@ -97,6 +66,7 @@ $main-navigation-current-a-background: transparent !default;
 			width: $main-navigation-secondary-width;
 			color: $main-navigation-secondary-a-color;
 			background: $main-navigation-secondary-a-background;
+			padding: $main-navigation-secondary-a-padding;
 		}
 
 		li {
@@ -126,10 +96,15 @@ $main-navigation-current-a-background: transparent !default;
 	}
 
 	// current item
-	.current_page_item a,
-	.current-menu-item a {
+	.current_page_item > a,
+	.current-menu-item > a {
 		color: $main-navigation-current-a-color;
 		background: $main-navigation-current-a-background;
+	}
+	ul ul .current_page_item > a,
+	ul ul .current-menu-item > a {
+		color: $main-navigation-secondary-current-a-color;
+		background: $main-navigation-secondary-current-a-background;
 	}
 
 }
@@ -139,7 +114,6 @@ $main-navigation-current-a-background: transparent !default;
 	display: none;
 }
 
-$brake-point: 600px !default;
 @media screen and (max-width: $brake-point) {
 
 	.menu-toggle,
@@ -152,22 +126,35 @@ $brake-point: 600px !default;
 	}
 
 }
+
+/*--------------------------------------------------------------
+5.3 Navigation of comment, paging, post
+--------------------------------------------------------------*/
 .site-main .comment-navigation,
 .site-main .paging-navigation,
 .site-main .post-navigation {
-	margin: 0 0 1.5em;
 	overflow: hidden;
+	margin-top: $page-navigation-margin-top;
+	margin-bottom: $page-navigation-margin-bottom;
+	@if $page-navigation-border-top {
+		border-top: $page-navigation-border-top;
+		padding-top: $page-navigation-padding-top;
+	}
+	@if $page-navigation-border-bottom {
+		border-bottom: $page-navigation-border-bottom;
+		padding-bottom: $page-navigation-padding-bottom;
+	}
 }
 .comment-navigation .nav-previous,
 .paging-navigation .nav-previous,
 .post-navigation .nav-previous {
 	float: left;
-	width: 50%;
+	width: $page-navigation-a-width;
 }
 .comment-navigation .nav-next,
 .paging-navigation .nav-next,
 .post-navigation .nav-next {
 	float: right;
 	text-align: right;
-	width: 50%;
+	width: $page-navigation-a-width;
 }

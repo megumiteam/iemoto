@@ -1,7 +1,4 @@
 @charset "UTF-8";
-$wp-caption-text-size: false !default;
-$wp-caption-text-align: center !default;
-$wp-caption-text-margin: 0.8075em !default;
 /*--------------------------------------------------------------
 12.0 Media
 --------------------------------------------------------------*/
@@ -24,7 +21,7 @@ object {
 12.1 Captions
 --------------------------------------------------------------*/
 .wp-caption {
-	margin-bottom: $alignment-margin;
+	margin-bottom: $wp-caption-margin-bottom;
 	max-width: 100%;
 }
 .wp-caption img[class*="wp-image-"] {
@@ -38,14 +35,14 @@ object {
 	text-align: $wp-caption-text-align;
 }
 .wp-caption .wp-caption-text {
-	margin: $wp-caption-text-margin 0;
+	margin: $wp-caption-text-margin;
 }
 
 /*--------------------------------------------------------------
 12.2 Galleries
 --------------------------------------------------------------*/
 .gallery {
-	margin-bottom: $alignment-margin;
+	margin-bottom: $gallery-margin-bottom;
 }
 .gallery-item {
 	display: inline-block;

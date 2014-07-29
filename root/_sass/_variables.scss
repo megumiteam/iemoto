@@ -3,48 +3,48 @@
 // Theme Variables
 //
 
-//$base-font-size: 16px;
-//$body-line-height: 1.5;
-
-@function nounit($value) {
-	@if (type-of($value) == number) {
-		$_divisor: ($value * 0) + 1;
-		@return $value / $_divisor;
-	} @else {
-		@warn "#{$value} is not a number.";
-		@return $value;
-	}
-}
-
-@function emCalc($px, $base: $base-font-size) {
-    @return ( nounit($px) / nounit($base)) * 1em;
-}
-
-@mixin fontsize($size: $base-font-size) {
-  font-size: nounit($size) + px;
-  font-size: ( nounit($size) / 10) + rem;
-}
+// $base-font-size: 16px;
+// $body-line-height: 1.5;
 
 
 // 
 // Various global styles
 // 
 
+// body
+
 // $body-background: #ffffff;
 // $body-font-color: #404040;
 // $body-font-family: sans-serif;
+// $border-color: #ccc;
 
+// anchors
 
-// Layout
-// $site-max-width: 1000px;
-// $sidebar-width: 25%;
+// $anchor-font-color: royalblue;
+// $anchor-font-color-visited: purple;
+// $anchor-font-color-hover: midnightblue;
+// $anchor-text-decoration: none;
+// $anchor-text-hover-decoration: underline;
+
+// $default-border-radius: 3px;
+
+// 
+// Various global Layout
+// 
+
 // $brake-point: 600px;
+// $site-max-width: 1000px;
+// $sidebar-posion: right;
+// $sidebar-width: 300px;
+// $section-margin: 50px;
+// $entry-margin: 25px;
+
 
 //
 // Typography Variables
 //
 
-// Headings
+// Headings styling
 
 // $header-margin-bottom: 1.5em;
 // $header-font-weight: bold;
@@ -55,33 +55,13 @@
 // $h5-font-size: emCalc(18);
 // $h6-font-size: 1em;
 
+// Paragraphs styling
 
-// Style the <hr> element
+// $paragraph-margin: 1.5em;
 
-// $hr-border-width: 1px;
-// $hr-border-style: solid;
-// $hr-border-color: #ccc;
-// $hr-margin: 1.5em;
+// Blockquotes styling
 
-
-// Style paragraphs
-
-// $paragraph-margin-bottom: 1.5em;
-
-
-// Style lists
-
-// $list-side-margin: 3em;
-// $list-nested-margin: 1.5em;
-// $definition-list-header-weight: bold;
-// $definition-list-header-margin-bottom: .3em;
-// $definition-list-margin-bottom: 1.5em;
-// $definition-list-margin-left: 3em;
-
-
-// Style blockquotes
-
-// $blockquote-margin: 1.5em;
+// $blockquote-margin: $paragraph-margin;
 // $blockquote-font-color: lighten($body-font-color, 30%);
 // $blockquote-background: #eee;
 // $blockquote-border: 1px solid #ddd;
@@ -90,129 +70,215 @@
 // $blockquote-cite-font-color: lighten($header-font-color, 20%);
 // $blockquote-cite-link-color: $blockquote-cite-font-color;
 
+// Address styling
 
-// Style <code> <pre> tags
+// $address-margin-bottom: $paragraph-margin;
 
-// $pre-background-color: #eee;
+// Pre and Code styling
+
+// $pre-background: #eee;
 // $pre-font-family: "Courier 10 Pitch", Courier, monospace;
 // $pre-font-size: 15px;
 // $pre-line-height: 1.6;
 // $pre-margin-bottom: 1.6em;
 // $pre-padding:  1.6em;
-
 // $code-font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 
-
-// Acronym styles
+// Acronym styling
 
 // $acronym-underline: 1px dotted #666;
 
+// Mark styling
 
-// Mark styles
-// $mark-background-color: #fff9c0;
+// $mark-background: #fff9c0;
 
-
-// A general <small> styling
+// Small tag styling
 
 // $small-font-size: 75%;
 
-
-// A general <big> styling
+// Big tag styling
 
 // $big-font-size: 125%;
 
 
+//
+// Elements Variables
+//
+
+// Style the <hr> element
+
+// $hr-border-width: 1px;
+// $hr-border-style: solid;
+// $hr-border-color: $border-color;
+// $hr-margin: $paragraph-margin;
+
+// Style list element
+
+// $list-margin-bottom: $paragraph-margin;
+// $list-margin-left: 3em;
+// $list-nested-margin-left: 1.5em;
+
+// $definition-margin-bottom: $paragraph-margin;
+// $definition-header-weight: inherit;
+// $definition-header-margin-bottom: 0;
+// $definition-list-margin-bottom: 0;
+// $definition-list-margin-left: 3em;
 
 // Table Variables
 
-// $table-margin-bottom: 1.5em;
-// $table-bg: #fff;
+// $table-margin-bottom: $paragraph-margin;
+// $table-border-collapse: false;
+// $table-background: #fff;
 // $table-row-padding: 0.5em;
 
-// $table-border: solid 1px #ccc;
+// $table-border: solid 1px $border-color;
 
-// $table-head-bg: #eee;
+// $table-head-background: #eee;
 // $table-head-font-color: #222;
 // $table-head-font-weight: bold;
 
 
+//
 // Form Variables
+//
 
 // $input-font-size: 100%;
 
 // $button-font-size: 12px;
 // $button-font-color: rgba(0, 0, 0, .8);
+
+// $button-text-shadow: false;
 // $button-text-shadow-hoff: false;
 // $button-text-shadow-voff: 1px;
 // $button-text-shadow-blur: false;
 // $button-text-shadow-spread: false;
 // $button-text-shadow-color: rgba(255, 255, 255, 0.8);
-// $button-padding: 0.6em 1em 0.4em;
-// $button-bg-color: #e6e6e6;
-// $button-border-color: #ccc;
+
+// $button-padding: 0.5em 1em;
+// $button-background: #e6e6e6;
+// $button-border-color: $border-color;
 // $button-border-style: solid;
 // $button-border-width: 1px;
-// $button-border-radius: 3px;
-$button-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-$button-box-hover-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
-$button-box-focus-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+// $button-border-radius: $default-border-radius;
+// $button-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
 
-// $input-font-color: #666;
+// $button-hover-background: lighten($button-background, 5%);
+// $button-hover-border-color: lighten($border-color, 5%);
+// $button-hover-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
+
+// $button-focus-background: darken($button-background, 5%);
+// $button-focus-border-color: darken($border-color, 5%);
+// $button-focus-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+
+// $select-font-color: $body-font-color;
+
+// $input-font-color: $body-font-color;
+// $input-background: #fff;
 // $input-focus-font-color: #111;
-// $input-bg-color: #fff;
-// $input-focus-bg-color: darken(#fff, 2%);
+// $input-focus-background: darken(#fff, 2%);
 // $input-border-color: #ccc;
 // $input-border-style: solid;
 // $input-border-width: 1px;
-// $input-border-radius: 3px;
+// $input-border-radius: $default-border-radius;
 // $input-box-padding: 3px;
 
-// Style anchors
 
-// $anchor-font-color: royalblue;
-// $anchor-font-color-visited: purple;
-// $anchor-font-color-hover: midnightblue;
-// $anchor-text-decoration: none;
-// $anchor-text-hover-decoration: underline;
+//
+// Main Navigation Variables
+//
 
+// primary
 
-// Alignment
-
-// $alignment-margin: 1.5em;
-
-
-// main-navigation
 // $main-navigation-a-padding: 0;
-// $main-navigation-a-background: transparent;
 // $main-navigation-a-color: $anchor-font-color;
-// $main-navigation-a-hover-link: false;
+// $main-navigation-a-background: transparent;
 
 // secondary
+
 // $main-navigation-secondary-top: 1.5em;
 // $main-navigation-secondary-width: 200px;
-// $main-navigation-secondary-background: transparent;
+// $main-navigation-secondary-background: white;
+// $main-navigation-secondary-shadow: false;
 // $main-navigation-secondary-shadow-color: rgba(0, 0, 0, 0.2);
 // $main-navigation-secondary-shadow-hoff: 0px;
 // $main-navigation-secondary-shadow-voff: 3px;
 // $main-navigation-secondary-shadow-blur: 3px;
 // $main-navigation-secondary-shadow-spread: false;
 // $main-navigation-secondary-shadow-inset: false;
+
+// $main-navigation-secondary-a-padding: 0;
 // $main-navigation-secondary-a-color: $anchor-font-color;
 // $main-navigation-secondary-a-background: transparent;
 
 // hover
-// $main-navigation-hover-a-color: $anchor-font-color;
+
+// $main-navigation-hover-a-color: $anchor-font-color-hover;
 // $main-navigation-hover-a-background: transparent;
-// $main-navigation-secondary-hover-a-color: $anchor-font-color;
+// $main-navigation-secondary-hover-a-color: $anchor-font-color-hover;
 // $main-navigation-secondary-hover-a-background: transparent;
 
 // current item
-// $main-navigation-current-a-color: $anchor-font-color;
+
+// $main-navigation-current-a-color: $anchor-font-color-hover;
 // $main-navigation-current-a-background: transparent;
+// $main-navigation-secondary-current-a-color: $anchor-font-color-hover;
+// $main-navigation-secondary-current-a-background: transparent;
 
 
-// wp-caption
+//
+// Navigation of comment, paging, post Variables
+//
 
+// $page-navigation-margin-top: $entry-margin;
+// $page-navigation-margin-bottom: $entry-margin;
+// $page-navigation-border-top: solid 1px $border-color;
+// $page-navigation-border-bottom: solid 1px $border-color;
+// $page-navigation-padding-top: $section-margin;
+// $page-navigation-padding-bottom: $section-margin;
+
+// $page-navigation-a-width: 50%;
+
+
+//
+// Alignment Variables
+//
+
+// $alignment-margin: $paragraph-margin;
+
+
+//
+// Widgets Variables
+//
+
+// $widget-margin: 0 0 $entry-margin;
+// $widget-title-margin: 0 0 0.5em;
+
+
+//
+// Content Variables
+//
+
+// $hentry-margin: 0 0 $entry-margin;
+// $entry-content-margin: 10px 0 0;
+// $page-links-margin: 0 0 10px;
+// $entry-footer-margin: 10px 0 0;
+
+// $comments-area-margin: $entry-margin 0 0;
+// $comments-title-margin: 0 0 $entry-margin;
+
+
+//
+// Captions Variables
+//
+
+// $wp-caption-margin-bottom: $alignment-margin;
 // $wp-caption-text-size: 1em;
 // $wp-caption-text-align: center;
-// $wp-caption-text-margin: 0.8075em;
+// $wp-caption-text-margin: 0.8075em 0;
+
+
+//
+// Galleries Variables
+//
+
+// $gallery-margin-bottom: $alignment-margin;

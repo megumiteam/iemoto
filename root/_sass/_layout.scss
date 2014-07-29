@@ -1,27 +1,23 @@
 @charset "UTF-8";
-/* =Layout
------------------------------------------------ */
-
-$site-max-width: 1000px !default;
-$sidebar-width: 25% !default;
-
-/*
+/*--------------------------------------------------------------
+13.0 Layout
+--------------------------------------------------------------*/
 .site {
-	margin: 0 auto;
-	max-width: $site-max-width;
+	@include inner;
 }
-*/
 
-/*
- * Layout: Content-Sidebar
- */
+/*--------------------------------------------------------------
+13.1 Media Queries (for PC)
+--------------------------------------------------------------*/
+@media screen and (min-width: $brake-point) {
 
-/*
+@if $sidebar-posion == right {
+// Layout: Content-Sidebar
 .content-area {
 	float: left;
 	margin: {
 		top: 0;
-		right: -$sidebar-width;
+		right: -($sidebar-width + $section-margin);
 		bottom: 0;
 		left: 0;
 	}
@@ -30,34 +26,26 @@ $sidebar-width: 25% !default;
 .site-main {
 	margin: {
 		top: 0;
-		right: $sidebar-width;
+		right: $sidebar-width + $section-margin;
 		bottom: 0;
 		left: 0;
 	}
 }
 .site-content .widget-area {
 	float: right;
-	overflow: hidden;
 	width: $sidebar-width;
 }
-.site-footer {
-	clear: both;
-	width: 100%;
-}
-*/
+} // Layout: Content-Sidebar
 
-/*
- * Layout: Sidebar-Content
- */
-
-/*
+// Layout: Sidebar-Content
+@if $sidebar-posion == left {
 .content-area {
 	float: right;
 	margin: {
 		top: 0;
 		right: 0;
 		bottom: 0;
-		left: -$sidebar-width;
+		left: -($sidebar-width + $section-margin);
 	}
 	width: 100%;
 }
@@ -66,16 +54,19 @@ $sidebar-width: 25% !default;
 		top: 0;
 		right: 0;
 		bottom: 0;
-		left: $sidebar-width;
+		left: $sidebar-width + $section-margin;
 	}
 }
 .site-content .widget-area {
 	float: left;
-	overflow: hidden;
 	width: $sidebar-width;
 }
+} // Layout: Sidebar-Content
+
+// Don't change!
 .site-footer {
 	clear: both;
 	width: 100%;
 }
-*/
+
+}//media

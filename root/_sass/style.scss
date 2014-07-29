@@ -8,7 +8,8 @@
 4.0 - Forms
 5.0 - Navigation
 	5.1 - Links
-	5.2 - Menus
+	5.2 - Main Navigation
+	5.3 - Navigation of comment, paging, post
 6.0 - Accessibility
 7.0 - Alignments
 8.0 - Clearings
@@ -21,12 +22,17 @@
 12.0 - Media
 	12.1 - Captions
 	12.2 - Galleries
+13.0 - Layout
+	13.1 - Media Queries (for PC)
 --------------------------------------------------------------*/
 
 @import "compass";
+@import "common/functions";
 @import "variables";
 @import "common/reset";
 @import "common/typography";
+@import "common/elements";
+@import "common/forms";
 @import "navigation";
 @import "common/accessibility";
 @import "common/alignments";
@@ -35,5 +41,4 @@
 @import "content";
 @import "common/infinitescroll";
 @import "media";
-
-// @import "layout";
+@import "layout";
