@@ -11,7 +11,7 @@
 	margin: $hentry-margin;
 }
 .byline,
-.updated {
+.updated:not(.published) {
 	display: none;
 }
 .single .byline,
@@ -35,9 +35,11 @@
 /*--------------------------------------------------------------
 10.2 Asides
 --------------------------------------------------------------*/
-.blog .format-aside .entry-title,
-.archive .format-aside .entry-title {
-	display: none;
+.format-aside .entry-title {
+	.blog &,
+	.archive & {
+		display: none;
+	}
 }
 
 /*--------------------------------------------------------------
