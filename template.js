@@ -32,11 +32,11 @@ exports.template = function( grunt, init, done ) {
         props.version = '0.1.0';
         props.devDependencies = {
             'grunt': '~0.4.1',
-            'grunt-contrib-jshint': '~0.1.1',
-            'grunt-contrib-uglify': '~0.1.1',
-            'grunt-contrib-compass': '~0.7.1',
-            'grunt-contrib-cssmin': '*',
-            "grunt-contrib-watch": "*"
+            'grunt-contrib-jshint': '~0.10.0',
+            'grunt-contrib-uglify': '~0.5.0',
+            'grunt-contrib-compass': '~0.7.2',
+            'grunt-contrib-cssmin': '~0.10.0',
+            "grunt-contrib-watch": '~0.6.0'
         };
         // Sanitize names where we need to for PHP/JS
         props.name = props.title.replace( /\s+/g, '-' ).toLowerCase();
