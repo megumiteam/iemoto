@@ -49,27 +49,34 @@ nav,
 section {
 	display: block;
 }
+
 ol, ul {
 	list-style: none;
 }
+
 table { /* tables still need 'cellspacing="0"' in the markup */
 	border-collapse: separate;
 	border-spacing: 0;
 }
+
 caption, th, td {
 	font-weight: normal;
 	text-align: left;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: "";
 }
+
 blockquote, q {
 	quotes: "" "";
 }
+
 a:focus {
 	outline: thin dotted;
 }
+
 a:hover,
 a:active {
 	outline: 0;
