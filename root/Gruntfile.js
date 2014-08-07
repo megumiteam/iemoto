@@ -75,7 +75,6 @@ module.exports = function( grunt ) {
         'License: GNU General Public License v2 or later\n' +
         'License URI: http://www.gnu.org/licenses/gpl-2.0.html\n' +
         'Text Domain: {%= prefix %}\n' +
-        'Domain Path: /languages/\n' +
         'Tags:\n' +
         '\n' +
         'This theme, like WordPress, is licensed under the GPL.\n' +
