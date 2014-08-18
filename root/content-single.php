@@ -42,7 +42,6 @@
 				} else {
 					$meta_text = __( 'Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', '{%= prefix %}' );
 				}
-
 			} else {
 				// But this blog has loads of categories so we should probably display them here
 				if ( '' != $tag_list ) {
@@ -50,7 +49,6 @@
 				} else {
 					$meta_text = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', '{%= prefix %}' );
 				}
-
 			} // end check for categories on this blog
 
 			printf(
