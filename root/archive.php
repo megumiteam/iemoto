@@ -39,10 +39,10 @@ get_header(); ?>
 							_e( 'Asides', '{%= prefix %}' );
 
 						elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) :
-							_e( 'Galleries', '{%= prefix %}');
+							_e( 'Galleries', '{%= prefix %}' );
 
 						elseif ( is_tax( 'post_format', 'post-format-image' ) ) :
-							_e( 'Images', '{%= prefix %}');
+							_e( 'Images', '{%= prefix %}' );
 
 						elseif ( is_tax( 'post_format', 'post-format-video' ) ) :
 							_e( 'Videos', '{%= prefix %}' );
