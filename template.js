@@ -81,7 +81,7 @@ exports.template = function( grunt, init, done ) {
 
         fs.renameSync(
             path.resolve('languages')+'/_s.pot',
-            path.resolve('languages')+'/'+props.file_name+'.pot'
+            path.resolve('languages')+'/'+props.prefix+'.pot'
         );
 
         // Done!
