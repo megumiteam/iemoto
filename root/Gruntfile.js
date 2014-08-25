@@ -11,22 +11,7 @@ module.exports = function( grunt ) {
         'js/{%= file_name %}.js'
       ],
       options: {
-        curly:   true,
-        eqeqeq:  true,
-        eqnull:  true,
-        undef:   true,
-        immed:   true,
-        latedef: true,
-        newcap:  true,
-        noarg:   true,
-        sub:     true,
-        boss:    true,
-        browser: true,
-        devel:   true,
-        globals: {
-          module:  false,
-          jQuery:  true
-        }
+        jshintrc: true
       }
     },
     uglify: {
