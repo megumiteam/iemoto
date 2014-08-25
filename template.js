@@ -27,17 +27,36 @@ exports.template = function( grunt, init, done ) {
         init.prompt( 'homepage', 'https://www.digitalcube.jp/' ),
         init.prompt( 'author_name', 'DigitalCube Co.,Ltd' ),
         init.prompt( 'author_url', 'https://www.digitalcube.jp/' ),
+        {
+            name: 'gulp',
+            message: 'Use gulp?',
+            default: 'y/N'
+        }
     ], function( err, props ) {
         props.keywords = [];
         props.version = '0.1.0';
-        props.devDependencies = {
-            'grunt': '~0.4.1',
-            'grunt-contrib-jshint': '~0.10.0',
-            'grunt-contrib-uglify': '~0.5.0',
-            'grunt-contrib-compass': '~0.9.1',
-            'grunt-contrib-cssmin': '~0.10.0',
-            "grunt-contrib-watch": '~0.6.0'
-        };
+        // Use gulp or grunt
+        if ( props.gulp === 'y' ) {
+            props.devDependencies = {
+                "gulp": "^3.8.7",
+                "gulp-compass": "^1.3.1",
+                "gulp-concat": "^2.3.4",
+                "gulp-header": "^1.0.5",
+                "gulp-jshint": "^1.8.4",
+                "gulp-load-plugins": "^0.5.3",
+                "gulp-minify-css": "^0.3.7",
+                "gulp-uglify": "^0.3.1"
+            };
+        } else {
+            props.devDependencies = {
+                'grunt': '~0.4.1',
+                'grunt-contrib-jshint': '~0.10.0',
+                'grunt-contrib-uglify': '~0.5.0',
+                'grunt-contrib-compass': '~0.9.1',
+                'grunt-contrib-cssmin': '~0.10.0',
+                "grunt-contrib-watch": '~0.6.0'
+            };
+        }
         // Sanitize names where we need to for PHP/JS
         props.name = props.title.replace( /\s+/g, '-' ).toLowerCase();
         // Development prefix (i.e. to prefix PHP function names, variables)
@@ -83,6 +102,20 @@ exports.template = function( grunt, init, done ) {
             path.resolve('languages')+'/_s.pot',
             path.resolve('languages')+'/'+props.prefix+'.pot'
         );
+
+        if ( props.gulp === 'y' ) {
+          fs.stat(path.resolve('Gruntfile.js'), function(err, stats){
+            if (!err) {
+              fs.unlinkSync('Gruntfile.js')
+            }
+          });
+        } else {
+          fs.stat(path.resolve('gulpfile.js'), function(err, stats){
+            if (!err) {
+              fs.unlinkSync('gulpfile.js')
+            }
+          });
+        }
 
         // Done!
         done();

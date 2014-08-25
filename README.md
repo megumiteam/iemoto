@@ -39,12 +39,19 @@ https を使う場合は以下のとおり。
 git clone https://github.com/megumiteam/iemoto.git ~/.grunt-init/iemoto
 ```
 
-### sass (compass) について
+### sass (Ccompass) について
 
 style.css の作成に Sass および Compass を利用していますので、事前にインストールしておいてください。
 
 * Sass: http://sass-lang.com/
 * Compass: http://compass-style.org/
+
+### gulp について
+
+js や sass (Compass) のコンパイルなどに [gulp.js](http://gulpjs.com/) を利用することも出来ます。 
+この場合、事前に `$ npm install --global gulp` でインストールしておいてください。
+
+* gulp.js: http://gulpjs.com/
 
 ## 使い方
 
@@ -77,18 +84,21 @@ Please answer the following:
 [?] Project homepage (https://digitalcube.jp/) 
 [?] Author name (Digitalcube Co,.Ltd) 
 [?] Author url (https://digitalcube.jp/) 
+[?] Use gulp? (y/N) 
 [?] Do you need to make any changes to the above before continuing? (y/N)
 ```
 
 最後に、変更はありませんか？と尋ねられるので、`N` と入力するか、そのままエンターキーを押すとテーマのテンプレートが作成されます。
 
-次に以下のコマンドを実行して `grunt` の実行に必要な Grunt プラグインをダウンロードしてください。
+`[?] Use gulp? (y/N) ` で `y` にすると gulp の実行に必要なファイルが作成されます（デフォルトは `N` です）。
+
+次に以下のコマンドを実行して `grunt` （あるいは `gulp` ）の実行に必要な Grunt プラグインをダウンロードしてください。
 
 ```
 npm install
 ```
 
-ここで、インストールされる Grunt プラグインは `package.json` 内で定義されています。
+ここで、インストールされる Grunt (gulp) プラグインは `package.json` 内で定義されています。
 
 以上が完了すると、ディレクトリ内に以下のようにテーマ用のファイルが生成されていることを確認できると思います。
 
@@ -117,7 +127,7 @@ npm install
 ├── content.php
 ├── footer.php
 ├── functions.php
-├── Gruntfile.js
+├── Gruntfile.js (あるいは gulpfile.js )
 ├── header.php
 ├── inc
 │   ├── custom-header.php
@@ -162,29 +172,39 @@ npm install
 cp ~/.grunt-init/iemoto/defaults.json.sample ~/.grunt-init/defaults.json
 ```
 
-## CSS や JavaScript ファイルの minify について
+## grunt での CSS や JavaScript ファイルの minify について
 
-`.js` や `.scss` などのファイルを修正したら、以下のコマンドを実行して下さい。
-
-たったこれだけで、Sass(Compass) のコンパイルとminifyが自動的に行われます。
+`.js` や `.scss` などのファイルを修正したら、以下のコマンドを実行して下さい。 
 
 ```
 grunt
 ```
 
+## gulp での CSS や JavaScript ファイルの minify について
+
+`.js` や `.scss` などのファイルを修正したら、以下のコマンドを実行して下さい。 
+
+```
+gulp
+```
+
+JavaScript のみの場合は `gulp js` 、Sass(Compass) のみの場合は `gulp compass` も利用できます。
+
 ## watch について
 
-`grunt watch` を使えば、ファイルの更新を grunt が監視し、自動的に Sass(Compass) のコンパイル、minify の作業を行います。
+`grunt watch` あるいは `gulp watch` を使えば、ファイルの更新を grunt(gulp) が監視し、自動的に Sass(Compass) のコンパイル、minify の作業を行います。
 
 ```
 grunt watch
+あるいは
+gulp watch
 ```
 
 watch を終了するには、キーボードで `[control]+[c]` を押して下さい。
 
 ## バージョン番号について
 
-grunt (watch) 実行時に `.js`、`style.css` に自動でバージョン番号を付与します。
+実行時に `.js`、`style.css` に自動でバージョン番号を付与します。
 
 バージョン番号を変更する場合は `package.json` ファイルの
 
