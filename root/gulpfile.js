@@ -20,9 +20,9 @@ gulp.task('js', function() {
   return gulp.src('js/{%= file_name %}.js')
     .pipe($.jshint())
     .pipe($.jshint.reporter('default'))
+    .pipe($.concatUtil('{%= file_name %}.min.js'))
     .pipe($.uglify({mangle: ['jQuery']}))
-    .pipe($.concat('{%= file_name %}.min.js'))
-    .pipe($.header(jsbanner, { pkg : pkg }))
+    .pipe($.concatUtil.header(jsbanner, { pkg : pkg }))
     .pipe(gulp.dest('js'))
 });
 
@@ -47,7 +47,7 @@ gulp.task('compass', function() {
 // watch
 gulp.task('watch', function () {
   gulp.watch('js/{%= file_name %}.js', ['js']);
-  gulp.watch(['_sass/*.scss', '_sass/*/*.scss'], ['compass']);
+  gulp.watch('_sass/{,*/}*.scss', ['compass']);
 });
 
 
