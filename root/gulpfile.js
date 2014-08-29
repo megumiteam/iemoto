@@ -31,10 +31,11 @@ gulp.task('js', function() {
 gulp.task('compass', function() {
   gulp.src('_sass/*.scss')
     .pipe($.compass({
-      css: 'css',
       sass: '_sass',
+      css: 'css',
       image: 'images',
       style: 'expanded',
+      relative: true,
       sourcemap: true
     }))
     .pipe($.minifyCss({keepSpecialComments: 1, target: './'}))
