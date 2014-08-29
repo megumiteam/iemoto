@@ -14,36 +14,15 @@ var jsbanner = ['/**',
   ' * Released under the GNU General Public License v2 or later',
   ' */',
   ''].join('\n');
-var cssbanner = ['/*',
-  'Theme Name: <%= pkg.title %>',
-  'Theme URI: <%= pkg.homepage %>',
-  'Author: <%= pkg.author.name %>',
-  'Author URI: <%= pkg.author.url %>',
-  'Description: <%= pkg.description %>',
-  'Version: <%= pkg.version %>',
-  'License: GNU General Public License v2 or later',
-  'License URI: http://www.gnu.org/licenses/gpl-2.0.html',
-  'Text Domain: {%= prefix %}',
-  'Tags:',
-  '',
-  'This theme, like WordPress, is licensed under the GPL.',
-  'Use it to make something cool, have fun, and share what you\'ve learned with others.',
-  '',
-  'Resetting and rebuilding styles have been helped along thanks to the fine work of',
-  'Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html',
-  'along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/',
-  'and Blueprint http://www.blueprintcss.org/',
-  '*/'].join('\n');
-
 
 // javascript
 gulp.task('js', function() {
   return gulp.src('js/{%= file_name %}.js')
     .pipe($.jshint())
     .pipe($.jshint.reporter('default'))
+    .pipe($.concatUtil('{%= file_name %}.min.js'))
     .pipe($.uglify({mangle: ['jQuery']}))
-    .pipe($.concat('{%= file_name %}.min.js'))
-    .pipe($.header(jsbanner, { pkg : pkg }))
+    .pipe($.concatUtil.header(jsbanner, { pkg : pkg }))
     .pipe(gulp.dest('js'))
 });
 
@@ -52,14 +31,15 @@ gulp.task('js', function() {
 gulp.task('compass', function() {
   gulp.src('_sass/*.scss')
     .pipe($.compass({
-      css: 'css',
       sass: '_sass',
+      css: 'css',
       image: 'images',
       style: 'expanded',
+      relative: true,
       sourcemap: true
     }))
-    .pipe($.minifyCss())
-    .pipe($.header(cssbanner, { pkg : pkg }))
+    .pipe($.minifyCss({keepSpecialComments: 1, target: './'}))
+    .pipe($.replace(/<%= pkg.version %>/g, pkg.version))
     .pipe(gulp.dest('./'))
 });
 
@@ -67,7 +47,7 @@ gulp.task('compass', function() {
 // watch
 gulp.task('watch', function () {
   gulp.watch('js/{%= file_name %}.js', ['js']);
-  gulp.watch(['_sass/*.scss', '_sass/*/*.scss'], ['compass']);
+  gulp.watch('_sass/{,*/}*.scss', ['compass']);
 });
 
 

@@ -1,0 +1,29 @@
+@charset "UTF-8";
+.sticky {
+}
+.hentry {
+	margin: $hentry-margin;
+}
+.byline,
+.updated:not(.published) {
+	display: none;
+}
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+.page-content,
+.entry-content,
+.entry-summary,
+.mceContentBody {
+	margin: $entry-content-margin;
+}
+.page-links {
+	clear: both;
+	margin: $page-links-margin;
+}
+.entry-footer {
+	clear: both;
+	margin: $entry-footer-margin;
+}
+

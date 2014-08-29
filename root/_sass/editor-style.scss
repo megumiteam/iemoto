@@ -1,0 +1,100 @@
+@charset "UTF-8";
+/*!
+Theme Name: {%= title %}
+Description: Used to style the TinyMCE editor.
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 - Reset
+2.0 - Typography
+3.0 - Elements
+4.0 - Links
+5.0 - Alignments
+6.0 Content
+7.0 - Media
+	7.1 - Captions
+	7.2 - Galleries
+--------------------------------------------------------------*/
+
+@import "compass";
+@import "functions/functions";
+@import "variables";
+
+/*--------------------------------------------------------------
+1.0 - Reset
+--------------------------------------------------------------*/
+@import "common/reset";
+
+/*--------------------------------------------------------------
+2.0 Typography
+--------------------------------------------------------------*/
+@import "common/typography";
+
+/*--------------------------------------------------------------
+3.0 Elements
+--------------------------------------------------------------*/
+@import "common/elements";
+
+/*--------------------------------------------------------------
+4.0 Links
+--------------------------------------------------------------*/
+@import "navigation/link";
+
+/*--------------------------------------------------------------
+5.0 Alignments
+--------------------------------------------------------------*/
+@import "common/alignments";
+
+/*--------------------------------------------------------------
+6.0 Content
+--------------------------------------------------------------*/
+@import "content/content";
+body#tinymce.wp-editor { 
+	margin: 10px; 
+}
+
+/*--------------------------------------------------------------
+7.0 Media
+--------------------------------------------------------------*/
+@import "media/media";
+/*--------------------------------------------------------------
+7.1 Captions
+--------------------------------------------------------------*/
+@import "media/captions";
+/*--------------------------------------------------------------
+7.2 Galleries
+--------------------------------------------------------------*/
+@import "media/galleries";
+/*--------------------------------------------------------------
+7.3 Audio/Video
+--------------------------------------------------------------*/
+.mejs-mediaelement,
+.mejs-container .mejs-controls {
+	background: #000;
+}
+
+.mejs-controls .mejs-time-rail .mejs-time-loaded,
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+	background: #fff;
+}
+
+.mejs-controls .mejs-time-rail .mejs-time-current {
+	background: #24890d;
+}
+
+.mejs-controls .mejs-time-rail .mejs-time-total,
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total {
+	background: rgba(255, 255, 255, .33);
+}
+
+.mejs-controls .mejs-time-rail span,
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total,
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+	border-radius: 0;
+}
+
+.mejs-overlay-loading {
+	background: transparent;
+}
+

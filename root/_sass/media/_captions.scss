@@ -1,0 +1,18 @@
+@charset "UTF-8";
+.wp-caption {
+	margin-bottom: $wp-caption-margin-bottom;
+	max-width: 100%;
+}
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin: 1.2% auto 0;
+}
+.wp-caption-text {
+	@if $wp-caption-text-size {
+		font-size: $wp-caption-text-size;
+	}
+	text-align: $wp-caption-text-align;
+}
+.wp-caption .wp-caption-text {
+	margin: $wp-caption-text-margin;
+}

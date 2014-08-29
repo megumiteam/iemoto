@@ -4,10 +4,11 @@ module.exports = function( grunt ) {
 
   // Project configuration
   grunt.initConfig( {
-    pkg:  grunt.file.readJSON( 'package.json' ),
+    pkg: grunt.file.readJSON( 'package.json' ),
+
+    // javascript
     jshint: {
       all: [
-        'Gruntfile.js',
         'js/{%= file_name %}.js'
       ],
       options: {
@@ -37,48 +38,47 @@ module.exports = function( grunt ) {
       }
     },
 
+    // compass(sass)
     compass: {
       dist: {
         options: {
-          sassDir: '_sass',
-          cssDir: 'css',
+          sassDir:     '_sass',
+          cssDir:      'css',
           outputStyle: 'expanded',
-          imagesDir: 'images',
-          javascriptsDir: 'js'
+          imagesDir:   'images',
+          relativeAssets: true,
+          sourcemap:   true
         }
       }
     },
     cssmin: {
       options: {
-      banner: '/*\n' +
-        'Theme Name: <%= pkg.title %>\n' +
-        'Theme URI: <%= pkg.homepage %>\n' +
-        'Author: <%= pkg.author.name %>\n' +
-        'Author URI: <%= pkg.author.url %>\n' +
-        'Description: <%= pkg.description %>\n' +
-        'Version: <%= pkg.version %>\n' +
-        'License: GNU General Public License v2 or later\n' +
-        'License URI: http://www.gnu.org/licenses/gpl-2.0.html\n' +
-        'Text Domain: {%= prefix %}\n' +
-        'Tags:\n' +
-        '\n' +
-        'This theme, like WordPress, is licensed under the GPL.\n' +
-        'Use it to make something cool, have fun, and share what you\'ve learned with others.\n' +
-        '\n' +
-        'Resetting and rebuilding styles have been helped along thanks to the fine work of\n' +
-        'Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html\n' +
-        'along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/\n' +
-        'and Blueprint http://www.blueprintcss.org/\n' +
-        '*/\n'
+        keepSpecialComments: 1,
+        target: './'
       },
       combine: {
         files: {
           'style.css': [
             'css/style.css'
+          ],
+          'editor-style.css': [
+            'css/editor-style.css'
           ]
         }
       }
     },
+    replace: {
+      dist: {
+        src: ['style.css'],
+        overwrite: true,
+        replacements: [{
+          from: /<%= pkg.version %>/g,
+          to: '<%= pkg.version %>'
+         }]
+      }
+    },
+
+    // watch
     watch: {
       scripts: {
         files: [
@@ -86,22 +86,19 @@ module.exports = function( grunt ) {
           '_sass/*/*.scss',
           'js/{%= file_name %}.js'
         ],
-        tasks: ['jshint', 'uglify', 'compass', 'cssmin']
+        tasks: ['jshint', 'uglify', 'compass', 'cssmin', 'replace']
       }
     }
+
   } );
-  //
+
   // Load other tasks
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-compass');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-contrib-watch');
+  require('load-grunt-tasks')(grunt);
 
   // Default task.
   grunt.registerTask(
     'default',
-    ['jshint', 'uglify', 'compass', 'cssmin']
+    ['jshint', 'uglify', 'compass', 'cssmin', 'replace']
   );
 
   grunt.util.linefeed = '\n';

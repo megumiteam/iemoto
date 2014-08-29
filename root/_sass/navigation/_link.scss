@@ -1,0 +1,12 @@
+@charset "UTF-8";
+a {
+	@include link-colors( $anchor-font-color, $anchor-font-color-hover, $anchor-font-color-hover, $anchor-font-color-visited, $anchor-font-color-hover);
+	@if $anchor-text-decoration {
+		text-decoration: $anchor-text-decoration;
+	}
+	@if $anchor-text-hover-decoration {
+		&:hover, &:focus, &:active {
+			text-decoration: $anchor-text-hover-decoration;
+		}
+	}
+}

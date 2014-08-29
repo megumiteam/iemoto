@@ -30,6 +30,9 @@ function {%= prefix %}_setup() {
 	 */
 	load_theme_textdomain( '{%= prefix %}', get_template_directory() . '/languages' );
 
+	// This theme styles the visual editor to resemble the theme style.
+	add_editor_style();
+
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
 
@@ -96,9 +99,15 @@ function {%= prefix %}_scripts() {
 	${%= prefix %}_theme_data = wp_get_theme();
 	${%= prefix %}_theme_ver  = ${%= prefix %}_theme_data->get( 'Version' );
 
+	${%= prefix %}_stylesheet = get_stylesheet_uri();
+
+	if ( defined( 'WP_DEBUG' ) && ( WP_DEBUG == true ) ) { // WP_DEBUG = ture
+		${%= prefix %}_stylesheet = get_template_directory_uri() . '/css/style.css';
+	}
+
 	wp_enqueue_style(
 		'{%= prefix %}-style',
-		get_stylesheet_uri(),
+		${%= prefix %}_stylesheet,
 		array(),
 		${%= prefix %}_theme_ver
 	);
