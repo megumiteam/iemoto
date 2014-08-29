@@ -1,0 +1,29 @@
+@charset "UTF-8";
+.site-main .comment-navigation,
+.site-main .paging-navigation,
+.site-main .post-navigation {
+	overflow: hidden;
+	margin-top: $page-navigation-margin-top;
+	margin-bottom: $page-navigation-margin-bottom;
+	@if $page-navigation-border-top {
+		border-top: $page-navigation-border-top;
+		padding-top: $page-navigation-padding-top;
+	}
+	@if $page-navigation-border-bottom {
+		border-bottom: $page-navigation-border-bottom;
+		padding-bottom: $page-navigation-padding-bottom;
+	}
+}
+.comment-navigation .nav-previous,
+.paging-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: left;
+	width: $page-navigation-a-width;
+}
+.comment-navigation .nav-next,
+.paging-navigation .nav-next,
+.post-navigation .nav-next {
+	float: right;
+	text-align: right;
+	width: $page-navigation-a-width;
+}

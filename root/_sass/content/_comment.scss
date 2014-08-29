@@ -1,0 +1,16 @@
+@charset "UTF-8";
+.comments-area,
+.comment-respond {
+	margin: $comments-area-margin;
+}
+.comments-title,
+.comment-reply-title {
+	margin: $comments-title-margin;
+}
+
+.comment-content a {
+	word-wrap: break-word;
+}
+.bypostauthor {
+}
+

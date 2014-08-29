@@ -45,6 +45,7 @@ exports.template = function( grunt, init, done ) {
                 "gulp-jshint": "^1.8.4",
                 "gulp-load-plugins": "^0.5.3",
                 "gulp-minify-css": "^0.3.7",
+                "gulp-replace": "^0.4.0",
                 "gulp-uglify": "^0.3.1"
             };
         } else {
