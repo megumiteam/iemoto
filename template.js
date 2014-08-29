@@ -40,8 +40,7 @@ exports.template = function( grunt, init, done ) {
             props.devDependencies = {
                 "gulp": "^3.8.7",
                 "gulp-compass": "^1.3.1",
-                "gulp-concat": "^2.3.4",
-                "gulp-header": "^1.0.5",
+                "gulp-concat-util": "^0.4.0",
                 "gulp-jshint": "^1.8.4",
                 "gulp-load-plugins": "^0.5.3",
                 "gulp-minify-css": "^0.3.7",
