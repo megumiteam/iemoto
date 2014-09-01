@@ -41,7 +41,7 @@ git clone https://github.com/megumiteam/iemoto.git ~/.grunt-init/iemoto
 
 ### sass (Ccompass) について
 
-style.css の作成に Sass および Compass を利用していますので、事前にインストールしておいてください。
+style.css および editor-style.css の作成に Sass および Compass を利用していますので、事前にインストールしておいてください。
 
 * Sass: http://sass-lang.com/
 * Compass: http://compass-style.org/
@@ -104,20 +104,40 @@ npm install
 
 ```
 ├── _sass
-│   ├── _content.scss
-│   ├── _layout.scss
-│   ├── _media.scss
-│   ├── _navigation.scss
 │   ├── _variables.scss
-│   ├── _widgets.scss
+│   ├── editor-style.scss
+│   ├── style.scss
 │   ├── common
 │   │   ├── _accessibility.scss
 │   │   ├── _alignments.scss
 │   │   ├── _clearings.scss
+│   │   ├── _elements.scss
+│   │   ├── _forms.scss
 │   │   ├── _infinitescroll.scss
 │   │   ├── _reset.scss
 │   │   └── _typography.scss
-│   └── style.scss
+│   ├── content
+│   │   ├── _aside.scss
+│   │   ├── _comment.scss
+│   │   └── _content.scss
+│   ├── functions
+│   │   └── _functions.scss
+│   ├── header_footer
+│   │   ├── _footer.scss
+│   │   └── _header.scss
+│   ├── layout
+│   │   ├── _layout.scss
+│   │   └── _media-queries.scss
+│   ├── media
+│   │   ├── _captions.scss
+│   │   ├── _galleries.scss
+│   │   └── _media.scss
+│   ├── navigation
+│   │   ├── _link.scss
+│   │   ├── _main-navigation.scss
+│   │   └── _paging.scss
+│   └── widgets
+│        └── _widgets.scss
 ├── 404.php
 ├── archive.php
 ├── comments.php
@@ -216,6 +236,13 @@ watch を終了するには、キーボードで `[control]+[c]` を押して下
 
 `functions.php` の `wp_enqueue_style()` や `wp_enqueue_script()` ではバージョン引数に `style.css` に記載されてるバージョン番号を利用します。
 
+### Debug モードと Sourcemap
+
+WordPress をデバッグモードにしていると、テーマは `css/style.css` を読み込みます。
+
+`grunt` または `gulp` で Sass(Compass) をコンパイルすると `css/style.css` に対して Sourcemap を作成しますので css のデバッグに便利です。
+
+Sourcemap の作成には Sass 3.3.0 以上が必要です。
 
 ## 公式ディレクトリ等へ登録する際の注意
 
