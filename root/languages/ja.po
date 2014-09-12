@@ -1,10 +1,10 @@
-# Copyright (C) {%= grunt.template.today('yyyy') %} {%= author_name %}
+# Copyright (C) 2014 Automattic
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: {%= title %} 1.0\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tags/{%= prefix %}\n"
-"POT-Creation-Date: 2014-07-02 03:17:03+00:00\n"
+"Project-Id-Version: _s 1.0-wpcom\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
+"POT-Creation-Date: 2014-09-12 11:00:45+00:00\n"
 "Last-Translator: Kazue Igarashi <gatesapce.k@gmail.com>\n"
 "Language-Team: \n"
 "Language: JAPANESE\n"
@@ -147,68 +147,18 @@ msgid ""
 "searching can help."
 msgstr "お探しのコンテンツが見つかりません。検索をお試しください。"
 
-#: content-page.php:18 content-single.php:20 content.php:22
+#: content-page.php:18 content-single.php:20 content.php:29
 msgid "Pages:"
 msgstr "ページ:"
 
-#: content-page.php:24 content-search.php:53 content-single.php:60
-#: content.php:55
+#: content-page.php:25 inc/template-tags.php:122
 msgid "Edit"
 msgstr "編集"
 
-#. translators: used between list items, there is a space after the comma
-#: content-search.php:30 content-search.php:40 content-single.php:29
-#: content-single.php:32 content.php:32 content.php:42
-msgid ", "
-msgstr ", "
-
-#: content-search.php:34 content.php:36
-msgid "Posted in %1$s"
-msgstr "カテゴリー: %1$s"
-
-#: content-search.php:44 content.php:46
-msgid "Tagged %1$s"
-msgstr "タグ: %1$s"
-
-#: content-search.php:50 content.php:52
-msgid "Leave a comment"
-msgstr "コメントをどうぞ"
-
-#: content-search.php:50 content.php:52
-msgid "1 Comment"
-msgstr "1件のコメント"
-
-#: content-search.php:50 content.php:52
-msgid "% Comments"
-msgstr "%件のコメント"
-
-#: content-single.php:37
-msgid ""
-"This entry was tagged %2$s. Bookmark the <a href=\"%3$s\" rel=\"bookmark"
-"\">permalink</a>."
-msgstr "タグ: %2$s. <a href=\"%3$s\" rel=\"bookmark\">パーマリンク</a>."
-
-#: content-single.php:39
-msgid "Bookmark the <a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
-msgstr "<a href=\"%3$s\" rel=\"bookmark\">パーマリンク</a>"
-
-#: content-single.php:45
-msgid ""
-"This entry was posted in %1$s and tagged %2$s. Bookmark the <a href=\"%3$s\" "
-"rel=\"bookmark\">permalink</a>."
-msgstr ""
-"カテゴリー: %1$s. タグ: %2$s. <a href=\"%3$s\" rel=\"bookmark\">パーマリンク"
-"</a>."
-
-#: content-single.php:47
-msgid ""
-"This entry was posted in %1$s. Bookmark the <a href=\"%3$s\" rel=\"bookmark"
-"\">permalink</a>."
-msgstr "カテゴリー: %1$s. <a href=\"%3$s\" rel=\"bookmark\">パーマリンク</a>."
-
-#: content.php:19
-msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
-msgstr "続きを読む <span class=\"meta-nav\">&rarr;</span>"
+#. translators: %s: Name of current post
+#: content.php:22
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr "%sの続きを読む <span class=\"meta-nav\">&rarr;</span>"
 
 #: footer.php:15
 msgid "http://wordpress.org/"
@@ -273,6 +223,31 @@ msgstr "投稿日時: %s"
 msgctxt "post author"
 msgid "by %s"
 msgstr "投稿者: %s"
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:104 inc/template-tags.php:110
+msgid ", "
+msgstr ", "
+
+#: inc/template-tags.php:106
+msgid "Posted in %1$s"
+msgstr "カテゴリー: %1$s"
+
+#: inc/template-tags.php:112
+msgid "Tagged %1$s"
+msgstr "タグ: %1$s"
+
+#: inc/template-tags.php:118
+msgid "Leave a comment"
+msgstr "コメントをどうぞ"
+
+#: inc/template-tags.php:118
+msgid "1 Comment"
+msgstr "1件のコメント"
+
+#: inc/template-tags.php:118
+msgid "% Comments"
+msgstr "%件のコメント"
 
 #: search.php:16
 msgid "Search Results for: %s"

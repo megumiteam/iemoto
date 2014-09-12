@@ -24,6 +24,7 @@
 		?>
 		<?php do_action( '{%= prefix %}_after_entry_content' ); ?>
 	</div><!-- .entry-content -->
+
 	<footer class="entry-footer">
 		<?php edit_post_link( __( 'Edit', '_s' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-footer -->
