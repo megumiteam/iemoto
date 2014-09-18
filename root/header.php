@@ -21,7 +21,7 @@
 <body <?php body_class(); ?>>
 <?php do_action( '{%= prefix %}_before_body' ); ?>
 <div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', '_s' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', '{%= prefix %}' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
 
