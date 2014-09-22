@@ -256,4 +256,6 @@ Feedbacks are very much welcome!
 * [miya0001](https://github.com/miya0001)
 * [gatespace](https://github.com/gatespace)
 * [8bitodyssey](https://github.com/8bitodyssey)
+* [ShinichiNishikawa](https://github.com/ShinichiNishikawa)
+* [tekapo](https://github.com/tekapo)
 
