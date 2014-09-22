@@ -89,7 +89,7 @@ Please answer the following:
 [?] Do you need to make any changes to the above before continuing? (y/N)
 ```
 
-In the end of this procedure, you will be asked if there's any changes. Type `N` or enter key to create the templates.
+At the end of this procedure, you will be asked if there are any changes. Type `N` or enter key to create the templates.
 
 When asked `[?] Use gulp? (y/N) `, type `y` to create files you need for gulp. It's `N` by default.
 
@@ -185,7 +185,7 @@ Create you own theme now.
 
 You can set default values to the `grunt-init` prompt.
 
-It will be more usefull if name and URL.
+It will be more useful if there is a name and URL.
 
 To set default values, put defaults.json and edit it.
 
