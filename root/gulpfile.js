@@ -29,9 +29,9 @@ gulp.task('js', function() {
 
 // compass(sass)
 gulp.task('compass', function() {
-  gulp.src('_sass/*.scss')
+  gulp.src('sass/*.scss')
     .pipe($.compass({
-      sass: '_sass',
+      sass: 'sass',
       css: 'css',
       image: 'images',
       style: 'expanded',
@@ -47,7 +47,7 @@ gulp.task('compass', function() {
 // watch
 gulp.task('watch', function () {
   gulp.watch('js/{%= file_name %}.js', ['js']);
-  gulp.watch('_sass/{,*/}*.scss', ['compass']);
+  gulp.watch('sass/{,*/}*.scss', ['compass']);
 });
 
 

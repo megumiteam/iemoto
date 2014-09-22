@@ -42,7 +42,7 @@ module.exports = function( grunt ) {
     compass: {
       dist: {
         options: {
-          sassDir:     '_sass',
+          sassDir:     'sass',
           cssDir:      'css',
           outputStyle: 'expanded',
           imagesDir:   'images',
