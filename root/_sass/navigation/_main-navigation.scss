@@ -76,7 +76,8 @@
 
 	// current item
 	.current_page_item > a,
-	.current-menu-item > a {
+	.current-menu-item > a,
+	.current_page_ancestor > a {
 		color: $main-navigation-current-a-color;
 		background: $main-navigation-current-a-background;
 	}
