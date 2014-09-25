@@ -1,5 +1,7 @@
 # Iemoto
 
+* [English](/README.md)
+
 これは、WordPressスターターテーマ [_s](https://github.com/automattic/_s) をベースにしたテーマ用の [grunt-init](http://gruntjs.com/project-scaffolding) テンプレートです。
 
 Iemoto は [_s](https://github.com/automattic/_s) の全ての修正と機能を取り入れています。
