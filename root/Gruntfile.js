@@ -15,61 +15,36 @@ module.exports = function( grunt ) {
         jshintrc: true
       }
     },
-    uglify: {
-      all: {
-        files: {
-          'js/{%= file_name %}.min.js': [
-            'js/{%= file_name %}.js'
-          ]
-        },
-        options: {
-          banner: '/**\n' +
-            ' * <%= pkg.title %> - v<%= pkg.version %>\n' +
-            ' *\n' +
-            ' * <%= pkg.homepage %>\n' +
-            ' *\n' +
-            ' * Copyright <%= grunt.template.today("yyyy") %>, <%= pkg.author.name %> (<%= pkg.author.url %>)\n' +
-            ' * Released under the GNU General Public License v2 or later\n' +
-            ' */\n',
-          mangle: {
-            except: ['jQuery']
-          }
-        }
-      }
-    },
 
     // compass(sass)
     compass: {
+      dev: {
+        options: {
+          sassDir:        'sass',
+          cssDir:         'css',
+          imagesDir:      'images',
+          outputStyle:    'expanded',
+          relativeAssets: true,
+          noLineComments: true,
+          sourcemap:      true
+        }
+      },
       dist: {
         options: {
-          sassDir:     'sass',
-          cssDir:      'css',
-          outputStyle: 'expanded',
-          imagesDir:   'images',
+          sassDir:        'sass',
+          cssDir:         './',
+          imagesDir:      'images',
+          outputStyle:    'expanded',
           relativeAssets: true,
-          sourcemap:   true
-        }
-      }
-    },
-    cssmin: {
-      options: {
-        keepSpecialComments: 1,
-        target: './'
-      },
-      combine: {
-        files: {
-          'style.css': [
-            'css/style.css'
-          ],
-          'editor-style.css': [
-            'css/editor-style.css'
-          ]
+          noLineComments: true,
+          sourcemap:      false,
+          force:          true
         }
       }
     },
     replace: {
       dist: {
-        src: ['style.css'],
+        src: ['css/style.css', 'style.css'],
         overwrite: true,
         replacements: [{
           from: /<%= pkg.version %>/g,
@@ -82,11 +57,11 @@ module.exports = function( grunt ) {
     watch: {
       scripts: {
         files: [
-          '_sass/*.scss',
-          '_sass/*/*.scss',
+          'sass/*.scss',
+          'sass/*/*.scss',
           'js/{%= file_name %}.js'
         ],
-        tasks: ['jshint', 'uglify', 'compass', 'cssmin', 'replace']
+        tasks: ['jshint', 'compass', 'replace']
       }
     }
 
@@ -98,7 +73,7 @@ module.exports = function( grunt ) {
   // Default task.
   grunt.registerTask(
     'default',
-    ['jshint', 'uglify', 'compass', 'cssmin', 'replace']
+    ['jshint', 'compass', 'replace']
   );
 
   grunt.util.linefeed = '\n';

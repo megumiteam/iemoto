@@ -134,7 +134,7 @@ function {%= prefix %}_scripts() {
 
 	wp_enqueue_script(
 		'{%= prefix %}-script',
-		get_stylesheet_directory_uri() . '/js/{%= file_name %}.min.js',
+		get_stylesheet_directory_uri() . '/js/{%= file_name %}.js',
 		array('jquery'),
 		${%= prefix %}_theme_ver,
 		true
