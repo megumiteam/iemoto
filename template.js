@@ -36,20 +36,18 @@ exports.template = function( grunt, init, done ) {
         props.keywords = [];
         props.version = '0.1.0';
         // Use gulp or grunt
-        if ( props.gulp === 'y' ) {
+        if ( props.gulp == 'y' ) {
             props.devDependencies = {
                 "gulp": "^3.8.7",
                 "gulp-compass": "^1.3.1",
                 "gulp-jshint": "^1.8.4",
                 "gulp-load-plugins": "^0.5.3",
-                "gulp-minify-css": "^0.3.7",
                 "gulp-replace": "^0.4.0"
             };
         } else {
             props.devDependencies = {
                 "grunt": "^0.4.5",
                 "grunt-contrib-compass": "^0.9.1",
-                "grunt-contrib-cssmin": "^0.10.0",
                 "grunt-contrib-jshint": "^0.10.0",
                 "grunt-contrib-watch": "^0.6.1",
                 "grunt-text-replace": "^0.3.12",
