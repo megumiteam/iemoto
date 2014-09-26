@@ -40,12 +40,10 @@ exports.template = function( grunt, init, done ) {
             props.devDependencies = {
                 "gulp": "^3.8.7",
                 "gulp-compass": "^1.3.1",
-                "gulp-concat-util": "^0.4.0",
                 "gulp-jshint": "^1.8.4",
                 "gulp-load-plugins": "^0.5.3",
                 "gulp-minify-css": "^0.3.7",
-                "gulp-replace": "^0.4.0",
-                "gulp-uglify": "^0.3.1"
+                "gulp-replace": "^0.4.0"
             };
         } else {
             props.devDependencies = {
@@ -53,7 +51,6 @@ exports.template = function( grunt, init, done ) {
                 "grunt-contrib-compass": "^0.9.1",
                 "grunt-contrib-cssmin": "^0.10.0",
                 "grunt-contrib-jshint": "^0.10.0",
-                "grunt-contrib-uglify": "^0.5.1",
                 "grunt-contrib-watch": "^0.6.1",
                 "grunt-text-replace": "^0.3.12",
                 "load-grunt-tasks": "^0.6.0"
@@ -95,9 +92,9 @@ exports.template = function( grunt, init, done ) {
             }
         });
 
-        fs.writeFileSync(
-            path.resolve('js')+'/'+props.file_name+'.js',
-            '(function($){})(jQuery);'
+        fs.renameSync(
+            path.resolve('js')+'/iemoto.js',
+            path.resolve('js')+'/'+props.file_name+'.js'
         );
 
         fs.renameSync(
@@ -105,7 +102,7 @@ exports.template = function( grunt, init, done ) {
             path.resolve('languages')+'/'+props.prefix+'.pot'
         );
 
-        if ( props.gulp === 'y' ) {
+        if ( props.gulp == 'y' ) {
           fs.stat(path.resolve('Gruntfile.js'), function(err, stats){
             if (!err) {
               fs.unlinkSync('Gruntfile.js')

@@ -4,7 +4,7 @@ Theme URI: {%= homepage %}
 Author: {%= author_name %}
 Author URI: {%= author_url %}
 Description: {%= description %}
-Version: 0.1.0
+Version: {%= version %}
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: {%= prefix %}

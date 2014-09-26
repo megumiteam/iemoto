@@ -15,28 +15,6 @@ module.exports = function( grunt ) {
         jshintrc: true
       }
     },
-    uglify: {
-      all: {
-        files: {
-          'js/{%= file_name %}.min.js': [
-            'js/{%= file_name %}.js'
-          ]
-        },
-        options: {
-          banner: '/**\n' +
-            ' * <%= pkg.title %> - v<%= pkg.version %>\n' +
-            ' *\n' +
-            ' * <%= pkg.homepage %>\n' +
-            ' *\n' +
-            ' * Copyright <%= grunt.template.today("yyyy") %>, <%= pkg.author.name %> (<%= pkg.author.url %>)\n' +
-            ' * Released under the GNU General Public License v2 or later\n' +
-            ' */\n',
-          mangle: {
-            except: ['jQuery']
-          }
-        }
-      }
-    },
 
     // compass(sass)
     compass: {
@@ -86,7 +64,7 @@ module.exports = function( grunt ) {
           '_sass/*/*.scss',
           'js/{%= file_name %}.js'
         ],
-        tasks: ['jshint', 'uglify', 'compass', 'cssmin', 'replace']
+        tasks: ['jshint', 'compass', 'cssmin', 'replace']
       }
     }
 
@@ -98,7 +76,7 @@ module.exports = function( grunt ) {
   // Default task.
   grunt.registerTask(
     'default',
-    ['jshint', 'uglify', 'compass', 'cssmin', 'replace']
+    ['jshint', 'compass', 'cssmin', 'replace']
   );
 
   grunt.util.linefeed = '\n';
