@@ -1,36 +1,38 @@
 # Iemoto
 
-This is a WordPress Starter Theme based on [_s](https://github.com/automattic/_s) and integrated with [grunt](http://gruntjs.com/project-scaffolding).
+* [English](/README.md)
 
-Iemoto follows all the fixes and feature upgrades of [_s](https://github.com/automattic/_s)
+これは、WordPressスターターテーマ [_s](https://github.com/automattic/_s) をベースにしたテーマ用の [grunt-init](http://gruntjs.com/project-scaffolding) テンプレートです。
 
-Automate theme development process with it!
+Iemoto は [_s](https://github.com/automattic/_s) の全ての修正と機能を取り入れています。
 
-## How to install
+Iemoto は WordPress テーマを開発する上で必要な様々なプロセスを自動化することができます。
 
-### install grunt-init
+## インストール
 
-If you've never used any `grunt-init` templates follow below to install `grunt-init`.
+### grunt-init をインストール
+
+まずはじめに `grunt-init` をインストールしてください。
 
 ```
 sudo npm install -g grunt-init
 ```
 
-Next, create `~/.grunt-init` directory.
+次に、`~/.grunt-init` ディレクトリを作成してください。
 
 ```
 mkdir ~/.grunt-init
 ```
 
-### Install Iemoto
+### Iemoto をインストール
 
-Get this templates via git.
+次にこのテンプレートを git から取得して下さい。
 
 ```
 git clone git@github.com:megumiteam/iemoto.git ~/.grunt-init/iemoto
 ```
 
-Or if you prefer https, try this.
+https を使う場合は以下のとおり。
 
 ```
 git clone https://github.com/megumiteam/iemoto.git ~/.grunt-init/iemoto
@@ -38,15 +40,14 @@ git clone https://github.com/megumiteam/iemoto.git ~/.grunt-init/iemoto
 
 ### Sass(Compass)
 
-Iemoto utilizes Sass and Compass to create style.css and editor-style.css.
-Get them first.
+style.css および editor-style.css の作成に Sass および Compass を利用していますので、事前にインストールしておいてください。
 
 * Sass: http://sass-lang.com/
 * Compass: http://compass-style.org/
 
 ### gulp
 
-You can also use [gulp.js](http://gulpjs.com/) for js/sass compiling if installed.
+js や sass (Compass) のコンパイルなどに [gulp.js](http://gulpjs.com/) を利用することも出来ます。 
 
 ```
 $ npm install --global gulp
@@ -54,21 +55,21 @@ $ npm install --global gulp
 
 * gulp.js: http://gulpjs.com/
 
-## Usage
+## 使い方
 
-Create your theme directory in `wp-content/themes`.
+`wp-content/themes` ディレクトリ以下に、任意の名前のテーマ用ディレクトリを作成してください。
 
 ```
 mkdir wp-content/themes/my-theme
 ```
 
-Cd to your theme directory run `grunt-init iemoto` to create theme files.
+ディレクトリを作成後そのディレクトリに移動し、次に以下のコマンドを実行して、テーマのベースとなる各種のファイルを作ります。
 
 ```
 grunt-init iemoto
 ```
 
-By commanding above, you will be asked for some inputs such as Theme Name, Description, license and so on.
+このコマンドを実行すると、テーマ名やDescription、ライセンスなど、いくつかの情報の入力を求められます。
 
 ```
 $ grunt-init iemoto
@@ -89,19 +90,19 @@ Please answer the following:
 [?] Do you need to make any changes to the above before continuing? (y/N)
 ```
 
-At the end of this procedure, you will be asked if there are any changes. Type `N` or enter key to create the templates.
+最後に、変更はありませんか？と尋ねられるので、`N` と入力するか、そのままエンターキーを押すとテーマのテンプレートが作成されます。
 
-When asked `[?] Use gulp? (y/N) `, type `y` to create files you need for gulp. It's `N` by default.
+`[?] Use gulp? (y/N) ` で `y` にすると gulp の実行に必要なファイルが作成されます（デフォルトは `N` です）。
 
-Then, command `npm install` to download files needed for `grunt` (or `gulp`) command.
+次に `npm install` コマンドを実行して `grunt` （あるいは `gulp` ）の実行に必要な Grunt プラグインをダウンロードしてください。
 
 ```
 npm install
 ```
 
-Files to be installed are defined in `package.json` file.
+ここで、インストールされる Grunt (gulp) プラグインは `package.json` 内で定義されています。
 
-Once you are done to this point, you can see all the files created as below.
+以上が完了すると、ディレクトリ内に以下のようにテーマ用のファイルが生成されていることを確認できると思います。
 
 ```
 ├── 404.php
@@ -191,41 +192,41 @@ Once you are done to this point, you can see all the files created as below.
 └── style.css
 ```
 
-Create you own theme now.
+以上でテーマの開発に必要な環境が整いました。
 
-## Default values
+## デフォルト値について
 
-You can set default values to the `grunt-init` prompt.
+`grunt-init` 実行時に表示される各種プロンプトにはデフォルト値を設定することができます。
 
-It will be more useful if there is a name and URL.
+名前やURL等は、あらかじめデフォルト値を設定してくとさらに便利になります。
 
-To set default values, put defaults.json and edit it.
+デフォルト値を設定するには以下のように、`defaults.json` を設置し、そのファイルを編集してください。
 
 ```
 cp ~/.grunt-init/iemoto/defaults.json.sample ~/.grunt-init/defaults.json
 ```
 
-## Minifying css and javascripts with grunt
+## grunt での CSS や JavaScript ファイルの minify について
 
-When you've edited `.js` and `.scss`, command this. 
+`.js` や `.scss` などのファイルを修正したら、以下のコマンドを実行して下さい。 
 
 ```
 grunt
 ```
 
-## Minifying css and javascripts with gulp
+## gulp での CSS や JavaScript ファイルの minify について
 
-When you've edited `.js` and `.scss`, command this. 
+`.js` や `.scss` などのファイルを修正したら、以下のコマンドを実行して下さい。 
 
 ```
 gulp
 ```
 
-You can `gulp js` or `gulp compass` to specify just js or Sass(Compass).
+JavaScript のみの場合は `gulp js` 、Sass(Compass) のみの場合は `gulp compass` も利用できます。
 
-## watch
+## watch について
 
-If you utilize `grunt watch` or `gulp watch`, grunt(gulp) will watch the file editing and automatically minify them.
+`grunt watch` あるいは `gulp watch` を使えば、ファイルの更新を grunt(gulp) が監視し、自動的に Sass(Compass) のコンパイル、minify の作業を行います。
 
 
 ```
@@ -234,32 +235,31 @@ grunt watch
 gulp watch
 ```
 
-To stop watch, type `[control]+[c]`
+watch を終了するには、キーボードで `[control]+[c]` を押して下さい。
 
-## Version of javascripts and styles
+## JavaScripts と css のバージョン
 
-Iemoto adds versions to js and css which is specified in package.json as
+Iemoto は `package.json` に記載されいているバージョンを `grunt` あるいは `gulp` 実行時に style.css と .js のコメント部分に付与します。
 
 ```
 "version": "0.1.0",
 ```
 
-When grunt(gulp)ed, the version specified in package.json will be implemented in style.css and .js as comments, and also will be passed to `wp_enqueue_style()` and `wp_enqueue_script()`.
+このバージョン番号は `wp_enqueue_style()` と `wp_enqueue_script()` でも使われます。
 
-### Debug mode and Sourcemap
+### Debug モードと Sourcemap
 
-If WP_DEBUG is true, theme will load `css/style.css`, which has Sourcemap integrated, instead of `style.css`, which is the Sourcemap-ommited version of the `css/style.css`.
+WordPress をデバッグモードにしていると、テーマは Sourcemap が付与された `css/style.css` を読み込みます。
 
-Sourcemap is available if your Sass version is greater than 3.3.0.
+Sourcemap の作成には Sass 3.3.0 以上が必要です。
 
+## 公式ディレクトリ等へ登録する際の注意
 
-## Note when you share your theme on WordPress.org directory
+公式ディレクトリに登録する際には、`node_modules` ディレクトリを svn:ignore しておきましょう。
 
-svn:ignore `node_modules` directory
+## フィードバック
 
-## Feedbacks
-
-Feedbacks are very much welcome!
+皆様からのフィードバックをお待ちしています。
 
 * https://github.com/megumiteam/iemoto/issues
 
