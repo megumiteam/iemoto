@@ -8,7 +8,7 @@ module.exports = function( grunt ) {
 
     // javascript
     jshint: {
-      all: [
+      dist: [
         'js/{%= file_name %}.js'
       ],
       options: {
@@ -55,10 +55,9 @@ module.exports = function( grunt ) {
 
     // watch
     watch: {
-      scripts: {
+      dist: {
         files: [
-          'sass/*.scss',
-          'sass/*/*.scss',
+          'sass/{,*/}{,*/}*.scss',
           'js/{%= file_name %}.js'
         ],
         tasks: ['jshint', 'compass', 'replace']

@@ -1,0 +1,225 @@
+@charset "UTF-8";
+/*!
+Theme Name: {%= title %}
+Description: Used to style the TinyMCE editor.
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Reset
+2.0 Body
+3.0 Typography
+4.0 Elements
+5.0 Links
+6.0 Alignments
+7.0 Tables
+8.0 Images
+9.0 Gallery
+10.0 Audio/Video
+11.0 RTL
+--------------------------------------------------------------*/
+@import "compass";
+@import "variables-site/variables-site";
+@import "mixins/mixins-master";
+
+/*--------------------------------------------------------------
+1.0 Reset
+--------------------------------------------------------------*/
+@import "reset";
+
+/*--------------------------------------------------------------
+2.0 Body
+--------------------------------------------------------------*/
+html .mceContentBody {
+	max-width: 640px;
+	margin: 10px;
+}
+body {
+	color: $color__text-main;
+	font-family: $font__main;
+	@include font-size(1.6);
+	line-height: $font__line-height-body;
+}
+
+/*--------------------------------------------------------------
+3.0 Typography
+--------------------------------------------------------------*/
+@import "typography/typography";
+
+/*--------------------------------------------------------------
+4.0 Elements
+--------------------------------------------------------------*/
+@import "elements/elements";
+
+/*--------------------------------------------------------------
+5.0 Links
+--------------------------------------------------------------*/
+@import "navigation/links";
+
+/*--------------------------------------------------------------
+6.0 Alignments
+--------------------------------------------------------------*/
+@import "modules/alignments";
+
+/*--------------------------------------------------------------
+7.0 Tables
+--------------------------------------------------------------*/
+.mce-item-table, {
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-width: 1px 0 0 1px;
+
+	th,
+	caption,
+	td {
+		border: 1px solid rgba(0, 0, 0, 0.1);
+		border-width: 0 1px 1px 0;
+	}
+}
+
+/*--------------------------------------------------------------
+8.0 Images
+--------------------------------------------------------------*/
+img {
+	max-width: 640px;
+}
+
+@import "media/captions";
+
+.mceTemp + ul,
+.mceTemp + ol {
+	list-style-position: inside;
+}
+
+/*--------------------------------------------------------------
+9.0 Gallery
+--------------------------------------------------------------*/
+@import "media/galleries";
+
+/*--------------------------------------------------------------
+10.0 Audio/Video
+--------------------------------------------------------------*/
+.mejs-mediaelement,
+.mejs-container .mejs-controls {
+	background: #000;
+}
+
+.mejs-controls .mejs-time-rail .mejs-time-loaded,
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+	background: #fff;
+}
+
+.mejs-controls .mejs-time-rail .mejs-time-current {
+	background: #24890d;
+}
+
+.mejs-controls .mejs-time-rail .mejs-time-total,
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total {
+	background: rgba(255, 255, 255, .33);
+}
+
+.mejs-controls .mejs-time-rail span,
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total,
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+	border-radius: 0;
+}
+
+.mejs-overlay-loading {
+	background: transparent;
+}
+
+.mejs-overlay-button {
+	background-color: #fff;
+	background-image: none;
+	border-radius: 2px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.8);
+	color: #000;
+	height: 36px;
+	margin-left: -24px;
+	width: 48px;
+}
+
+.mejs-overlay-button:before {
+	-webkit-font-smoothing: antialiased;
+	content: '\f452';
+	display: inline-block;
+	font: normal 32px/1.125 Genericons;
+	position: absolute;
+	top: 1px;
+	left: 10px;
+}
+
+.mejs-controls .mejs-button button:focus {
+	outline: none;
+}
+
+.mejs-controls .mejs-button button {
+	-webkit-font-smoothing: antialiased;
+	background: none;
+	color: #fff;
+	display: inline-block;
+	font: normal 16px/1 Genericons;
+}
+
+.mejs-playpause-button.mejs-play button:before {
+	content: '\f452';
+}
+
+.mejs-playpause-button.mejs-pause button:before {
+	content: '\f448';
+}
+
+.mejs-volume-button.mejs-mute button:before {
+	content: '\f109';
+	font-size: 20px;
+	position: absolute;
+	top: -2px;
+	left: 0;
+}
+
+.mejs-volume-button.mejs-unmute button:before {
+	content: '\f109';
+	left: 0;
+	position: absolute;
+	top: 0;
+}
+
+.mejs-fullscreen-button button:before {
+	content: '\f474';
+}
+
+.mejs-fullscreen-button.mejs-unfullscreen button:before {
+	content: '\f406';
+}
+
+.mejs-overlay:hover .mejs-overlay-button {
+	background-color: #24890d;
+	color: #fff;
+}
+
+.mejs-controls .mejs-button button:hover {
+	color: #41a62a;
+}
+
+/*--------------------------------------------------------------
+11.0 RTL
+--------------------------------------------------------------*/
+html .mceContentBody.rtl {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+
+.rtl ol,
+.rtl ul {
+	margin-left: 0;
+	margin-right: 3em;
+}
+
+.rtl .wp-caption,
+.rtl tr th {
+	text-align: right;
+}
+
+.rtl td {
+	text-align: right;
+}

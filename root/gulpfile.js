@@ -32,7 +32,7 @@ gulp.task('compass', function() {
 // watch
 gulp.task('watch', function () {
   gulp.watch('js/{%= file_name %}.js', ['js']);
-  gulp.watch('sass/{,*/}*.scss', ['compass']);
+  gulp.watch('sass/{,*/}{,*/}*.scss', ['compass']);
 });
 
 // default task

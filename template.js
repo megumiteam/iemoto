@@ -101,17 +101,11 @@ exports.template = function( grunt, init, done ) {
         );
 
         if ( props.gulp == 'y' ) {
-          fs.stat(path.resolve('Gruntfile.js'), function(err, stats){
-            if (!err) {
-              fs.unlinkSync('Gruntfile.js')
-            }
-          });
+            fs.unlinkSync('Gruntfile.js')
+            console.log('Deleted Gruntfile.js');
         } else {
-          fs.stat(path.resolve('gulpfile.js'), function(err, stats){
-            if (!err) {
-              fs.unlinkSync('gulpfile.js')
-            }
-          });
+            fs.unlinkSync('gulpfile.js')
+            console.log('Deleted gulpfile.js');
         }
 
         // Done!
