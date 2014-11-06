@@ -21,8 +21,6 @@
  * @uses {%= prefix %}_header_style()
  * @uses {%= prefix %}_admin_header_style()
  * @uses {%= prefix %}_admin_header_image()
- *
- * @package {%= title %}
  */
 function {%= prefix %}_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( '{%= prefix %}_custom_header_args', array(
@@ -71,7 +69,7 @@ function {%= prefix %}_header_style() {
 	?>
 		.site-title a,
 		.site-description {
-			color: #<?php echo $header_text_color; ?>;
+			color: #<?php echo esc_attr( $header_text_color ); ?>;
 		}
 	<?php endif; ?>
 	</style>
