@@ -1,10 +1,10 @@
-# Copyright (C) {%= grunt.template.today('yyyy') %} {%= author_name %}
+# Copyright (C) 2014 Automattic
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: {%= title %} 1.0\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tags/{%= prefix %}\n"
-"POT-Creation-Date: 2014-07-02 03:17:03+00:00\n"
+"Project-Id-Version: _s 1.0-wpcom\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
+"POT-Creation-Date: 2014-11-13 01:51:13+00:00\n"
 "Last-Translator: Kazue Igarashi <gatesapce.k@gmail.com>\n"
 "Language-Team: \n"
 "Language: JAPANESE\n"
@@ -32,72 +32,6 @@ msgstr "よく使われているカテゴリー"
 #: 404.php:44
 msgid "Try looking in the monthly archives. %1$s"
 msgstr "月別アーカイブを見てみてください。%1$s"
-
-#: archive.php:27
-msgid "Author: %s"
-msgstr "投稿者アーカイブ: %s"
-
-#: archive.php:30
-msgid "Day: %s"
-msgstr "%sのアーカイブ"
-
-#: archive.php:33
-msgid "Month: %s"
-msgstr "%sのアーカイブ"
-
-#: archive.php:33
-msgctxt "monthly archives date format"
-msgid "F Y"
-msgstr "Y年F"
-
-#: archive.php:36
-msgid "Year: %s"
-msgstr "%s年のアーカイブ"
-
-#: archive.php:36
-msgctxt "yearly archives date format"
-msgid "Y"
-msgstr "Y"
-
-#: archive.php:39
-msgid "Asides"
-msgstr "アサイド"
-
-#: archive.php:42
-msgid "Galleries"
-msgstr "ギャラリー"
-
-#: archive.php:45
-msgid "Images"
-msgstr "画像"
-
-#: archive.php:48
-msgid "Videos"
-msgstr "動画"
-
-#: archive.php:51
-msgid "Quotes"
-msgstr "引用"
-
-#: archive.php:54
-msgid "Links"
-msgstr "リンク"
-
-#: archive.php:57
-msgid "Statuses"
-msgstr "ステータス"
-
-#: archive.php:60
-msgid "Audios"
-msgstr "オーディオ"
-
-#: archive.php:63
-msgid "Chats"
-msgstr "チャット"
-
-#: archive.php:66
-msgid "Archives"
-msgstr "アーカイブ"
 
 #: comments.php:28
 msgctxt "comments title"
@@ -248,6 +182,103 @@ msgstr "1件のコメント"
 #: inc/template-tags.php:118
 msgid "% Comments"
 msgstr "%件のコメント"
+
+#: inc/template-tags.php:139
+msgid "Category: %s"
+msgstr "カテゴリーアーカイブ: %s"
+
+#: inc/template-tags.php:141
+msgid "Tag: %s"
+msgstr "タグアーカイブ: %s"
+
+#: inc/template-tags.php:143
+msgid "Author: %s"
+msgstr "投稿者アーカイブ: %s"
+
+#: inc/template-tags.php:145
+msgid "Year: %s"
+msgstr "%s年のアーカイブ"
+
+#: inc/template-tags.php:145
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+#: inc/template-tags.php:147
+msgid "Month: %s"
+msgstr "%sのアーカイブ"
+
+#: inc/template-tags.php:147
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "Y年F"
+
+#: inc/template-tags.php:149
+msgid "Day: %s"
+msgstr "%sのアーカイブ"
+
+#: inc/template-tags.php:149
+msgctxt "daily archives date format"
+msgid "F j, Y"
+msgstr ""
+
+#: inc/template-tags.php:151
+msgctxt "post format archive title"
+msgid "Asides"
+msgstr "アサイド"
+
+#: inc/template-tags.php:153
+msgctxt "post format archive title"
+msgid "Galleries"
+msgstr "ギャラリー"
+
+#: inc/template-tags.php:155
+msgctxt "post format archive title"
+msgid "Images"
+msgstr "画像"
+
+#: inc/template-tags.php:157
+msgctxt "post format archive title"
+msgid "Videos"
+msgstr "動画"
+
+#: inc/template-tags.php:159
+msgctxt "post format archive title"
+msgid "Quotes"
+msgstr "引用"
+
+#: inc/template-tags.php:161
+msgctxt "post format archive title"
+msgid "Links"
+msgstr "リンク"
+
+#: inc/template-tags.php:163
+msgctxt "post format archive title"
+msgid "Statuses"
+msgstr "ステータス"
+
+#: inc/template-tags.php:165
+msgctxt "post format archive title"
+msgid "Audio"
+msgstr "オーディオ"
+
+#: inc/template-tags.php:167
+msgctxt "post format archive title"
+msgid "Chats"
+msgstr "チャット"
+
+#: inc/template-tags.php:169
+msgid "Archives: %s"
+msgstr "アーカイブ: %s"
+
+#. translators: 1: Taxonomy singular name, 2: Current taxonomy term
+#: inc/template-tags.php:173
+msgid "%1$s: %2$s"
+msgstr "%1$s アーカイブ: %2$s"
+
+#: inc/template-tags.php:175
+msgid "Archives"
+msgstr "アーカイブ"
 
 #: search.php:16
 msgid "Search Results for: %s"
