@@ -250,6 +250,9 @@ function {%= prefix %}_categorized_blog() {
  * Flush out the transients used in {%= prefix %}_categorized_blog
  */
 function {%= prefix %}_category_transient_flusher() {
+	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+		return;
+	}
 	// Like, beat it. Dig?
 	delete_transient( '{%= prefix %}_categories' );
 }
