@@ -22,10 +22,10 @@ if ( ! function_exists( '{%= prefix %}_setup' ) ) :
  */
 function {%= prefix %}_setup() {
 
-	/**
-	 * Make theme available for translation
-	 * Translations can be filed in the /languages/ directory
-	 * If you're building a theme based on {%= title %}, use a find and replace
+	/*
+	 * Make theme available for translation.
+	 * Translations can be filed in the /languages/ directory.
+	 * If you're building a theme based on {%= prefix %}, use a find and replace
 	 * to change '{%= prefix %}' to the name of your theme in all the template files
 	 */
 	load_theme_textdomain( '{%= prefix %}', get_template_directory() . '/languages' );
@@ -35,6 +35,14 @@ function {%= prefix %}_setup() {
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
+
+	/*
+	 * Let WordPress manage the document title.
+	 * By adding theme support, we declare that this theme does not use a
+	 * hard-coded <title> tag in the document head, and expect WordPress to
+	 * provide it for us.
+	 */
+	add_theme_support( 'title-tag' );
 
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
