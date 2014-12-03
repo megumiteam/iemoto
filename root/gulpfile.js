@@ -12,6 +12,7 @@ gulp.task('js', function() {
 
 // compass(sass)
 gulp.task('compass', function() {
+  // dev
   gulp.src('sass/*.scss')
     .pipe($.compass({
       sass:      'sass',
@@ -20,12 +21,23 @@ gulp.task('compass', function() {
       style:     'expanded',
       relative:  true,
       sourcemap: true,
-      comments:  false
+      comments:  true
     }))
     .pipe($.replace(/<%= pkg.version %>/g, pkg.version))
     .pipe(gulp.dest('css'))
-    .pipe($.replace('../images/', 'images/'))
-    .pipe($.replace('/*# sourceMappingURL=style.css.map */', ''))
+
+  // dist
+  gulp.src('sass/*.scss')
+    .pipe($.compass({
+      sass:      'sass',
+      css:       './',
+      image:     'images',
+      style:     'expanded',
+      relative:  true,
+      sourcemap: false,
+      comments:  false
+    }))
+    .pipe($.replace(/<%= pkg.version %>/g, pkg.version))
     .pipe(gulp.dest('./'))
 });
 
