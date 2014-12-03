@@ -47,11 +47,11 @@ exports.template = function( grunt, init, done ) {
         } else {
             props.devDependencies = {
                 "grunt": "^0.4.5",
-                "grunt-contrib-compass": "^0.9.1",
+                "grunt-contrib-compass": "^1.0.0",
                 "grunt-contrib-jshint": "^0.10.0",
-                "grunt-contrib-watch": "^0.6.1",
-                "grunt-text-replace": "^0.3.12",
-                "load-grunt-tasks": "^0.6.0"
+                "grunt-contrib-watch": "^0.6.0",
+                "grunt-text-replace": "^0.4.0",
+                "load-grunt-tasks": "^1.0.0"
             };
         }
         // Sanitize names where we need to for PHP/JS
