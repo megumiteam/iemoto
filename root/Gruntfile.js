@@ -26,7 +26,8 @@ module.exports = function( grunt ) {
           outputStyle:    'expanded',
           relativeAssets: true,
           noLineComments: true,
-          sourcemap:      true
+          sourcemap:      true,
+          force:          true
         }
       },
       dist: {
