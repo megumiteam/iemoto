@@ -1,7 +1,8 @@
-# Copyright (C) 2014 Automattic
+# Copyright (C) {%= grunt.template.today('yyyy') %} {%= author_name %}
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
+"Project-Id-Version: {%= title %} 1.0\n"
 "Project-Id-Version: _s 1.0-wpcom\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2014-12-08 02:19:00+00:00\n"
