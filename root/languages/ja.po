@@ -1,10 +1,10 @@
-# Copyright (C) {%= grunt.template.today('yyyy') %} {%= author_name %}
+# Copyright (C) 2014 Automattic
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: {%= title %} 1.0\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tags/{%= prefix %}\n"
-"POT-Creation-Date: 2014-11-13 01:51:13+00:00\n"
+"Project-Id-Version: _s 1.0-wpcom\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
+"POT-Creation-Date: 2014-12-08 02:19:00+00:00\n"
 "Last-Translator: Kazue Igarashi <gatesapce.k@gmail.com>\n"
 "Language-Team: \n"
 "Language: JAPANESE\n"
@@ -106,19 +106,19 @@ msgstr "Proudly powered by %s"
 msgid "Theme: %1$s by %2$s."
 msgstr "テーマ: %1$s by %2$s."
 
-#: functions.php:45 header.php:32
+#: functions.php:53 header.php:31
 msgid "Primary Menu"
 msgstr "メインメニュー"
 
-#: functions.php:80
+#: functions.php:88
 msgid "Sidebar"
 msgstr "サイドバー"
 
-#: header.php:23
+#: header.php:22
 msgid "Skip to content"
 msgstr "コンテンツへスキップ"
 
-#: inc/extras.php:63
+#: inc/extras.php:64
 msgid "Page %s"
 msgstr "ページ %s"
 
