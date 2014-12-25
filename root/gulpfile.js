@@ -7,6 +7,18 @@ gulp.task('js', function() {
   return gulp.src('js/{%= file_name %}.js')
     .pipe($.jshint())
     .pipe($.jshint.reporter('default'))
+    .pipe($.notify(function (file) {
+      if (file.jshint.success) {
+        return false;
+      }
+
+      var errors = file.jshint.results.map(function (data) {
+        if (data.error) {
+          return "(" + data.error.line + ':' + data.error.character + ') ' + data.error.reason;
+        }
+      }).join("\n");
+      return file.relative + " (" + file.jshint.results.length + " errors)\n" + errors;
+    }))
     .pipe(gulp.dest('js'))
 });
 
@@ -14,6 +26,9 @@ gulp.task('js', function() {
 gulp.task('compass', function() {
   // dev
   gulp.src('sass/*.scss')
+    .pipe($.plumber({
+      errorHandler: $.notify.onError("Error: <%= error.message %>")
+    }))
     .pipe($.compass({
       sass:      'sass',
       css:       'css',
@@ -28,6 +43,9 @@ gulp.task('compass', function() {
 
   // dist
   gulp.src('sass/*.scss')
+    .pipe($.plumber({
+      errorHandler: $.notify.onError("Error: <%= error.message %>")
+    }))
     .pipe($.compass({
       sass:      'sass',
       css:       './',
