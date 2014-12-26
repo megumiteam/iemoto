@@ -36,7 +36,8 @@ gulp.task('compass', function() {
       style:     'expanded',
       relative:  true,
       sourcemap: true,
-      comments:  true
+      comments:  true,
+      force:     true
     }))
     .pipe($.replace(/<%= pkg.version %>/g, pkg.version))
     .pipe(gulp.dest('css'))
@@ -53,7 +54,8 @@ gulp.task('compass', function() {
       style:     'expanded',
       relative:  true,
       sourcemap: false,
-      comments:  false
+      comments:  false,
+      force:     true
     }))
     .pipe($.replace(/<%= pkg.version %>/g, pkg.version))
     .pipe(gulp.dest('./'))
