@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0-wpcom\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2014-12-08 02:19:00+00:00\n"
+"POT-Creation-Date: 2014-12-26 05:49:16+00:00\n"
 "Last-Translator: Kazue Igarashi <gatesapce.k@gmail.com>\n"
 "Language-Team: \n"
 "Language: JAPANESE\n"
@@ -92,7 +92,7 @@ msgstr "編集"
 #. translators: %s: Name of current post
 #: content.php:22
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
-msgstr "%sの続きを読む <span class=\"meta-nav\">&rarr;</span>"
+msgstr "続きを読む %s <span class=\"meta-nav\">&rarr;</span>"
 
 #: footer.php:15
 msgid "http://wordpress.org/"
@@ -222,61 +222,61 @@ msgctxt "daily archives date format"
 msgid "F j, Y"
 msgstr ""
 
-#: inc/template-tags.php:151
+#: inc/template-tags.php:152
 msgctxt "post format archive title"
 msgid "Asides"
 msgstr "アサイド"
 
-#: inc/template-tags.php:153
+#: inc/template-tags.php:154
 msgctxt "post format archive title"
 msgid "Galleries"
 msgstr "ギャラリー"
 
-#: inc/template-tags.php:155
+#: inc/template-tags.php:156
 msgctxt "post format archive title"
 msgid "Images"
 msgstr "画像"
 
-#: inc/template-tags.php:157
+#: inc/template-tags.php:158
 msgctxt "post format archive title"
 msgid "Videos"
 msgstr "動画"
 
-#: inc/template-tags.php:159
+#: inc/template-tags.php:160
 msgctxt "post format archive title"
 msgid "Quotes"
 msgstr "引用"
 
-#: inc/template-tags.php:161
+#: inc/template-tags.php:162
 msgctxt "post format archive title"
 msgid "Links"
 msgstr "リンク"
 
-#: inc/template-tags.php:163
+#: inc/template-tags.php:164
 msgctxt "post format archive title"
 msgid "Statuses"
 msgstr "ステータス"
 
-#: inc/template-tags.php:165
+#: inc/template-tags.php:166
 msgctxt "post format archive title"
 msgid "Audio"
 msgstr "オーディオ"
 
-#: inc/template-tags.php:167
+#: inc/template-tags.php:168
 msgctxt "post format archive title"
 msgid "Chats"
 msgstr "チャット"
 
-#: inc/template-tags.php:169
+#: inc/template-tags.php:171
 msgid "Archives: %s"
 msgstr "アーカイブ: %s"
 
 #. translators: 1: Taxonomy singular name, 2: Current taxonomy term
-#: inc/template-tags.php:173
+#: inc/template-tags.php:175
 msgid "%1$s: %2$s"
 msgstr "%1$s アーカイブ: %2$s"
 
-#: inc/template-tags.php:175
+#: inc/template-tags.php:177
 msgid "Archives"
 msgstr "アーカイブ"
 
