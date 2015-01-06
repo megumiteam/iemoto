@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0-wpcom\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2014-12-26 05:49:16+00:00\n"
+"POT-Creation-Date: 2015-01-05 05:45:02+00:00\n"
 "Last-Translator: Kazue Igarashi <gatesapce.k@gmail.com>\n"
 "Language-Team: \n"
 "Language: JAPANESE\n"
@@ -118,7 +118,7 @@ msgstr "サイドバー"
 msgid "Skip to content"
 msgstr "コンテンツへスキップ"
 
-#: inc/extras.php:64
+#: inc/extras.php:52
 msgid "Page %s"
 msgstr "ページ %s"
 
