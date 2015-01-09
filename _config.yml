@@ -1,0 +1,12 @@
+name: Iemoto - Underscores (_s) based grunt-init template for WordPress theme.
+auto: true
+server: true
+markdown: redcarpet
+highlighter: pygments
+exclude: ["root"]
+github:
+    user: megumiteam
+    project: iemoto
+header:
+    title: Iemoto
+    description: Underscores (_s) based grunt-init template for WordPress theme.

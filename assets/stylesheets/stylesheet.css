@@ -103,7 +103,7 @@ footer p {
 
 a {
   text-decoration: none;
-  color: #007edf;
+  color: #b3292c;
   text-shadow: none;
 
   transition: color 0.5s ease;
@@ -266,7 +266,7 @@ Full-Width Styles
 
 .inner {
   position: relative;
-  max-width: 640px;
+  max-width: 800px;
   padding: 20px 10px;
   margin: 0 auto;
 }
@@ -279,20 +279,18 @@ Full-Width Styles
   z-index: 10;
   padding: 10px 50px 10px 10px;
   color: #fff;
-  background: url('../images/blacktocat.png') #0090ff no-repeat 95% 50%;
+  background: url('../images/blacktocat.png') #5c5952 no-repeat 95% 50%;
   font-weight: 700;
   box-shadow: 0 0 10px rgba(0,0,0,.5);
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
 }
+#forkme_banner:hover {
+  background: url('../images/blacktocat.png') #b3292c no-repeat 95% 50%;
+}
 
 #header_wrap {
-  background: #212121;
-  background: -moz-linear-gradient(top, #373737, #212121);
-  background: -webkit-linear-gradient(top, #373737, #212121);
-  background: -ms-linear-gradient(top, #373737, #212121);
-  background: -o-linear-gradient(top, #373737, #212121);
-  background: linear-gradient(top, #373737, #212121);
+  background: white url('../images/header_wrap_bg.jpg') center center;
 }
 
 #header_wrap .inner {
@@ -301,18 +299,18 @@ Full-Width Styles
 
 #project_title {
   margin: 0;
-  color: #fff;
+  color: #111;
   font-size: 42px;
   font-weight: 700;
-  text-shadow: #111 0px 0px 10px;
+  text-shadow: white 1px 1px 1px;
 }
 
 #project_tagline {
-  color: #fff;
+  color: #111;
   font-size: 24px;
   font-weight: 300;
   background: none;
-  text-shadow: #111 0px 0px 10px;
+  text-shadow: white 1px 1px 1px;
 }
 
 #downloads {
@@ -356,7 +354,7 @@ Full-Width Styles
 
 #main_content_wrap {
   background: #f2f2f2;
-  border-top: 1px solid #111;
+/*   border-top: 1px solid #111; */
   border-bottom: 1px solid #111;
 }
 
