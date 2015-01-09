@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: _s 1.0-wpcom\n"
+"Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2015-01-05 05:45:02+00:00\n"
+"POT-Creation-Date: 2015-01-08 01:36:23+00:00\n"
 "Last-Translator: Kazue Igarashi <gatesapce.k@gmail.com>\n"
 "Language-Team: \n"
 "Language: JAPANESE\n"
@@ -85,7 +85,7 @@ msgstr "お探しのコンテンツが見つかりません。検索をお試し
 msgid "Pages:"
 msgstr "ページ:"
 
-#: content-page.php:25 inc/template-tags.php:122
+#: content-page.php:25 inc/template-tags.php:126
 msgid "Edit"
 msgstr "編集"
 
@@ -122,161 +122,151 @@ msgstr "コンテンツへスキップ"
 msgid "Page %s"
 msgstr "ページ %s"
 
-#: inc/template-tags.php:21
+#: inc/template-tags.php:23
 msgid "Posts navigation"
 msgstr "投稿ナビゲーション"
 
-#: inc/template-tags.php:25
-msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
-msgstr "<span class=\"meta-nav\">&larr;</span> 以前の投稿"
+#: inc/template-tags.php:27
+msgid "Older posts"
+msgstr "以前の投稿"
 
-#: inc/template-tags.php:29
-msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
-msgstr "新しい投稿 <span class=\"meta-nav\">&rarr;</span>"
+#: inc/template-tags.php:31
+msgid "Newer posts"
+msgstr "新しい投稿"
 
-#: inc/template-tags.php:52
+#: inc/template-tags.php:56
 msgid "Post navigation"
 msgstr "投稿ナビゲーション"
 
-#: inc/template-tags.php:55
-msgctxt "Previous post link"
-msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
-msgstr "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
-
-#: inc/template-tags.php:56
-msgctxt "Next post link"
-msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
-msgstr "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
-
-#: inc/template-tags.php:82
+#: inc/template-tags.php:86
 msgctxt "post date"
 msgid "Posted on %s"
 msgstr "投稿日時: %s"
 
-#: inc/template-tags.php:87
+#: inc/template-tags.php:91
 msgctxt "post author"
 msgid "by %s"
 msgstr "投稿者: %s"
 
 #. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:104 inc/template-tags.php:110
+#: inc/template-tags.php:108 inc/template-tags.php:114
 msgid ", "
 msgstr ", "
 
-#: inc/template-tags.php:106
+#: inc/template-tags.php:110
 msgid "Posted in %1$s"
 msgstr "カテゴリー: %1$s"
 
-#: inc/template-tags.php:112
+#: inc/template-tags.php:116
 msgid "Tagged %1$s"
 msgstr "タグ: %1$s"
 
-#: inc/template-tags.php:118
+#: inc/template-tags.php:122
 msgid "Leave a comment"
 msgstr "コメントをどうぞ"
 
-#: inc/template-tags.php:118
+#: inc/template-tags.php:122
 msgid "1 Comment"
 msgstr "1件のコメント"
 
-#: inc/template-tags.php:118
+#: inc/template-tags.php:122
 msgid "% Comments"
 msgstr "%件のコメント"
 
-#: inc/template-tags.php:139
+#: inc/template-tags.php:143
 msgid "Category: %s"
 msgstr "カテゴリーアーカイブ: %s"
 
-#: inc/template-tags.php:141
+#: inc/template-tags.php:145
 msgid "Tag: %s"
 msgstr "タグアーカイブ: %s"
 
-#: inc/template-tags.php:143
+#: inc/template-tags.php:147
 msgid "Author: %s"
 msgstr "投稿者アーカイブ: %s"
 
-#: inc/template-tags.php:145
+#: inc/template-tags.php:149
 msgid "Year: %s"
 msgstr "%s年のアーカイブ"
 
-#: inc/template-tags.php:145
+#: inc/template-tags.php:149
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr "Y"
 
-#: inc/template-tags.php:147
+#: inc/template-tags.php:151
 msgid "Month: %s"
 msgstr "%sのアーカイブ"
 
-#: inc/template-tags.php:147
+#: inc/template-tags.php:151
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr "Y年F"
 
-#: inc/template-tags.php:149
+#: inc/template-tags.php:153
 msgid "Day: %s"
 msgstr "%sのアーカイブ"
 
-#: inc/template-tags.php:149
+#: inc/template-tags.php:153
 msgctxt "daily archives date format"
 msgid "F j, Y"
 msgstr ""
 
-#: inc/template-tags.php:152
+#: inc/template-tags.php:156
 msgctxt "post format archive title"
 msgid "Asides"
 msgstr "アサイド"
 
-#: inc/template-tags.php:154
+#: inc/template-tags.php:158
 msgctxt "post format archive title"
 msgid "Galleries"
 msgstr "ギャラリー"
 
-#: inc/template-tags.php:156
+#: inc/template-tags.php:160
 msgctxt "post format archive title"
 msgid "Images"
 msgstr "画像"
 
-#: inc/template-tags.php:158
+#: inc/template-tags.php:162
 msgctxt "post format archive title"
 msgid "Videos"
 msgstr "動画"
 
-#: inc/template-tags.php:160
+#: inc/template-tags.php:164
 msgctxt "post format archive title"
 msgid "Quotes"
 msgstr "引用"
 
-#: inc/template-tags.php:162
+#: inc/template-tags.php:166
 msgctxt "post format archive title"
 msgid "Links"
 msgstr "リンク"
 
-#: inc/template-tags.php:164
+#: inc/template-tags.php:168
 msgctxt "post format archive title"
 msgid "Statuses"
 msgstr "ステータス"
 
-#: inc/template-tags.php:166
+#: inc/template-tags.php:170
 msgctxt "post format archive title"
 msgid "Audio"
 msgstr "オーディオ"
 
-#: inc/template-tags.php:168
+#: inc/template-tags.php:172
 msgctxt "post format archive title"
 msgid "Chats"
 msgstr "チャット"
 
-#: inc/template-tags.php:171
+#: inc/template-tags.php:175
 msgid "Archives: %s"
 msgstr "アーカイブ: %s"
 
 #. translators: 1: Taxonomy singular name, 2: Current taxonomy term
-#: inc/template-tags.php:175
+#: inc/template-tags.php:179
 msgid "%1$s: %2$s"
 msgstr "%1$s アーカイブ: %2$s"
 
-#: inc/template-tags.php:177
+#: inc/template-tags.php:181
 msgid "Archives"
 msgstr "アーカイブ"
 

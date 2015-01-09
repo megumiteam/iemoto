@@ -33,7 +33,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php {%= prefix %}_paging_nav(); ?>
+			<?php the_posts_navigation(); ?>
 
 		<?php else : ?>
 

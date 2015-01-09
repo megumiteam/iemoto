@@ -7,22 +7,24 @@
  * @package {%= title %}
  */
 
-if ( ! function_exists( '{%= prefix %}_paging_nav' ) ) :
+if ( ! function_exists( 'the_posts_navigation' ) ) :
 /**
  * Display navigation to next/previous set of posts when applicable.
+ *
+ * @todo Remove this function when WordPress 4.3 is released.
  */
-function {%= prefix %}_paging_nav() {
+function the_posts_navigation() {
 	// Don't print empty markup if there's only one page.
 	if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
 		return;
 	}
 	?>
-	<nav class="navigation paging-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', '{%= prefix %}' ); ?></h1>
+	<nav class="navigation posts-navigation" role="navigation">
+		<h2 class="screen-reader-text"><?php _e( 'Posts navigation', '{%= prefix %}' ); ?></h2>
 		<div class="nav-links">
 
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', '{%= prefix %}' ) ); ?></div>
+			<div class="nav-previous"><?php next_posts_link( __( 'Older posts', '{%= prefix %}' ) ); ?></div>
 			<?php endif; ?>
 
 			<?php if ( get_previous_posts_link() ) : ?>
@@ -35,11 +37,13 @@ function {%= prefix %}_paging_nav() {
 }
 endif;
 
-if ( ! function_exists( '{%= prefix %}_post_nav' ) ) :
+if ( ! function_exists( 'the_post_navigation' ) ) :
 /**
  * Display navigation to next/previous post when applicable.
+ *
+ * @todo Remove this function when WordPress 4.3 is released.
  */
-function {%= prefix %}_post_nav() {
+function the_post_navigation() {
 	// Don't print empty markup if there's nowhere to navigate.
 	$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
 	$next     = get_adjacent_post( false, '', false );
@@ -49,11 +53,11 @@ function {%= prefix %}_post_nav() {
 	}
 	?>
 	<nav class="navigation post-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Post navigation', '{%= prefix %}' ); ?></h1>
+		<h2 class="screen-reader-text"><?php _e( 'Post navigation', '{%= prefix %}' ); ?></h2>
 		<div class="nav-links">
 			<?php
-				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span>&nbsp;%title', 'Previous post link', '{%= prefix %}' ) );
-				next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title&nbsp;<span class="meta-nav">&rarr;</span>', 'Next post link',     '{%= prefix %}' ) );
+				previous_post_link( '<div class="nav-previous">%link</div>', '%title' );
+				next_post_link( '<div class="nav-next">%link</div>', '%title' );
 			?>
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
