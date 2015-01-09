@@ -46,8 +46,8 @@ git clone https://github.com/megumiteam/iemoto.git ~/.grunt-init/iemoto
 Iemoto utilizes Sass and Compass to create style.css and editor-style.css.
 Get them first.
 
-* Sass: http://sass-lang.com/
-* Compass: http://compass-style.org/
+* Sass: [http://sass-lang.com/](http://sass-lang.com/)
+* Compass: [http://compass-style.org/](http://compass-style.org/)
 
 ### gulp
 
@@ -57,7 +57,7 @@ You can also use [gulp.js](http://gulpjs.com/) for js/sass compiling if installe
 $ npm install --global gulp
 ```
 
-* gulp.js: http://gulpjs.com/
+* gulp.js: [http://gulpjs.com/](http://gulpjs.com/)
 
 ## Usage
 
