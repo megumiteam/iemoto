@@ -7,7 +7,7 @@ Description: Used to style the TinyMCE editor.
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-1.0 Reset
+1.0 Normalize
 2.0 Body
 3.0 Typography
 4.0 Elements
@@ -24,9 +24,9 @@ Description: Used to style the TinyMCE editor.
 @import "mixins/mixins-master";
 
 /*--------------------------------------------------------------
-1.0 Reset
+1.0 Normalize
 --------------------------------------------------------------*/
-@import "reset";
+@import "normalize";
 
 /*--------------------------------------------------------------
 2.0 Body
