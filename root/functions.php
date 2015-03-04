@@ -109,8 +109,8 @@ function {%= prefix %}_scripts() {
 
 	${%= prefix %}_stylesheet = get_stylesheet_uri();
 
-	if ( defined( 'WP_DEBUG' ) && ( WP_DEBUG == true ) && file_exists( get_template_directory() . '/css/style.css' ) ) { // WP_DEBUG = ture
-		${%= prefix %}_stylesheet = get_template_directory_uri() . '/css/style.css';
+	if ( defined( 'WP_DEBUG' ) && ( WP_DEBUG == true ) && file_exists( get_stylesheet_directory() . '/css/style.css' ) ) { // WP_DEBUG = ture
+		${%= prefix %}_stylesheet = get_stylesheet_directory_uri() . '/css/style.css';
 	}
 
 	wp_enqueue_style(
