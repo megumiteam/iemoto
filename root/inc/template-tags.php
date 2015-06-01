@@ -20,15 +20,15 @@ function the_posts_navigation() {
 	}
 	?>
 	<nav class="navigation posts-navigation" role="navigation">
-		<h2 class="screen-reader-text"><?php _e( 'Posts navigation', '{%= prefix %}' ); ?></h2>
+		<h2 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', '{%= prefix %}' ); ?></h2>
 		<div class="nav-links">
 
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( 'Older posts', '{%= prefix %}' ) ); ?></div>
+			<div class="nav-previous"><?php next_posts_link( esc_html__( 'Older posts', '{%= prefix %}' ) ); ?></div>
 			<?php endif; ?>
 
 			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', '{%= prefix %}' ) ); ?></div>
+			<div class="nav-next"><?php previous_posts_link( esc_html__( 'Newer posts', '{%= prefix %}' ) ); ?></div>
 			<?php endif; ?>
 
 		</div><!-- .nav-links -->
@@ -53,7 +53,7 @@ function the_post_navigation() {
 	}
 	?>
 	<nav class="navigation post-navigation" role="navigation">
-		<h2 class="screen-reader-text"><?php _e( 'Post navigation', '{%= prefix %}' ); ?></h2>
+		<h2 class="screen-reader-text"><?php esc_html_e( 'Post navigation', '{%= prefix %}' ); ?></h2>
 		<div class="nav-links">
 			<?php
 				previous_post_link( '<div class="nav-previous">%link</div>', '%title' );
@@ -83,16 +83,16 @@ function {%= prefix %}_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		_x( 'Posted on %s', 'post date', '{%= prefix %}' ),
+		esc_html_x( 'Posted on %s', 'post date', '{%= prefix %}' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
 	$byline = sprintf(
-		_x( 'by %s', 'post author', '{%= prefix %}' ),
+		esc_html_x( 'by %s', 'post author', '{%= prefix %}' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
-	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>';
+	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
 
 }
 endif;
@@ -105,25 +105,25 @@ function {%= prefix %}_entry_footer() {
 	// Hide category and tag text for pages.
 	if ( 'post' == get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( __( ', ', '{%= prefix %}' ) );
+		$categories_list = get_the_category_list( esc_html__( ', ', '{%= prefix %}' ) );
 		if ( $categories_list && {%= prefix %}_categorized_blog() ) {
-			printf( '<span class="cat-links">' . __( 'Posted in %1$s', '{%= prefix %}' ) . '</span>', $categories_list );
+			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', '{%= prefix %}' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 		}
 
 		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', __( ', ', '{%= prefix %}' ) );
+		$tags_list = get_the_tag_list( '', esc_html__( ', ', '{%= prefix %}' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . __( 'Tagged %1$s', '{%= prefix %}' ) . '</span>', $tags_list );
+			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', '{%= prefix %}' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 		}
 	}
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
-		comments_popup_link( __( 'Leave a comment', '{%= prefix %}' ), __( '1 Comment', '{%= prefix %}' ), __( '% Comments', '{%= prefix %}' ) );
+		comments_popup_link( esc_html__( 'Leave a comment', '{%= prefix %}' ), esc_html__( '1 Comment', '{%= prefix %}' ), esc_html__( '% Comments', '{%= prefix %}' ) );
 		echo '</span>';
 	}
 
-	edit_post_link( __( 'Edit', '{%= prefix %}' ), '<span class="edit-link">', '</span>' );
+	edit_post_link( esc_html__( 'Edit', '{%= prefix %}' ), '<span class="edit-link">', '</span>' );
 }
 endif;
 
@@ -140,45 +140,45 @@ if ( ! function_exists( 'the_archive_title' ) ) :
  */
 function the_archive_title( $before = '', $after = '' ) {
 	if ( is_category() ) {
-		$title = sprintf( __( 'Category: %s', '{%= prefix %}' ), single_cat_title( '', false ) );
+		$title = sprintf( esc_html__( 'Category: %s', '{%= prefix %}' ), single_cat_title( '', false ) );
 	} elseif ( is_tag() ) {
-		$title = sprintf( __( 'Tag: %s', '{%= prefix %}' ), single_tag_title( '', false ) );
+		$title = sprintf( esc_html__( 'Tag: %s', '{%= prefix %}' ), single_tag_title( '', false ) );
 	} elseif ( is_author() ) {
-		$title = sprintf( __( 'Author: %s', '{%= prefix %}' ), '<span class="vcard">' . get_the_author() . '</span>' );
+		$title = sprintf( esc_html__( 'Author: %s', '{%= prefix %}' ), '<span class="vcard">' . get_the_author() . '</span>' );
 	} elseif ( is_year() ) {
-		$title = sprintf( __( 'Year: %s', '{%= prefix %}' ), get_the_date( _x( 'Y', 'yearly archives date format', '{%= prefix %}' ) ) );
+		$title = sprintf( esc_html__( 'Year: %s', '{%= prefix %}' ), get_the_date( esc_html_x( 'Y', 'yearly archives date format', '{%= prefix %}' ) ) );
 	} elseif ( is_month() ) {
-		$title = sprintf( __( 'Month: %s', '{%= prefix %}' ), get_the_date( _x( 'F Y', 'monthly archives date format', '{%= prefix %}' ) ) );
+		$title = sprintf( esc_html__( 'Month: %s', '{%= prefix %}' ), get_the_date( esc_html_x( 'F Y', 'monthly archives date format', '{%= prefix %}' ) ) );
 	} elseif ( is_day() ) {
-		$title = sprintf( __( 'Day: %s', '{%= prefix %}' ), get_the_date( _x( 'F j, Y', 'daily archives date format', '{%= prefix %}' ) ) );
+		$title = sprintf( esc_html__( 'Day: %s', '{%= prefix %}' ), get_the_date( esc_html_x( 'F j, Y', 'daily archives date format', '{%= prefix %}' ) ) );
 	} elseif ( is_tax( 'post_format' ) ) {
 		if ( is_tax( 'post_format', 'post-format-aside' ) ) {
-			$title = _x( 'Asides', 'post format archive title', '{%= prefix %}' );
+			$title = esc_html_x( 'Asides', 'post format archive title', '{%= prefix %}' );
 		} elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) {
-			$title = _x( 'Galleries', 'post format archive title', '{%= prefix %}' );
+			$title = esc_html_x( 'Galleries', 'post format archive title', '{%= prefix %}' );
 		} elseif ( is_tax( 'post_format', 'post-format-image' ) ) {
-			$title = _x( 'Images', 'post format archive title', '{%= prefix %}' );
+			$title = esc_html_x( 'Images', 'post format archive title', '{%= prefix %}' );
 		} elseif ( is_tax( 'post_format', 'post-format-video' ) ) {
-			$title = _x( 'Videos', 'post format archive title', '{%= prefix %}' );
+			$title = esc_html_x( 'Videos', 'post format archive title', '{%= prefix %}' );
 		} elseif ( is_tax( 'post_format', 'post-format-quote' ) ) {
-			$title = _x( 'Quotes', 'post format archive title', '{%= prefix %}' );
+			$title = esc_html_x( 'Quotes', 'post format archive title', '{%= prefix %}' );
 		} elseif ( is_tax( 'post_format', 'post-format-link' ) ) {
-			$title = _x( 'Links', 'post format archive title', '{%= prefix %}' );
+			$title = esc_html_x( 'Links', 'post format archive title', '{%= prefix %}' );
 		} elseif ( is_tax( 'post_format', 'post-format-status' ) ) {
-			$title = _x( 'Statuses', 'post format archive title', '{%= prefix %}' );
+			$title = esc_html_x( 'Statuses', 'post format archive title', '{%= prefix %}' );
 		} elseif ( is_tax( 'post_format', 'post-format-audio' ) ) {
-			$title = _x( 'Audio', 'post format archive title', '{%= prefix %}' );
+			$title = esc_html_x( 'Audio', 'post format archive title', '{%= prefix %}' );
 		} elseif ( is_tax( 'post_format', 'post-format-chat' ) ) {
-			$title = _x( 'Chats', 'post format archive title', '{%= prefix %}' );
+			$title = esc_html_x( 'Chats', 'post format archive title', '{%= prefix %}' );
 		}
 	} elseif ( is_post_type_archive() ) {
-		$title = sprintf( __( 'Archives: %s', '{%= prefix %}' ), post_type_archive_title( '', false ) );
+		$title = sprintf( esc_html__( 'Archives: %s', '{%= prefix %}' ), post_type_archive_title( '', false ) );
 	} elseif ( is_tax() ) {
 		$tax = get_taxonomy( get_queried_object()->taxonomy );
 		/* translators: 1: Taxonomy singular name, 2: Current taxonomy term */
-		$title = sprintf( __( '%1$s: %2$s', '{%= prefix %}' ), $tax->labels->singular_name, single_term_title( '', false ) );
+		$title = sprintf( esc_html__( '%1$s: %2$s', '{%= prefix %}' ), $tax->labels->singular_name, single_term_title( '', false ) );
 	} else {
-		$title = __( 'Archives', '{%= prefix %}' );
+		$title = esc_html__( 'Archives', '{%= prefix %}' );
 	}
 
 	/**
@@ -189,7 +189,7 @@ function the_archive_title( $before = '', $after = '' ) {
 	$title = apply_filters( 'get_the_archive_title', $title );
 
 	if ( ! empty( $title ) ) {
-		echo $before . $title . $after;
+		echo $before . $title . $after;  // WPCS: XSS OK.
 	}
 }
 endif;
@@ -216,7 +216,7 @@ function the_archive_description( $before = '', $after = '' ) {
 		 *
 		 * @param string $description Archive description to be displayed.
 		 */
-		echo $before . $description . $after;
+		echo $before . $description . $after;  // WPCS: XSS OK.
 	}
 }
 endif;

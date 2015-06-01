@@ -1,6 +1,6 @@
 <?php
 /**
- * The sidebar containing the main widget areas.
+ * The sidebar containing the main widget area.
  *
  * @package {%= title %}
  */

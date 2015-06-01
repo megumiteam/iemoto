@@ -6,6 +6,7 @@
  *
  * @package {%= title %}
  */
+
 ?>
 
 		<?php do_action( '{%= prefix %}_after_content' ); ?>
