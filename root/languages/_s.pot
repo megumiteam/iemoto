@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: {%= title %} 1.0\n"
+"Project-Id-Version: {%= title %} 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2015-06-01 03:31:14+00:00\n"
+"POT-Creation-Date: 2015-11-17 02:21:51+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -12,229 +12,113 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: 404.php:15
+#: 404.php:17
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: 404.php:19
+#: 404.php:21
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
 
-#: 404.php:27
+#: 404.php:29
 msgid "Most Used Categories"
 msgstr ""
 
 #. translators: %1$s: smiley
-#: 404.php:44
+#: 404.php:46
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
-#: comments.php:29
+#: comments.php:31
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: comments.php:38 comments.php:59
+#: comments.php:40 comments.php:61
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:41 comments.php:62
+#: comments.php:43 comments.php:64
 msgid "Older Comments"
 msgstr ""
 
-#: comments.php:42 comments.php:63
+#: comments.php:44 comments.php:65
 msgid "Newer Comments"
 msgstr ""
 
-#: comments.php:75
+#: comments.php:77
 msgid "Comments are closed."
 msgstr ""
 
-#: footer.php:16
-msgid "http://wordpress.org/"
-msgstr ""
-
-#: footer.php:16
-msgid "Proudly powered by %s"
+#: footer.php:18
+msgid "https://wordpress.org/"
 msgstr ""
 
 #: footer.php:18
+msgid "Proudly powered by %s"
+msgstr ""
+
+#: footer.php:20
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
-#: functions.php:45 header.php:32
+#: functions.php:47 header.php:42
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:100
+#: functions.php:102
 msgid "Sidebar"
 msgstr ""
 
-#: header.php:23
+#: header.php:25
 msgid "Skip to content"
 msgstr ""
 
-#: inc/extras.php:52
-msgid "Page %s"
-msgstr ""
-
-#: inc/template-tags.php:23
-msgid "Posts navigation"
-msgstr ""
-
-#: inc/template-tags.php:27
-msgid "Older posts"
-msgstr ""
-
-#: inc/template-tags.php:31
-msgid "Newer posts"
-msgstr ""
-
-#: inc/template-tags.php:56
-msgid "Post navigation"
-msgstr ""
-
-#: inc/template-tags.php:86
+#: inc/template-tags.php:28
 msgctxt "post date"
 msgid "Posted on %s"
 msgstr ""
 
-#: inc/template-tags.php:91
+#: inc/template-tags.php:33
 msgctxt "post author"
 msgid "by %s"
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:108 inc/template-tags.php:114
+#: inc/template-tags.php:50 inc/template-tags.php:56
 msgid ", "
 msgstr ""
 
-#: inc/template-tags.php:110
+#: inc/template-tags.php:52
 msgid "Posted in %1$s"
 msgstr ""
 
-#: inc/template-tags.php:116
+#: inc/template-tags.php:58
 msgid "Tagged %1$s"
 msgstr ""
 
-#: inc/template-tags.php:122
+#: inc/template-tags.php:64
 msgid "Leave a comment"
 msgstr ""
 
-#: inc/template-tags.php:122
+#: inc/template-tags.php:64
 msgid "1 Comment"
 msgstr ""
 
-#: inc/template-tags.php:122
+#: inc/template-tags.php:64
 msgid "% Comments"
 msgstr ""
 
-#: inc/template-tags.php:126 template-parts/content-page.php:26
-msgid "Edit"
+#. translators: %s: Name of current post
+#: inc/template-tags.php:71 template-parts/content-page.php:32
+msgid "Edit %s"
 msgstr ""
 
-#: inc/template-tags.php:143
-msgid "Category: %s"
-msgstr ""
-
-#: inc/template-tags.php:145
-msgid "Tag: %s"
-msgstr ""
-
-#: inc/template-tags.php:147
-msgid "Author: %s"
-msgstr ""
-
-#: inc/template-tags.php:149
-msgid "Year: %s"
-msgstr ""
-
-#: inc/template-tags.php:149
-msgctxt "yearly archives date format"
-msgid "Y"
-msgstr ""
-
-#: inc/template-tags.php:151
-msgid "Month: %s"
-msgstr ""
-
-#: inc/template-tags.php:151
-msgctxt "monthly archives date format"
-msgid "F Y"
-msgstr ""
-
-#: inc/template-tags.php:153
-msgid "Day: %s"
-msgstr ""
-
-#: inc/template-tags.php:153
-msgctxt "daily archives date format"
-msgid "F j, Y"
-msgstr ""
-
-#: inc/template-tags.php:156
-msgctxt "post format archive title"
-msgid "Asides"
-msgstr ""
-
-#: inc/template-tags.php:158
-msgctxt "post format archive title"
-msgid "Galleries"
-msgstr ""
-
-#: inc/template-tags.php:160
-msgctxt "post format archive title"
-msgid "Images"
-msgstr ""
-
-#: inc/template-tags.php:162
-msgctxt "post format archive title"
-msgid "Videos"
-msgstr ""
-
-#: inc/template-tags.php:164
-msgctxt "post format archive title"
-msgid "Quotes"
-msgstr ""
-
-#: inc/template-tags.php:166
-msgctxt "post format archive title"
-msgid "Links"
-msgstr ""
-
-#: inc/template-tags.php:168
-msgctxt "post format archive title"
-msgid "Statuses"
-msgstr ""
-
-#: inc/template-tags.php:170
-msgctxt "post format archive title"
-msgid "Audio"
-msgstr ""
-
-#: inc/template-tags.php:172
-msgctxt "post format archive title"
-msgid "Chats"
-msgstr ""
-
-#: inc/template-tags.php:175
-msgid "Archives: %s"
-msgstr ""
-
-#. translators: 1: Taxonomy singular name, 2: Current taxonomy term
-#: inc/template-tags.php:179
-msgid "%1$s: %2$s"
-msgstr ""
-
-#: inc/template-tags.php:181
-msgid "Archives"
-msgstr ""
-
-#: search.php:16
+#: search.php:18
 msgid "Search Results for: %s"
 msgstr ""
 
@@ -259,13 +143,13 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: template-parts/content-page.php:19 template-parts/content-single.php:23
-#: template-parts/content.php:32
+#: template-parts/content-page.php:21 template-parts/content-single.php:25
+#: template-parts/content.php:34
 msgid "Pages:"
 msgstr ""
 
-#. translators: %s: Name of current post
-#: template-parts/content.php:25
+#. translators: %s: Name of current post.
+#: template-parts/content.php:27
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 

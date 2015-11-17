@@ -1,6 +1,8 @@
 <?php
 /**
- * {%= title %} functions and definitions
+ * {%= title %} functions and definitions.
+ *
+ * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package {%= title %}
  */
@@ -39,7 +41,7 @@ function {%= prefix %}_setup() {
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *
-	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
 
@@ -62,7 +64,7 @@ function {%= prefix %}_setup() {
 
 	/*
 	 * Enable support for Post Formats.
-	 * See http://codex.wordpress.org/Post_Formats
+	 * See https://developer.wordpress.org/themes/functionality/post-formats/
 	 */
 	add_theme_support( 'post-formats', array(
 		'aside',
@@ -96,7 +98,7 @@ add_action( 'after_setup_theme', '{%= prefix %}_content_width', 0 );
 /**
  * Register widget area.
  *
- * @link http://codex.wordpress.org/Function_Reference/register_sidebar
+ * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function {%= prefix %}_widgets_init() {
 	register_sidebar( array(
@@ -105,8 +107,8 @@ function {%= prefix %}_widgets_init() {
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
 	) );
 }
 add_action( 'widgets_init', '{%= prefix %}_widgets_init' );

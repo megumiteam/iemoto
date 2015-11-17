@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: {%= title %} 1.0\n"
+"Project-Id-Version: {%= title %} 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2015-06-01 03:31:14+00:00\n"
+"POT-Creation-Date: 2015-11-17 02:21:51+00:00\n"
 "Last-Translator: Kazue Igarashi <gatesapce.k@gmail.com>\n"
 "Language-Team: \n"
 "Language: JAPANESE\n"
@@ -13,230 +13,114 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n == 1 ? 0 : 1;\n"
 
-#: 404.php:15
+#: 404.php:17
 msgid "Oops! That page can&rsquo;t be found."
 msgstr "お探しのページが見つかりません。"
 
-#: 404.php:19
+#: 404.php:21
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
 "ここには何も見つかりませんでした。以下のリンクまたは検索をお試しください。"
 
-#: 404.php:27
+#: 404.php:29
 msgid "Most Used Categories"
 msgstr "よく使われているカテゴリー"
 
 #. translators: %1$s: smiley
-#: 404.php:44
+#: 404.php:46
 msgid "Try looking in the monthly archives. %1$s"
 msgstr "月別アーカイブを見てみてください。%1$s"
 
-#: comments.php:29
+#: comments.php:31
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] "「%2$s」への%1$s件のフィードバック"
 msgstr[1] "「%2$s」への%1$s件のフィードバック"
 
-#: comments.php:38 comments.php:59
+#: comments.php:40 comments.php:61
 msgid "Comment navigation"
 msgstr "コメントナビゲーション"
 
-#: comments.php:41 comments.php:62
+#: comments.php:43 comments.php:64
 msgid "Older Comments"
 msgstr "以前のコメント"
 
-#: comments.php:42 comments.php:63
+#: comments.php:44 comments.php:65
 msgid "Newer Comments"
 msgstr "新しいコメント"
 
-#: comments.php:75
+#: comments.php:77
 msgid "Comments are closed."
 msgstr "コメントは受け付けていません。"
 
-#: footer.php:16
-msgid "http://wordpress.org/"
+#: footer.php:18
+msgid "https://wordpress.org/"
 msgstr ""
 
-#: footer.php:16
+#: footer.php:18
 msgid "Proudly powered by %s"
 msgstr "Proudly powered by %s"
 
-#: footer.php:18
+#: footer.php:20
 msgid "Theme: %1$s by %2$s."
 msgstr "テーマ: %1$s by %2$s."
 
-#: functions.php:45 header.php:32
+#: functions.php:47 header.php:42
 msgid "Primary Menu"
 msgstr "メインメニュー"
 
-#: functions.php:100
+#: functions.php:102
 msgid "Sidebar"
 msgstr "サイドバー"
 
-#: header.php:23
+#: header.php:25
 msgid "Skip to content"
 msgstr "コンテンツへスキップ"
 
-#: inc/extras.php:52
-msgid "Page %s"
-msgstr "ページ %s"
-
-#: inc/template-tags.php:23
-msgid "Posts navigation"
-msgstr "投稿ナビゲーション"
-
-#: inc/template-tags.php:27
-msgid "Older posts"
-msgstr "以前の投稿"
-
-#: inc/template-tags.php:31
-msgid "Newer posts"
-msgstr "新しい投稿"
-
-#: inc/template-tags.php:56
-msgid "Post navigation"
-msgstr "投稿ナビゲーション"
-
-#: inc/template-tags.php:86
+#: inc/template-tags.php:28
 msgctxt "post date"
 msgid "Posted on %s"
 msgstr "投稿日時: %s"
 
-#: inc/template-tags.php:91
+#: inc/template-tags.php:33
 msgctxt "post author"
 msgid "by %s"
 msgstr "投稿者: %s"
 
 #. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:108 inc/template-tags.php:114
+#: inc/template-tags.php:50 inc/template-tags.php:56
 msgid ", "
 msgstr ", "
 
-#: inc/template-tags.php:110
+#: inc/template-tags.php:52
 msgid "Posted in %1$s"
 msgstr "カテゴリー: %1$s"
 
-#: inc/template-tags.php:116
+#: inc/template-tags.php:58
 msgid "Tagged %1$s"
 msgstr "タグ: %1$s"
 
-#: inc/template-tags.php:122
+#: inc/template-tags.php:64
 msgid "Leave a comment"
 msgstr "コメントをどうぞ"
 
-#: inc/template-tags.php:122
+#: inc/template-tags.php:64
 msgid "1 Comment"
 msgstr "1件のコメント"
 
-#: inc/template-tags.php:122
+#: inc/template-tags.php:64
 msgid "% Comments"
 msgstr "%件のコメント"
 
-#: inc/template-tags.php:126 template-parts/content-page.php:26
-msgid "Edit"
-msgstr "編集"
+#. translators: %s: Name of current post
+#: inc/template-tags.php:71 template-parts/content-page.php:32
+msgid "Edit %s"
+msgstr "%sを編集"
 
-#: inc/template-tags.php:143
-msgid "Category: %s"
-msgstr "カテゴリーアーカイブ: %s"
-
-#: inc/template-tags.php:145
-msgid "Tag: %s"
-msgstr "タグアーカイブ: %s"
-
-#: inc/template-tags.php:147
-msgid "Author: %s"
-msgstr "投稿者アーカイブ: %s"
-
-#: inc/template-tags.php:149
-msgid "Year: %s"
-msgstr "%s年のアーカイブ"
-
-#: inc/template-tags.php:149
-msgctxt "yearly archives date format"
-msgid "Y"
-msgstr "Y"
-
-#: inc/template-tags.php:151
-msgid "Month: %s"
-msgstr "%sのアーカイブ"
-
-#: inc/template-tags.php:151
-msgctxt "monthly archives date format"
-msgid "F Y"
-msgstr "Y年F"
-
-#: inc/template-tags.php:153
-msgid "Day: %s"
-msgstr "%sのアーカイブ"
-
-#: inc/template-tags.php:153
-msgctxt "daily archives date format"
-msgid "F j, Y"
-msgstr ""
-
-#: inc/template-tags.php:156
-msgctxt "post format archive title"
-msgid "Asides"
-msgstr "アサイド"
-
-#: inc/template-tags.php:158
-msgctxt "post format archive title"
-msgid "Galleries"
-msgstr "ギャラリー"
-
-#: inc/template-tags.php:160
-msgctxt "post format archive title"
-msgid "Images"
-msgstr "画像"
-
-#: inc/template-tags.php:162
-msgctxt "post format archive title"
-msgid "Videos"
-msgstr "動画"
-
-#: inc/template-tags.php:164
-msgctxt "post format archive title"
-msgid "Quotes"
-msgstr "引用"
-
-#: inc/template-tags.php:166
-msgctxt "post format archive title"
-msgid "Links"
-msgstr "リンク"
-
-#: inc/template-tags.php:168
-msgctxt "post format archive title"
-msgid "Statuses"
-msgstr "ステータス"
-
-#: inc/template-tags.php:170
-msgctxt "post format archive title"
-msgid "Audio"
-msgstr "オーディオ"
-
-#: inc/template-tags.php:172
-msgctxt "post format archive title"
-msgid "Chats"
-msgstr "チャット"
-
-#: inc/template-tags.php:175
-msgid "Archives: %s"
-msgstr "アーカイブ: %s"
-
-#. translators: 1: Taxonomy singular name, 2: Current taxonomy term
-#: inc/template-tags.php:179
-msgid "%1$s: %2$s"
-msgstr "%1$s アーカイブ: %2$s"
-
-#: inc/template-tags.php:181
-msgid "Archives"
-msgstr "アーカイブ"
-
-#: search.php:16
+#: search.php:18
 msgid "Search Results for: %s"
 msgstr "検索結果: %s"
 
@@ -265,13 +149,13 @@ msgid ""
 "searching can help."
 msgstr "お探しのコンテンツが見つかりません。検索をお試しください。"
 
-#: template-parts/content-page.php:19 template-parts/content-single.php:23
-#: template-parts/content.php:32
+#: template-parts/content-page.php:21 template-parts/content-single.php:25
+#: template-parts/content.php:34
 msgid "Pages:"
 msgstr "ページ:"
 
-#. translators: %s: Name of current post
-#: template-parts/content.php:25
+#. translators: %s: Name of current post.
+#: template-parts/content.php:27
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr "続きを読む %s <span class=\"meta-nav\">&rarr;</span>"
 
@@ -302,3 +186,4 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid "http://automattic.com/"
 msgstr ""
+
