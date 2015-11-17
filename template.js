@@ -38,11 +38,11 @@ exports.template = function( grunt, init, done ) {
         // Use gulp or grunt
         if ( props.gulp == 'y' ) {
             props.devDependencies = {
-                "gulp": "^3.8.0",
-                "gulp-compass": "^2.0.0",
-                "gulp-jshint": "^1.9.0",
+                "gulp": "^3.9.0",
+                "gulp-compass": "^2.1.0",
+                "gulp-jshint": "^1.12.0",
                 "gulp-load-plugins": "^0.7.0",
-                "gulp-notify": "^2.1.0",
+                "gulp-notify": "^2.2.0",
                 "gulp-plumber": "^0.6.6",
                 "gulp-replace": "^0.5.0"
             };
