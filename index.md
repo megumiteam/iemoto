@@ -112,88 +112,91 @@ Once you are done to this point, you can see all the files created as below.
 ├── 404.php
 ├── archive.php
 ├── comments.php
-├── content-none.php
-├── content-page.php
-├── content-single.php
-├── content.php
 ├── footer.php
 ├── functions.php
 ├── Gruntfile.js (or gulpfile.js )
 ├── header.php
 ├── inc
-│   ├── custom-header.php
-│   ├── customizer.php
-│   ├── extras.php
-│   ├── jetpack.php
-│   └── template-tags.php
+│   ├── custom-header.php
+│   ├── customizer.php
+│   ├── extras.php
+│   ├── jetpack.php
+│   └── template-tags.php
 ├── index.php
 ├── js
-│   ├── customizer.js
-│   ├── iemoto.js
-│   ├── navigation.js
-│   └── skip-link-focus-fix.js
+│   ├── customizer.js
+│   ├── <themename>.js
+│   ├── navigation.js
+│   └── skip-link-focus-fix.js
 ├── languages
-│   ├── <themename>.pot
-│   ├── ja.mo
-│   ├── ja.po
-│   └── readme.txt
+│   ├── <themename>.pot
+│   ├── ja.mo
+│   ├── ja.po
+│   └── readme.txt
 ├── node_modules
 ├── package.json
 ├── page.php
 ├── README.md
+├── readme.txt
 ├── rtl.css
 ├── sass
-│   ├── _reset.scss
-│   ├── editor-style.scss
-│   ├── style.scss
-│   ├── elements
-│   │   ├── _elements.scss
-│   │   ├── _lists.scss
-│   │   └── _tables.scss
-│   ├── forms
-│   │   ├── _buttons.scss
-│   │   ├── _fields.scss
-│   │   └── _forms.scss
-│   ├── layout
-│   │   ├── _content-sidebar.scss
-│   │   └── _sidebar-content.scss
-│   ├── media
-│   │   ├── _captions.scss
-│   │   ├── _galleries.scss
-│   │   └── _media.scss
-│   ├── mixins
-│   │   └── _mixins-master.scss
-│   ├── modules
-│   │   ├── _accessibility.scss
-│   │   ├── _alignments.scss
-│   │   ├── _clearings.scss
-│   │   └── _infinite-scroll.scss
-│   ├── navigation
-│   │   ├── _links.scss
-│   │   ├── _menus.scss
-│   │   └── _navigation.scss
-│   ├── site
-│   │   ├── _site.scss
-│   │   ├── primary
-│   │   │   ├── _asides.scss
-│   │   │   ├── _comments.scss
-│   │   │   └── _posts-and-pages.scss
-│   │   └── secondary
-│   │   │   └── _widgets.scss
-│   ├── typography
-│   │   ├── _copy.scss
-│   │   ├── _headings.scss
-│   │   └── _typography.scss
-│   └── variables-site
-│        ├── _colors.scss
-│        ├── _structure.scss
-│        ├── _typography.scss
-│        └── _variables-site.scss
+│   ├── _normalize.scss
+│   ├── editor-style.scss
+│   ├── style.scss
+│   ├── elements
+│   │   ├── _elements.scss
+│   │   ├── _lists.scss
+│   │   └── _tables.scss
+│   ├── forms
+│   │   ├── _buttons.scss
+│   │   ├── _fields.scss
+│   │   └── _forms.scss
+│   ├── layout
+│   │   ├── _content-sidebar.scss
+│   │   └── _sidebar-content.scss
+│   ├── media
+│   │   ├── _captions.scss
+│   │   ├── _galleries.scss
+│   │   └── _media.scss
+│   ├── mixins
+│   │   └── _mixins-master.scss
+│   ├── modules
+│   │   ├── _accessibility.scss
+│   │   ├── _alignments.scss
+│   │   ├── _clearings.scss
+│   │   └── _infinite-scroll.scss
+│   ├── navigation
+│   │   ├── _links.scss
+│   │   ├── _menus.scss
+│   │   └── _navigation.scss
+│   ├── site
+│   │   ├── _site.scss
+│   │   ├── primary
+│   │   │   ├── _asides.scss
+│   │   │   ├── _comments.scss
+│   │   │   └── _posts-and-pages.scss
+│   │   └── secondary
+│   │   │   └── _widgets.scss
+│   ├── typography
+│   │   ├── _copy.scss
+│   │   ├── _headings.scss
+│   │   └── _typography.scss
+│   └── variables-site
+│        ├── _colors.scss
+│        ├── _structure.scss
+│        ├── _typography.scss
+│        └── _variables-site.scss
 ├── screenshot.png
 ├── search.php
 ├── sidebar.php
 ├── single.php
-└── style.css
+├── style.css
+└── template-parts
+    ├── content-none.php
+    ├── content-page.php
+    ├── content-search.php
+    ├── content-single.php
+    └── content.php
 ```
 
 Create you own theme now.
