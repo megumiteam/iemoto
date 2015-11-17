@@ -108,10 +108,6 @@ npm install
 ├── 404.php
 ├── archive.php
 ├── comments.php
-├── content-none.php
-├── content-page.php
-├── content-single.php
-├── content.php
 ├── footer.php
 ├── functions.php
 ├── Gruntfile.js (or gulpfile.js )
@@ -125,7 +121,7 @@ npm install
 ├── index.php
 ├── js
 │   ├── customizer.js
-│   ├── iemoto.js
+│   ├── <themename>.js
 │   ├── navigation.js
 │   └── skip-link-focus-fix.js
 ├── languages
@@ -137,9 +133,10 @@ npm install
 ├── package.json
 ├── page.php
 ├── README.md
+├── readme.txt
 ├── rtl.css
 ├── sass
-│   ├── _reset.scss
+│   ├── _normalize.scss
 │   ├── editor-style.scss
 │   ├── style.scss
 │   ├── elements
@@ -189,7 +186,13 @@ npm install
 ├── search.php
 ├── sidebar.php
 ├── single.php
-└── style.css
+├── style.css
+└── template-parts
+      ├── content-none.php
+      ├── content-page.php
+      ├── content-search.php
+      ├── content-single.php
+      └── content.php
 ```
 
 以上でテーマの開発に必要な環境が整いました。

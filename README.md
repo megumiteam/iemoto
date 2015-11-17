@@ -107,10 +107,6 @@ Once you are done to this point, you can see all the files created as below.
 ├── 404.php
 ├── archive.php
 ├── comments.php
-├── content-none.php
-├── content-page.php
-├── content-single.php
-├── content.php
 ├── footer.php
 ├── functions.php
 ├── Gruntfile.js (or gulpfile.js )
@@ -124,7 +120,7 @@ Once you are done to this point, you can see all the files created as below.
 ├── index.php
 ├── js
 │   ├── customizer.js
-│   ├── iemoto.js
+│   ├── <themename>.js
 │   ├── navigation.js
 │   └── skip-link-focus-fix.js
 ├── languages
@@ -136,9 +132,10 @@ Once you are done to this point, you can see all the files created as below.
 ├── package.json
 ├── page.php
 ├── README.md
+├── readme.txt
 ├── rtl.css
 ├── sass
-│   ├── _reset.scss
+│   ├── _normalize.scss
 │   ├── editor-style.scss
 │   ├── style.scss
 │   ├── elements
@@ -188,7 +185,13 @@ Once you are done to this point, you can see all the files created as below.
 ├── search.php
 ├── sidebar.php
 ├── single.php
-└── style.css
+├── style.css
+└── template-parts
+      ├── content-none.php
+      ├── content-page.php
+      ├── content-search.php
+      ├── content-single.php
+      └── content.php
 ```
 
 Create you own theme now.
