@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: {%= title %} 1.0.0\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2015-11-17 02:21:51+00:00\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/tags/{%= prefix %}\n"
+"POT-Creation-Date: 2015-09-16 19:02:07+00:00\n"
 "Last-Translator: Kazue Igarashi <gatesapce.k@gmail.com>\n"
 "Language-Team: \n"
 "Language: JAPANESE\n"
@@ -68,9 +68,9 @@ msgstr "Proudly powered by %s"
 msgid "Theme: %1$s by %2$s."
 msgstr "テーマ: %1$s by %2$s."
 
-#: functions.php:47 header.php:42
-msgid "Primary Menu"
-msgstr "メインメニュー"
+#: functions.php:47
+msgid "Primary"
+msgstr "メイン"
 
 #: functions.php:102
 msgid "Sidebar"
@@ -79,6 +79,10 @@ msgstr "サイドバー"
 #: header.php:25
 msgid "Skip to content"
 msgstr "コンテンツへスキップ"
+
+#: header.php:38
+msgid "Primary Menu"
+msgstr "メインメニュー"
 
 #: inc/template-tags.php:28
 msgctxt "post date"
@@ -118,7 +122,7 @@ msgstr "%件のコメント"
 #. translators: %s: Name of current post
 #: inc/template-tags.php:71 template-parts/content-page.php:32
 msgid "Edit %s"
-msgstr "%sを編集"
+msgstr "編集 %s"
 
 #: search.php:18
 msgid "Search Results for: %s"
@@ -186,4 +190,3 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid "http://automattic.com/"
 msgstr ""
-

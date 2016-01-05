@@ -47,7 +47,7 @@ function {%= prefix %}_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary Menu', '{%= prefix %}' ),
+		'primary' => esc_html__( 'Primary', '{%= prefix %}' ),
 	) );
 
 	/*
@@ -80,7 +80,7 @@ function {%= prefix %}_setup() {
 		'default-image' => '',
 	) ) );
 }
-endif; // {%= prefix %}_setup
+endif;
 add_action( 'after_setup_theme', '{%= prefix %}_setup' );
 
 /**
@@ -105,8 +105,8 @@ function {%= prefix %}_widgets_init() {
 		'name'          => esc_html__( 'Sidebar', '{%= prefix %}' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );

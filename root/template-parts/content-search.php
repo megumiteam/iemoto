@@ -30,4 +30,3 @@
 		<?php {%= prefix %}_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
-

@@ -18,8 +18,9 @@
 
 	<div class="entry-content">
 		<?php do_action( '{%= prefix %}_before_entry_content' ); ?>
-		<?php the_content(); ?>
 		<?php
+			the_content();
+
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', '{%= prefix %}' ),
 				'after'  => '</div>',
@@ -42,4 +43,3 @@
 		?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
-

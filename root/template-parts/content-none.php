@@ -18,21 +18,24 @@
 
 	<div class="page-content">
 		<?php do_action( '{%= prefix %}_before_page_content' ); ?>
-		<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
+		<?php
+		if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
 			<p><?php printf( wp_kses( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', '{%= prefix %}' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
 
 		<?php elseif ( is_search() ) : ?>
 
 			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', '{%= prefix %}' ); ?></p>
-			<?php get_search_form(); ?>
+			<?php
+				get_search_form();
 
-		<?php else : ?>
+		else : ?>
 
 			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', '{%= prefix %}' ); ?></p>
-			<?php get_search_form(); ?>
+			<?php
+				get_search_form();
 
-		<?php endif; ?>
+		endif; ?>
 		<?php do_action( '{%= prefix %}_after_page_content' ); ?>
 	</div><!-- .page-content -->
 </section><!-- .no-results -->
