@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var runSequence = require('run-sequence');
 var $    = require('gulp-load-plugins')();
 var pkg  = require('./package.json');
 
@@ -23,9 +24,8 @@ gulp.task('js', function() {
 });
 
 // compass(sass)
-gulp.task('compass', function() {
-  // dev
-  gulp.src('sass/*.scss')
+gulp.task('compass-dev', function() {
+  return gulp.src('sass/*.scss')
     .pipe($.plumber({
       errorHandler: $.notify.onError("Error: <%= error.message %>")
     }))
@@ -36,14 +36,13 @@ gulp.task('compass', function() {
       style:     'expanded',
       relative:  true,
       sourcemap: true,
-      comments:  true,
-      force:     true
+      comments:  true
     }))
     .pipe($.replace(/<%= pkg.version %>/g, pkg.version))
     .pipe(gulp.dest('css'))
-
-  // dist
-  gulp.src('sass/*.scss')
+});
+gulp.task('compass-dist', function() {
+  return gulp.src('sass/*.scss')
     .pipe($.plumber({
       errorHandler: $.notify.onError("Error: <%= error.message %>")
     }))
@@ -54,11 +53,18 @@ gulp.task('compass', function() {
       style:     'expanded',
       relative:  true,
       sourcemap: false,
-      comments:  false,
-      force:     true
+      comments:  false
     }))
     .pipe($.replace(/<%= pkg.version %>/g, pkg.version))
     .pipe(gulp.dest('./'))
+});
+
+gulp.task('compass', function(callback) {
+  return runSequence(
+    'compass-dev',
+    'compass-dist',
+    callback
+  );
 });
 
 // watch

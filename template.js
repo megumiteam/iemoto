@@ -44,7 +44,8 @@ exports.template = function( grunt, init, done ) {
                 "gulp-load-plugins": "^0.7.0",
                 "gulp-notify": "^2.2.0",
                 "gulp-plumber": "^0.6.6",
-                "gulp-replace": "^0.5.0"
+                "gulp-replace": "^0.5.0",
+                "run-sequence": "^1.1.5"
             };
         } else {
             props.devDependencies = {
