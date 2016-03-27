@@ -25,7 +25,7 @@
 	<div class="entry-summary">
 		<?php do_action( '{%= prefix %}_before_entry_summary' ); ?>
 		<?php the_excerpt(); ?>
-		<?php do_action( '{%= prefix %}_after_entry_summary'' ); ?>
+		<?php do_action( '{%= prefix %}_after_entry_summary' ); ?>
 	</div><!-- .entry-summary -->
 
 	<footer class="entry-footer">
