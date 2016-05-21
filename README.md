@@ -13,7 +13,7 @@ Automate theme development process with it!
 If you've never used any `grunt-init` templates follow below to install `grunt-init`.
 
 ```
-sudo npm install -g grunt-init
+npm install -g grunt-init
 ```
 
 Next, create `~/.grunt-init` directory.
