@@ -15,7 +15,7 @@ Iemoto は WordPress テーマを開発する上で必要な様々なプロセ�
 まずはじめに `grunt-init` をインストールしてください。
 
 ```
-sudo npm install -g grunt-init
+npm install -g grunt-init
 ```
 
 次に、`~/.grunt-init` ディレクトリを作成してください。
@@ -26,7 +26,7 @@ mkdir ~/.grunt-init
 
 ### Iemoto をインストール
 
-次にこのテンプレートを git から取得して下さい。
+Iemoto を git から取得してください。
 
 ```
 git clone git@github.com:megumiteam/iemoto.git ~/.grunt-init/iemoto
@@ -168,7 +168,6 @@ npm install
 │   ├── site
 │   │   ├── _site.scss
 │   │   ├── primary
-│   │   │   ├── _asides.scss
 │   │   │   ├── _comments.scss
 │   │   │   └── _posts-and-pages.scss
 │   │   └── secondary
@@ -191,7 +190,6 @@ npm install
       ├── content-none.php
       ├── content-page.php
       ├── content-search.php
-      ├── content-single.php
       └── content.php
 ```
 

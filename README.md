@@ -167,7 +167,6 @@ Once you are done to this point, you can see all the files created as below.
 │   ├── site
 │   │   ├── _site.scss
 │   │   ├── primary
-│   │   │   ├── _asides.scss
 │   │   │   ├── _comments.scss
 │   │   │   └── _posts-and-pages.scss
 │   │   └── secondary
@@ -190,7 +189,6 @@ Once you are done to this point, you can see all the files created as below.
       ├── content-none.php
       ├── content-page.php
       ├── content-search.php
-      ├── content-single.php
       └── content.php
 ```
 
