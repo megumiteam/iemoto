@@ -62,18 +62,6 @@ function {%= prefix %}_setup() {
 		'caption',
 	) );
 
-	/*
-	 * Enable support for Post Formats.
-	 * See https://developer.wordpress.org/themes/functionality/post-formats/
-	 */
-	add_theme_support( 'post-formats', array(
-		'aside',
-		'image',
-		'video',
-		'quote',
-		'link',
-	) );
-
 	// Set up the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( '{%= prefix %}_custom_background_args', array(
 		'default-color' => 'ffffff',
@@ -104,7 +92,7 @@ function {%= prefix %}_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', '{%= prefix %}' ),
 		'id'            => 'sidebar-1',
-		'description'   => '',
+		'description'   => esc_html__( 'Add widgets here.', '{%= prefix %}' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -138,7 +126,7 @@ function {%= prefix %}_scripts() {
 		'{%= prefix %}-navigation',
 		get_template_directory_uri() . '/js/navigation.js',
 		array(),
-		'20120206',
+		'20151215',
 		true
 	);
 
@@ -146,7 +134,7 @@ function {%= prefix %}_scripts() {
 		'{%= prefix %}-skip-link-focus-fix',
 		get_template_directory_uri() . '/js/skip-link-focus-fix.js',
 		array(),
-		'20130115',
+		'20151215',
 		true
 	);
 

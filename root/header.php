@@ -23,7 +23,7 @@
 <body <?php body_class(); ?>>
 <?php do_action( '{%= prefix %}_before_body' ); ?>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', '{%= prefix %}' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', '{%= prefix %}' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
 

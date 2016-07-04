@@ -24,12 +24,12 @@ msgid ""
 msgstr ""
 "ここには何も見つかりませんでした。以下のリンクまたは検索をお試しください。"
 
-#: 404.php:29
+#: 404.php:33
 msgid "Most Used Categories"
 msgstr "よく使われているカテゴリー"
 
 #. translators: %1$s: smiley
-#: 404.php:46
+#: 404.php:51
 msgid "Try looking in the monthly archives. %1$s"
 msgstr "月別アーカイブを見てみてください。%1$s"
 
@@ -52,7 +52,7 @@ msgstr "以前のコメント"
 msgid "Newer Comments"
 msgstr "新しいコメント"
 
-#: comments.php:77
+#: comments.php:78
 msgid "Comments are closed."
 msgstr "コメントは受け付けていません。"
 
@@ -72,15 +72,19 @@ msgstr "テーマ: %1$s by %2$s."
 msgid "Primary"
 msgstr "メイン"
 
-#: functions.php:102
+#: functions.php:90
 msgid "Sidebar"
 msgstr "サイドバー"
+
+#: functions.php:92
+msgid "Add widgets here."
+msgstr "ここにウィジェットを追加。"
 
 #: header.php:25
 msgid "Skip to content"
 msgstr "コンテンツへスキップ"
 
-#: header.php:38
+#: header.php:45
 msgid "Primary Menu"
 msgstr "メインメニュー"
 
@@ -107,24 +111,17 @@ msgstr "カテゴリー: %1$s"
 msgid "Tagged %1$s"
 msgstr "タグ: %1$s"
 
-#: inc/template-tags.php:64
-msgid "Leave a comment"
-msgstr "コメントをどうぞ"
-
-#: inc/template-tags.php:64
-msgid "1 Comment"
-msgstr "1件のコメント"
-
-#: inc/template-tags.php:64
-msgid "% Comments"
-msgstr "%件のコメント"
+#. translators: %s: post title
+#: inc/template-tags.php:65
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr "<span class=\"screen-reader-text\">%s に</span>コメントする"
 
 #. translators: %s: Name of current post
-#: inc/template-tags.php:71 template-parts/content-page.php:32
+#: inc/template-tags.php:72 template-parts/content-page.php:34
 msgid "Edit %s"
 msgstr "編集 %s"
 
-#: search.php:18
+#: search.php:19
 msgid "Search Results for: %s"
 msgstr "検索結果: %s"
 
@@ -132,14 +129,14 @@ msgstr "検索結果: %s"
 msgid "Nothing Found"
 msgstr "何も見つかりませんでした"
 
-#: template-parts/content-none.php:20
+#: template-parts/content-none.php:21
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 "最初の投稿を公開する準備ができましたか ?<a href=\"%1$s\">こちらからスタートし"
 "ましょう</a>。"
 
-#: template-parts/content-none.php:24
+#: template-parts/content-none.php:25
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
@@ -147,19 +144,18 @@ msgstr ""
 "検索キーワードに一致するコンテンツが見つかりませんでした。他のキーワードをお"
 "試しください。"
 
-#: template-parts/content-none.php:29
+#: template-parts/content-none.php:31
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr "お探しのコンテンツが見つかりません。検索をお試しください。"
 
-#: template-parts/content-page.php:21 template-parts/content-single.php:25
-#: template-parts/content.php:34
+#: template-parts/content-page.php:22 template-parts/content.php:38
 msgid "Pages:"
 msgstr "ページ:"
 
 #. translators: %s: Name of current post.
-#: template-parts/content.php:27
+#: template-parts/content.php:33
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr "続きを読む %s <span class=\"meta-nav\">&rarr;</span>"
 
