@@ -45,16 +45,16 @@ exports.template = function( grunt, init, done ) {
                 "gulp-notify": "^2.2.0",
                 "gulp-plumber": "^0.6.6",
                 "gulp-replace": "^0.5.0",
-                "run-sequence": "^1.1.5"
+                "run-sequence": "^1.2.0"
             };
         } else {
             props.devDependencies = {
-                "grunt": "^0.4.5",
-                "grunt-contrib-compass": "^1.0.0",
-                "grunt-contrib-jshint": "^0.10.0",
-                "grunt-contrib-watch": "^0.6.0",
+                "grunt": "^1.0.0",
+                "grunt-contrib-compass": "^1.1.0",
+                "grunt-contrib-jshint": "^1.0.0",
+                "grunt-contrib-watch": "^1.0.0",
                 "grunt-text-replace": "^0.4.0",
-                "load-grunt-tasks": "^1.0.0"
+                "load-grunt-tasks": "^3.5.0"
             };
         }
         // Sanitize names where we need to for PHP/JS
