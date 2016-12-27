@@ -1,6 +1,6 @@
 <?php
 /**
- * {%= title %} Theme Customizer.
+ * {%= title %} Theme Customizer
  *
  * @package {%= title %}
  */

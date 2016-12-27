@@ -1,6 +1,6 @@
 <?php
 /**
- * Custom functions that act independently of the theme templates.
+ * Custom functions that act independently of the theme templates
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
@@ -33,7 +33,7 @@ add_filter( 'body_class', '{%= prefix %}_body_classes' );
  */
 function {%= prefix %}_pingback_header() {
 	if ( is_singular() && pings_open() ) {
-		echo '<link rel="pingback" href="', bloginfo( 'pingback_url' ), '">';
+		echo '<link rel="pingback" href="', esc_url( get_bloginfo( 'pingback_url' ) ), '">';
 	}
 }
 add_action( 'wp_head', '{%= prefix %}_pingback_header' );
