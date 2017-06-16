@@ -117,22 +117,22 @@ Once you are done to this point, you can see all the files created as below.
 ├── Gruntfile.js (or gulpfile.js )
 ├── header.php
 ├── inc
-│   ├── custom-header.php
-│   ├── customizer.php
-│   ├── extras.php
-│   ├── jetpack.php
-│   └── template-tags.php
+│   ├── custom-header.php
+│   ├── customizer.php
+│   ├── jetpack.php
+│   ├── template-functions.php
+│   └── template-tags.php
 ├── index.php
 ├── js
-│   ├── customizer.js
-│   ├── <themename>.js
-│   ├── navigation.js
-│   └── skip-link-focus-fix.js
+│   ├── <themename>.js
+│   ├── customizer.js
+│   ├── navigation.js
+│   └── skip-link-focus-fix.js
 ├── languages
-│   ├── <themename>.pot
-│   ├── ja.mo
-│   ├── ja.po
-│   └── readme.txt
+│   ├── <themename>.pot
+│   ├── ja.mo
+│   ├── ja.po
+│   └── readme.txt
 ├── node_modules
 ├── package.json
 ├── page.php
@@ -140,61 +140,61 @@ Once you are done to this point, you can see all the files created as below.
 ├── readme.txt
 ├── rtl.css
 ├── sass
-│   ├── _normalize.scss
-│   ├── editor-style.scss
-│   ├── style.scss
-│   ├── elements
-│   │   ├── _elements.scss
-│   │   ├── _lists.scss
-│   │   └── _tables.scss
-│   ├── forms
-│   │   ├── _buttons.scss
-│   │   ├── _fields.scss
-│   │   └── _forms.scss
-│   ├── layout
-│   │   ├── _content-sidebar.scss
-│   │   └── _sidebar-content.scss
-│   ├── media
-│   │   ├── _captions.scss
-│   │   ├── _galleries.scss
-│   │   └── _media.scss
-│   ├── mixins
-│   │   └── _mixins-master.scss
-│   ├── modules
-│   │   ├── _accessibility.scss
-│   │   ├── _alignments.scss
-│   │   ├── _clearings.scss
-│   │   └── _infinite-scroll.scss
-│   ├── navigation
-│   │   ├── _links.scss
-│   │   ├── _menus.scss
-│   │   └── _navigation.scss
-│   ├── site
-│   │   ├── _site.scss
-│   │   ├── primary
-│   │   │   ├── _comments.scss
-│   │   │   └── _posts-and-pages.scss
-│   │   └── secondary
-│   │   │   └── _widgets.scss
-│   ├── typography
-│   │   ├── _copy.scss
-│   │   ├── _headings.scss
-│   │   └── _typography.scss
-│   └── variables-site
-│        ├── _colors.scss
-│        ├── _structure.scss
-│        ├── _typography.scss
-│        └── _variables-site.scss
+│   ├── _normalize.scss
+│   ├── editor-style.scss
+│   ├── style.scss
+│   ├── elements
+│   │   ├── _elements.scss
+│   │   ├── _lists.scss
+│   │   └── _tables.scss
+│   ├── forms
+│   │   ├── _buttons.scss
+│   │   ├── _fields.scss
+│   │   └── _forms.scss
+│   ├── layout
+│   │   ├── _content-sidebar.scss
+│   │   └── _sidebar-content.scss
+│   ├── media
+│   │   ├── _captions.scss
+│   │   ├── _galleries.scss
+│   │   └── _media.scss
+│   ├── mixins
+│   │   └── _mixins-master.scss
+│   ├── modules
+│   │   ├── _accessibility.scss
+│   │   ├── _alignments.scss
+│   │   ├── _clearings.scss
+│   │   └── _infinite-scroll.scss
+│   ├── navigation
+│   │   ├── _links.scss
+│   │   ├── _menus.scss
+│   │   └── _navigation.scss
+│   ├── site
+│   │   ├── _site.scss
+│   │   ├── primary
+│   │   │   ├── _comments.scss
+│   │   │   └── _posts-and-pages.scss
+│   │   └── secondary
+│   │   │   └── _widgets.scss
+│   ├── typography
+│   │   ├── _copy.scss
+│   │   ├── _headings.scss
+│   │   └── _typography.scss
+│   └── variables-site
+│        ├── _colors.scss
+│        ├── _structure.scss
+│        ├── _typography.scss
+│        └── _variables-site.scss
 ├── screenshot.png
 ├── search.php
 ├── sidebar.php
 ├── single.php
 ├── style.css
 └── template-parts
-      ├── content-none.php
-      ├── content-page.php
-      ├── content-search.php
-      └── content.php
+      ├── content-none.php
+      ├── content-page.php
+      ├── content-search.php
+      └── content.php
 ```
 
 Create you own theme now.
@@ -211,7 +211,7 @@ To set default values, put defaults.json and edit it.
 cp ~/.grunt-init/iemoto/defaults.json.sample ~/.grunt-init/defaults.json
 ```
 
-## Minifying css and javascripts with grunt
+## About compiling SASS and verifying JavaScript code with grunt
 
 When you've edited `.js` and `.scss`, command this. 
 
@@ -219,7 +219,7 @@ When you've edited `.js` and `.scss`, command this.
 grunt
 ```
 
-## Minifying css and javascripts with gulp
+## About compiling SASS and verifying JavaScript code with gulp
 
 When you've edited `.js` and `.scss`, command this. 
 
@@ -231,7 +231,7 @@ You can `gulp js` or `gulp compass` to specify just js or Sass(Compass).
 
 ## watch
 
-If you utilize `grunt watch` or `gulp watch`, grunt(gulp) will watch the file editing and automatically minify them.
+If you utilize `grunt watch` or `gulp watch`, grunt(gulp) will watch the file editing and automatically compile and validate them.
 
 
 ```
@@ -271,9 +271,4 @@ Feedbacks are very much welcome!
 
 ## Contributors
 
-* [miya0001](https://github.com/miya0001)
-* [gatespace](https://github.com/gatespace)
-* [8bitodyssey](https://github.com/8bitodyssey)
-* [ShinichiNishikawa](https://github.com/ShinichiNishikawa)
-* [tekapo](https://github.com/tekapo)
-
+* https://github.com/megumiteam/iemoto/graphs/contributors
