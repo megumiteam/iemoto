@@ -13,7 +13,7 @@
 	<header class="entry-header">
 		<?php do_action( '{%= prefix %}_before_entry_header' ); ?>
 		<?php
-		if ( is_single() ) :
+		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		else :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
@@ -32,9 +32,16 @@
 		<?php do_action( '{%= prefix %}_before_entry_content' ); ?>
 		<?php
 			the_content( sprintf(
-				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', '{%= prefix %}' ), array( 'span' => array( 'class' => array() ) ) ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
+				wp_kses(
+					/* translators: %s: Name of current post. Only visible to screen readers */
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', '{%= prefix %}' ),
+					array(
+						'span' => array(
+							'class' => array(),
+						),
+					)
+				),
+				get_the_title()
 			) );
 
 			wp_link_pages( array(
@@ -48,4 +55,4 @@
 	<footer class="entry-footer">
 		<?php {%= prefix %}_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
-</article><!-- #post-## -->
+</article><!-- #post-<?php the_ID(); ?> -->

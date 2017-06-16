@@ -31,4 +31,4 @@
 	<footer class="entry-footer">
 		<?php {%= prefix %}_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
-</article><!-- #post-## -->
+</article><!-- #post-<?php the_ID(); ?> -->
