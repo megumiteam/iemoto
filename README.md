@@ -114,13 +114,13 @@ Once you are done to this point, you can see all the files created as below.
 ├── inc
 │   ├── custom-header.php
 │   ├── customizer.php
-│   ├── extras.php
 │   ├── jetpack.php
+│   ├── template-functions.php
 │   └── template-tags.php
 ├── index.php
 ├── js
-│   ├── customizer.js
 │   ├── <themename>.js
+│   ├── customizer.js
 │   ├── navigation.js
 │   └── skip-link-focus-fix.js
 ├── languages
@@ -206,7 +206,7 @@ To set default values, put defaults.json and edit it.
 cp ~/.grunt-init/iemoto/defaults.json.sample ~/.grunt-init/defaults.json
 ```
 
-## Minifying css and javascripts with grunt
+## About compiling SASS and verifying JavaScript code with grunt
 
 When you've edited `.js` and `.scss`, command this. 
 
@@ -214,7 +214,7 @@ When you've edited `.js` and `.scss`, command this.
 grunt
 ```
 
-## Minifying css and javascripts with gulp
+## About compiling SASS and verifying JavaScript code with gulp
 
 When you've edited `.js` and `.scss`, command this. 
 
@@ -226,7 +226,7 @@ You can `gulp js` or `gulp compass` to specify just js or Sass(Compass).
 
 ## watch
 
-If you utilize `grunt watch` or `gulp watch`, grunt(gulp) will watch the file editing and automatically minify them.
+If you utilize `grunt watch` or `gulp watch`, grunt(gulp) will watch the file editing and automatically compile and validate them.
 
 
 ```
@@ -266,9 +266,4 @@ Feedbacks are very much welcome!
 
 ## Contributors
 
-* [miya0001](https://github.com/miya0001)
-* [gatespace](https://github.com/gatespace)
-* [8bitodyssey](https://github.com/8bitodyssey)
-* [ShinichiNishikawa](https://github.com/ShinichiNishikawa)
-* [tekapo](https://github.com/tekapo)
-
+* https://github.com/megumiteam/iemoto/graphs/contributors
