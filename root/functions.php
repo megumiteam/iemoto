@@ -156,16 +156,6 @@ function {%= prefix %}_scripts() {
 add_action( 'wp_enqueue_scripts', '{%= prefix %}_scripts' );
 
 /**
- * Add a pingback url auto-discovery header for singularly identifiable articles.
- */
-function {%= prefix %}_pingback_header() {
-	if ( is_singular() && pings_open() ) {
-		echo '<link rel="pingback" href="', esc_url( get_bloginfo( 'pingback_url' ) ), '">';
-	}
-}
-add_action( 'wp_head', '{%= prefix %}_pingback_header' );
-
-/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
