@@ -104,6 +104,7 @@ npm install
 
 以上が完了すると、ディレクトリ内に以下のようにテーマ用のファイルが生成されていることを確認できると思います。
 
+
 ```
 ├── 404.php
 ├── archive.php
@@ -115,13 +116,13 @@ npm install
 ├── inc
 │   ├── custom-header.php
 │   ├── customizer.php
-│   ├── extras.php
 │   ├── jetpack.php
+│   ├── template-functions.php
 │   └── template-tags.php
 ├── index.php
 ├── js
-│   ├── customizer.js
 │   ├── <themename>.js
+│   ├── customizer.js
 │   ├── navigation.js
 │   └── skip-link-focus-fix.js
 ├── languages
@@ -207,7 +208,7 @@ npm install
 cp ~/.grunt-init/iemoto/defaults.json.sample ~/.grunt-init/defaults.json
 ```
 
-## grunt での CSS や JavaScript ファイルの minify について
+## grunt での SASS のコンパイルと JavaScript コードの検証について
 
 `.js` や `.scss` などのファイルを修正したら、以下のコマンドを実行して下さい。 
 
@@ -215,7 +216,7 @@ cp ~/.grunt-init/iemoto/defaults.json.sample ~/.grunt-init/defaults.json
 grunt
 ```
 
-## gulp での CSS や JavaScript ファイルの minify について
+## gulp での SASS のコンパイルと JavaScript コードの検証について
 
 `.js` や `.scss` などのファイルを修正したら、以下のコマンドを実行して下さい。 
 
@@ -227,7 +228,7 @@ JavaScript のみの場合は `gulp js` 、Sass(Compass) のみの場合は `gul
 
 ## watch について
 
-`grunt watch` あるいは `gulp watch` を使えば、ファイルの更新を grunt(gulp) が監視し、自動的に Sass(Compass) のコンパイル、minify の作業を行います。
+`grunt watch` あるいは `gulp watch` を使えば、ファイルの更新を grunt(gulp) が監視し、自動的に Sass(Compass) のコンパイル、JavaScript コードの検証の作業を行います。
 
 
 ```
@@ -266,9 +267,5 @@ Sourcemap の作成には Sass 3.3.0 以上が必要です。
 
 ## Contributors
 
-* [miya0001](https://github.com/miya0001)
-* [gatespace](https://github.com/gatespace)
-* [8bitodyssey](https://github.com/8bitodyssey)
-* [ShinichiNishikawa](https://github.com/ShinichiNishikawa)
-* [tekapo](https://github.com/tekapo)
+* https://github.com/megumiteam/iemoto/graphs/contributors
 

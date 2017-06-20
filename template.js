@@ -40,11 +40,13 @@ exports.template = function( grunt, init, done ) {
             props.devDependencies = {
                 "gulp": "^3.9.0",
                 "gulp-compass": "^2.1.0",
-                "gulp-jshint": "^1.12.0",
-                "gulp-load-plugins": "^0.7.0",
-                "gulp-notify": "^2.2.0",
-                "gulp-plumber": "^0.6.6",
+                "gulp-jshint": "^2.0.0",
+                "gulp-load-plugins": "^1.5.0",
+                "gulp-notify": "^3.0.0",
+                "gulp-plumber": "^1.1.0",
                 "gulp-replace": "^0.5.0",
+                "gulp-replace": "^0.5.0",
+                "jshint": "^2.9.4",
                 "run-sequence": "^1.2.0"
             };
         } else {
