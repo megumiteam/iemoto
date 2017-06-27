@@ -1,6 +1,6 @@
 <?php
 /**
- * Additional features to allow styling of the templates
+ * Functions which enhance the theme by hooking into WordPress
  *
  * @package {%= title %}
  */
@@ -12,11 +12,6 @@
  * @return array
  */
 function {%= prefix %}_body_classes( $classes ) {
-	// Adds a class of group-blog to blogs with more than 1 published author.
-	if ( is_multi_author() ) {
-		$classes[] = 'group-blog';
-	}
-
 	// Adds a class of hfeed to non-singular pages.
 	if ( ! is_singular() ) {
 		$classes[] = 'hfeed';

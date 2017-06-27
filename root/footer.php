@@ -14,7 +14,7 @@
 		<?php do_action( '{%= prefix %}_after_content' ); ?>
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
+	<footer id="colophon" class="site-footer">
 		<?php do_action( '{%= prefix %}_before_footer' ); ?>
 		<div class="site-info">
 			<?php do_action( '{%= prefix %}_footer' ); ?>

@@ -50,7 +50,7 @@ function {%= prefix %}_entry_footer() {
 	if ( 'post' === get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( esc_html__( ', ', '{%= prefix %}' ) );
-		if ( $categories_list && {%= prefix %}_categorized_blog() ) {
+		if ( $categories_list ) {
 			/* translators: 1: list of categories. */
 			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', '{%= prefix %}' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 		}
@@ -100,47 +100,3 @@ function {%= prefix %}_entry_footer() {
 	);
 }
 endif;
-
-/**
- * Returns true if a blog has more than 1 category.
- *
- * @return bool
- */
-function {%= prefix %}_categorized_blog() {
-	$all_the_cool_cats = get_transient( '{%= prefix %}_categories' );
-	if ( false === $all_the_cool_cats ) {
-		// Create an array of all the categories that are attached to posts.
-		$all_the_cool_cats = get_categories( array(
-			'fields'     => 'ids',
-			'hide_empty' => 1,
-			// We only need to know if there is more than one category.
-			'number'     => 2,
-		) );
-
-		// Count the number of categories that are attached to the posts.
-		$all_the_cool_cats = count( $all_the_cool_cats );
-
-		set_transient( '{%= prefix %}_categories', $all_the_cool_cats );
-	}
-
-	if ( $all_the_cool_cats > 1 || is_preview() ) {
-		// This blog has more than 1 category so {%= prefix %}_categorized_blog should return true.
-		return true;
-	} else {
-		// This blog has only 1 category so {%= prefix %}_categorized_blog should return false.
-		return false;
-	}
-}
-
-/**
- * Flush out the transients used in {%= prefix %}_categorized_blog
- */
-function {%= prefix %}_category_transient_flusher() {
-	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
-		return;
-	}
-	// Like, beat it. Dig?
-	delete_transient( '{%= prefix %}_categories' );
-}
-add_action( 'edit_category', '{%= prefix %}_category_transient_flusher' );
-add_action( 'save_post',     '{%= prefix %}_category_transient_flusher' );

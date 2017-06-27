@@ -16,7 +16,7 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<?php do_action( '{%= prefix %}_before_primary' ); ?>
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main">
 
 			<?php
 			while ( have_posts() ) : the_post();
