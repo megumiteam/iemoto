@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2017-06-16 11:57+0900\n"
+"POT-Creation-Date: 2017-07-21 12:33+0900\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Kazue Igarashi <gatesapce.k@gmail.com>\n"
 "Language-Team: \n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n == 1 ? 0 : 1;\n"
-"X-Generator: Poedit 2.0.1\n"
+"X-Generator: Poedit 2.0.2\n"
 
 #: 404.php:17
 msgid "Oops! That page can&rsquo;t be found."
@@ -26,44 +26,21 @@ msgid ""
 msgstr ""
 "ここには何も見つかりませんでした。以下のリンクまたは検索をお試しください。"
 
-#: 404.php:33
+#: 404.php:30
 msgid "Most Used Categories"
 msgstr "よく使われているカテゴリー"
 
 #. translators: %1$s: smiley
-#: 404.php:51
-#, php-format
+#: 404.php:47
 msgid "Try looking in the monthly archives. %1$s"
 msgstr "月別アーカイブを見てみてください。%1$s"
 
 #. translators: 1: title.
 #: comments.php:34
-#, php-format
 msgid "One thought on &ldquo;%1$s&rdquo;"
 msgstr "「%1$s」への1件のフィードバック"
 
-#. translators: 1: comment count number, 2: title.
-#: comments.php:40
-#, php-format
-msgctxt "comments title"
-msgid "%1$s thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] "「%2$s」への%1$s件のフィードバック"
-msgstr[1] "「%2$s」への%1$s件のフィードバック"
-
-#: comments.php:50 comments.php:71
-msgid "Comment navigation"
-msgstr "コメントナビゲーション"
-
-#: comments.php:53 comments.php:74
-msgid "Older Comments"
-msgstr "以前のコメント"
-
-#: comments.php:54 comments.php:75
-msgid "Newer Comments"
-msgstr "新しいコメント"
-
-#: comments.php:88
+#: comments.php:67
 msgid "Comments are closed."
 msgstr "コメントは受け付けていません。"
 
@@ -73,13 +50,11 @@ msgstr ""
 
 #. translators: %s: CMS name, i.e. WordPress.
 #: footer.php:20
-#, php-format
 msgid "Proudly powered by %s"
 msgstr "Proudly powered by %s"
 
 #. translators: 1: Theme name, 2: Theme author.
 #: footer.php:25
-#, php-format
 msgid "Theme: %1$s by %2$s."
 msgstr "テーマ: %1$s by %2$s."
 
@@ -87,11 +62,11 @@ msgstr "テーマ: %1$s by %2$s."
 msgid "Primary"
 msgstr "メイン"
 
-#: functions.php:93
+#: functions.php:105
 msgid "Sidebar"
 msgstr "サイドバー"
 
-#: functions.php:95
+#: functions.php:107
 msgid "Add widgets here."
 msgstr "ここにウィジェットを追加。"
 
@@ -99,23 +74,9 @@ msgstr "ここにウィジェットを追加。"
 msgid "Skip to content"
 msgstr "コンテンツへスキップ"
 
-#: header.php:44
+#: header.php:45
 msgid "Primary Menu"
 msgstr "メインメニュー"
-
-#. translators: %s: post date.
-#: inc/template-tags.php:29
-#, php-format
-msgctxt "post date"
-msgid "Posted on %s"
-msgstr "投稿日時: %s"
-
-#. translators: %s: post author.
-#: inc/template-tags.php:35
-#, php-format
-msgctxt "post author"
-msgid "by %s"
-msgstr "投稿者: %s"
 
 #. translators: used between list items, there is a space after the comma
 #: inc/template-tags.php:52
@@ -124,16 +85,8 @@ msgstr ", "
 
 #. translators: 1: list of categories.
 #: inc/template-tags.php:55
-#, php-format
 msgid "Posted in %1$s"
 msgstr "カテゴリー: %1$s"
-
-#. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:59
-#, php-format
-msgctxt "list item separator"
-msgid ", "
-msgstr ", "
 
 #. translators: 1: list of tags.
 #: inc/template-tags.php:62
@@ -142,19 +95,16 @@ msgstr "タグ: %1$s"
 
 #. translators: %s: post title
 #: inc/template-tags.php:72
-#, php-format
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr "<span class=\"screen-reader-text\">%s に</span>コメントする"
 
 #. translators: %s: Name of current post. Only visible to screen readers
 #: inc/template-tags.php:89 template-parts/content-page.php:35
-#, php-format
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr "<span class=\"screen-reader-text\">%s を</span>編集"
 
 #. translators: %s: search query.
 #: search.php:21
-#, php-format
 msgid "Search Results for: %s"
 msgstr "検索結果: %s"
 
@@ -164,7 +114,6 @@ msgstr "何も見つかりませんでした"
 
 #. translators: 1: link to WP admin new post page.
 #: template-parts/content-none.php:25
-#, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
@@ -191,7 +140,6 @@ msgstr "ページ:"
 
 #. translators: %s: Name of current post. Only visible to screen readers
 #: template-parts/content.php:34
-#, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr "<span class=\"screen-reader-text\">%s の</span>続きを読む"
 
@@ -222,3 +170,38 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid "http://automattic.com/"
 msgstr ""
+
+#. translators: 1: comment count number, 2: title.
+#: comments.php:40
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "「%2$s」への%1$s件のフィードバック"
+msgstr[1] "「%2$s」への%1$s件のフィードバック"
+
+#. translators: %s: post date.
+#: inc/template-tags.php:29
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr "投稿日時: %s"
+
+#. translators: %s: post author.
+#: inc/template-tags.php:35
+msgctxt "post author"
+msgid "by %s"
+msgstr "投稿者: %s"
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:59
+msgctxt "list item separator"
+msgid ", "
+msgstr ", "
+
+#~ msgid "Comment navigation"
+#~ msgstr "コメントナビゲーション"
+
+#~ msgid "Older Comments"
+#~ msgstr "以前のコメント"
+
+#~ msgid "Newer Comments"
+#~ msgstr "新しいコメント"
